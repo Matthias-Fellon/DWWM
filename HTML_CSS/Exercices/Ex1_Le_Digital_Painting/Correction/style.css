@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
+div, header, section, footer, aside, nav, main, article, figure, h1, h2, h3, h4, h5, h6, p, a, ul, li, figure, figcaption, class, img { 
+	margin: 0;
+	padding: 0;
+}
+
+main{
+    margin: 0 auto;
+    width: 1000px;
+    background-color: #ff8500;
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ************************************************************************************************************************* */
+
+h1{
+    color: #fefefe;
+    font-size: 64px;
+    line-height: 30px;
+    padding:80px 0 23px 84px ;
+}
+p{
+    color: #fefefe;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 30px;
+    padding:0 87px 46px 84px ;
+       
+}
+h2{
+    color: black;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 30px;
+    padding-bottom: 22px;
+    padding-left: 84px;
+}
+
+/*Inline-block : Cela signifie que l'élément est affiché comme un élément en ligne, ce qui signifie qu'il peut être placé à côté d'autres éléments sur la même ligne, tout en ayant les propriétés de dimension et de mise en page d'un élément de bloc.
+
+Bloc : Les éléments de bloc s'étendent sur toute la largeur disponible et prennent une nouvelle ligne, comme les paragraphes (<p>), les divs (<div>), etc.
+
+En combinant ces deux comportements, "display: inline-block;" permet à un élément d'être placé sur la même ligne que d'autres éléments, tout en conservant les propriétés de mise en page telles que la largeur, la hauteur, les marges, les rembourrages, etc.
+*/
+em {
+    display: inline-block;
+    border-top: solid 1px #193458;
+    color: #193458;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0 114px 35px 284px;
+    border-bottom: solid 1px #193458;
+    padding-bottom: 16px;
+}
+ul {
+    padding-left: 98px;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 36px;
+    padding-bottom: 138px;
+}
