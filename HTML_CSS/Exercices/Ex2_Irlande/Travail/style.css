@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 299px;
+}
+
+#Logo{
+    margin: 5px 0px 50px 0px;
+}
+
+#Img_Lac, #Img_Foret{
+    margin: 60px 0px;
+}
+
+body{
+    max-width: 960px;
+    background-color: #394a51;
+    position: relative;
+    margin: 0 auto;
+}
+
+main{
+    background-color: #fbf2d5;
+    font-family: 'Roboto';
+    font-size: 20px;
+    padding: 20px 90px;
+}
+
+
+h1{
+    color: #fdcb87;
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 4px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+h2{
+    color: #7fa99b;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+p{
+    line-height: 30px;
+}
+
+.paragraphe{
+    padding: 0px 80px;
+    
+}
+
+.sous_paragraphe{
+    padding: none;
+    padding: 0px 80px 0px 20px;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    font-style: italic;
+    color: #394a51;
+    border-left: 2px solid #7fa99b;
+}
+
+span{
+    color: #7fa99b;
+}
+
+ul{
+    padding: 8px 0px;
+    list-style: square inside;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #394a51;
+}
