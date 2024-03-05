@@ -1,0 +1,5 @@
+git init
+git add fichier_1 fichier_2 etc....
+git commit -m "Mettre un commentaire"
+git push
+git pull
