@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-width: 960px;
+    background-color: #EFE784;
+    font-family: 'Roboto';
+    margin: 0 auto;
+}
+
+.header{
+    position: relative;
+    height: 350px;
+}
+
+
+.Img_Entête, .Logo_header, .h1{
+    position: absolute;
+}
+
+.Logo_header{
+    top: 97px;
+    left: 273px;
+}
+
+.h1{
+
+    top: 230px;
+    left: 320px;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    color: #EFE784;
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 23px;
+}
+
+main{
+    
+    background-color: #7fa99b;
+    font-size: 20px;
+}
+
+.intro{
+    background-color: #3E3838
+}
+
+h2{
+    display: inline-block;
+    
+    color: #EFE784;
+    font-size: 24px;
+    border-top: 1px solid #EFE784;
+    border-bottom: 1px solid #EFE784;
+}
+
+p{
+    line-height: 30px;
+}
+
+.paragraphe{
+    padding: 0px 80px;
+    
+}
+
+.sous_paragraphe{
+    padding: none;
+    padding: 0px 80px 0px 20px;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    font-style: italic;
+    color: #394a51;
+    border-left: 2px solid #7fa99b;
+}
+
+span{
+    color: #7fa99b;
+}
+
+ul{
+    padding: 8px 0px;
+    list-style: square inside;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #394a51;
+}
