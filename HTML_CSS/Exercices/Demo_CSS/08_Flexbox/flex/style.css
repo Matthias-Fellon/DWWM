@@ -1,0 +1,41 @@
+#container{
+    display: flex;
+    /* background-color: cadetblue; */
+    height: 500px;
+    width: 500px;
+    border: 2px solid sienna;
+    /* margin: 10% auto; */
+}
+
+#flex-item_1{
+    background-color: red;
+    /* width: 200px; */
+    /* height: 50px;  */
+
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* flex-basis: 200px; */
+    flex: 4 1 200px; /* Compresse les lignes "flex-grow", "flex-shrink" et "flex-basis" en une seule ligne*/
+}
+
+#flex-item_2{
+    background-color: blue;
+    /* width: 200px; */
+    /* height: 500px; */
+
+    /* flex-grow: 4; */
+    /* flex-shrink: 0; */
+    /* flex-basis: 200px; */
+    flex: 4 1 200px; /* Compresse les lignes "flex-grow", "flex-shrink" et "flex-basis" en une seule ligne*/
+}
+
+#flex-item_3{
+    background-color: yellow;
+    /* width: 200px; */
+    /* height: 500px; */
+
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* flex-basis: 200px; */
+    flex: 4 1 200px;/* Compresse les lignes "flex-grow", "flex-shrink" et "flex-basis" en une seule ligne*/
+}
