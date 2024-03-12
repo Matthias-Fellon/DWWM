@@ -10,11 +10,11 @@ div{
 
 .grid{
     width: 50%;
-    height: 90hv;
+    height: 90vh;
     margin: auto;
     display: grid;
-    grid-template-columns:repeat(4, 1fr);
-    grid-template-rows: repeat(5, 170px);
+    grid-template-columns: 150px repeat(3, 1fr);
+    grid-template-rows: 100px repeat(3, 200px) 100px;
     gap: 20px;
 }
 
@@ -22,28 +22,18 @@ div{
     background-color: red;
     font-family: 'Roboto';
     font-size: 20px;
+    padding: 8px;
     color: white;
 }
 
 .item1{
+
     grid-column:1/5 ;
 }
 
 .item2{
     grid-row: 2/5;
 }
-
-/* .item3{
-    
-}
-
-.item4{
-    
-}
-
-.item5{
-    
-} */
 
 .item6{
     grid-row: 3/5;

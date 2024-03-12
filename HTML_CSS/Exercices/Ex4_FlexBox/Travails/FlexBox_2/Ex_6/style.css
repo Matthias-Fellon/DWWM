@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+* .container {
+  width: 90%;
+  height: 90vh;
+  margin: 1% auto;
+  padding: 2%;
+  background-color: wheat;
+  display: flex;
+  flex-flow: row nowrap;
+}
+* .container .item {
+  background-color: blue;
+}
+* .container .container {
+  background-color: lightblue;
+  display: flex;
+  flex-flow: column nowrap;
+}
+* .container .container .item {
+  background-color: greenyellow;
+}
+* .container .container .container .item {
+  background-color: gray;
+}
+* .container .container .container .container .item {
+  background-color: pink;
+}
+* .container .container .container .container .item {
+  background-color: aqua;
+}
+* .container .container .item {
+  background-color: rosybrown;
+}
