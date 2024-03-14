@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 }
-* .container {
+.container {
   width: 90%;
   height: 90vh;
   margin: 1% auto;
@@ -12,26 +12,33 @@
   display: flex;
   flex-flow: row nowrap;
 }
-* .container .item {
+.container .item {
   background-color: blue;
 }
-* .container .container {
+.container .container_2 {
   background-color: lightblue;
   display: flex;
   flex-flow: column nowrap;
-}
-* .container .container .item {
-  background-color: greenyellow;
-}
-* .container .container .container .item {
-  background-color: gray;
-}
-* .container .container .container .container .item {
-  background-color: pink;
-}
-* .container .container .container .container .item {
-  background-color: aqua;
-}
-* .container .container .item {
-  background-color: rosybrown;
+  /*.item{
+            background-color: greenyellow;
+        }
+
+        .container{
+            .item{
+                background-color: gray;
+            }
+            .container{
+                .item{
+                    background-color: pink;
+                }
+
+                .item{
+                    background-color: aqua;
+                }
+            }
+        }
+
+        .item{
+            background-color: rosybrown;
+        }*/
 }
