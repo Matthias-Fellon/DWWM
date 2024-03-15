@@ -8,8 +8,8 @@ git --global user "Nom d'utilisateur"
 git add fichier_1 fichier_2 etc....
 git commit -m "Mettre un commentaire"
 git push
-git push -u origin main ---> maniere plus propre de push le travail
-git pull
+git push -u origin NonDeLaBranche ---> maniere plus propre de push le travail
+git pull ---> obtenir des fichiers envoyés par d'autres sur le projet
 
 git log
 git status
