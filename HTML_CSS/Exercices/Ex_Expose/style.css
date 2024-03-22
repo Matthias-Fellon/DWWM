@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header .navbar {
+  display: flex;
+  background-color: #ECEFD8;
+  height: 102px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .navbar .p_nav {
+  font-family: Roboto Condensed;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23.44px;
+  letter-spacing: 0.23em;
+  text-align: center;
+  color: black;
+}
+header .header {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+header .header h1 {
+  position: absolute;
+  font-family: Roboto Condensed;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 37.29px;
+  letter-spacing: 0.085em;
+  text-align: center;
+}
+main .bienvenue {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+main .bienvenue h2 {
+  font-family: Roboto Condensed;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35.16px;
+  text-align: left;
+  color: #393939;
+}
+@media screen and (min-width: 768px) {
+  display: none;
+}
