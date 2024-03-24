@@ -3,78 +3,256 @@
     margin: 0;
     padding: 0;
 }
-
-header{
-    .navbar{
-        display: flex;
-        background-color: #ECEFD8;
-        height: 102px;
-        justify-content: space-evenly;
-        align-items: center;
-        .p_nav{
-            font-family: Roboto Condensed;
-            font-size: 20px;
-            font-weight: 300;
-            line-height: 23.44px;
-            letter-spacing: 0.23em;
-            text-align: center;
-            color: black;
+body{
+    font-family: Roboto Condensed, sans-serif;
+    max-width: 768px;
+    header{
+        .navbar{
+            height: 102px;
+            background-color: #ECEFD8;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            .p_nav{
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 23.44px;
+                letter-spacing: 0.23em;
+                text-align: center;
+                color: black;
+            }
+        }
+        .header{
+            height: 560px;
+            background: url(/Exercices/Ex_Expose/Images/Tablet/header-bg_mobile.png) no-repeat center;
+            background: size 100%; //a tester
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5%;
+    
+            h1{
+                display: inline-block;
+                font-size: 28px;
+                font-weight: 400;
+                line-height: 37.29px;
+                letter-spacing: 0.085em;
+                text-align: center;
+                color: white;
+                border-bottom: solid 1px white;
+                border-top: solid 1px white;
+            }
         }
     }
-    .header{
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        
-        // #img_header_bg{
+    
+    main{
+        .bienvenue{
+            background-color: #ECEFD8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0px;
             
-            
-        // }
+            & :nth-child(1){
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 35.16px;
+                text-align: left;
+                color: #393939;
+            }
 
-        // #img_logo_header{
-            
-        // }
+            & :nth-child(2){
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 35.28px;
+                letter-spacing: 0.005em;
+                text-align: center;
+                color: #191A18;
+                width: 518px;
+            }
+
+            & :nth-child(3){
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 28.22px;
+                letter-spacing: 0.005em;
+                text-align: center;
+                color: #EED690;
+                background-color: #849561;
+                border: solid 1px white;
+                padding: 15px 40px;
+            }
+        }
+        .moment{
+            background-color: #393939;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 30px 10px;
+            padding-bottom: 80px;
+
+            h3{
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 26.11px;
+                letter-spacing: 0.155em;
+                text-align: center;
+                color: #849561;
+            }
+
+            .conteneur{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                gap: 80px 60px;
+
+                .fragment{
+                    width: 316px;
+                    background-color: #849561;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+
+                    & :nth-child(2){
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 28.13px;
+                        text-align: center;
+                        color: white;
+                    }
+
+                    & :nth-child(3){
+                        font-size: 22px;
+                        font-weight: 400;
+                        line-height: 25.78px;
+                        text-align: center;
+                        color: white;
+                    }
+
+                    & :nth-child(4){
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 23.04px;
+                        letter-spacing: 0.05em;
+                        text-align: center;
+                        color: white;
+                        background-color: #393939;
+                        border: solid 1px #9AB464;
+                        padding: 15px 40px;
+                    }
+                }
+            } 
+        }
+
+        .nympheas{
+            background-color: #1D1B1BFC;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            gap: 30px;
+
+            & :nth-child(1){
+                width: 53px;
+                height: 73px;
+                border: solid 1px white;
+            }
+
+            & :nth-child(2){
+                font-size: 27px;
+                font-weight: 700;
+                line-height: 5.4px;
+                text-align: center;
+                color: white;
+            }
+
+            & :nth-child(3){
+                font-size: 22px;
+                font-weight: 300;
+                line-height: 39.58px;
+                letter-spacing: 0.015em;
+                text-align: center;
+                color: white;
+            }
+        }
+
+        .echo_fondateur{
+            background-color: #393939;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 30px 10px;
+            padding-bottom: 80px;
+
+            h3{
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 26.11px;
+                letter-spacing: 0.155em;
+                text-align: center;
+                color: #849561;
+            }
+
+            .conteneur{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                gap: 80px 60px;
+
+                .fragment{
+                    width: 316px;
+                    background-color: #849561;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px;
+                    gap: 20px;
+
+                    & :nth-child(1){
+                        border-radius: 50%;
+                    }
+
+                    & :nth-child(2){
+                        font-size: 20px;
+                        font-weight: 700;
+                        letter-spacing: 0.23em;
+                        line-height: 37.29px;
+                        text-align: center;
+                        color: white;
+                        border-top: solid 1px white;
+                    }
+
+                    & :nth-child(3){
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 19.15px;
+                        letter-spacing: 0.235em;
+                        text-align: left;
+                        color: white;
+                    }
+
+                    & :nth-child(4){
+                        display: flex;
+                        flex-flow: row wrap;
+                        column-gap: 20px;
         
-        h1{
-            position: absolute;
-            font-family: Roboto Condensed;
-            font-size: 28px;
-            font-weight: 400;
-            line-height: 37.29px;
-            letter-spacing: 0.085em;
-            text-align: center;
+                        // & :nth-child(1,2,3){ //fonction nth-child(1,2,3) marche pas 
+                        //     background-color: #393939;
+                        // }
+                    }
+                }
+            }
         }
     }
 }
 
-main{
-    .bienvenue{
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        h2{
-            font-family: Roboto Condensed;
-            font-size: 30px;
-            font-weight: 700;
-            line-height: 35.16px;
-            text-align: left;
-            color: #393939;
-        }
-    }
-    .moment{
-
-    }
-    .nypheas{
-
-    }
-    .echo_fondateur{
-
-    }
-}
 
 //MEDIA QUERRY
 
-@media screen and(min-width:768px){
-    display: none;
-}
+// @media screen and(min-width:768px){
+//     display: none;
+// }

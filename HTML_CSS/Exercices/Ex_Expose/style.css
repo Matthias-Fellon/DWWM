@@ -3,15 +3,18 @@
   margin: 0;
   padding: 0;
 }
-header .navbar {
-  display: flex;
-  background-color: #ECEFD8;
+body {
+  font-family: Roboto Condensed, sans-serif;
+  max-width: 768px;
+}
+body header .navbar {
   height: 102px;
+  background-color: #ECEFD8;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-header .navbar .p_nav {
-  font-family: Roboto Condensed;
+body header .navbar .p_nav {
   font-size: 20px;
   font-weight: 300;
   line-height: 23.44px;
@@ -19,34 +22,199 @@ header .navbar .p_nav {
   text-align: center;
   color: black;
 }
-header .header {
+body header .header {
+  height: 560px;
+  background: url(/Exercices/Ex_Expose/Images/Tablet/header-bg_mobile.png) no-repeat center;
+  background: size 100%;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
   justify-content: center;
+  gap: 5%;
 }
-header .header h1 {
-  position: absolute;
-  font-family: Roboto Condensed;
+body header .header h1 {
+  display: inline-block;
   font-size: 28px;
   font-weight: 400;
   line-height: 37.29px;
   letter-spacing: 0.085em;
   text-align: center;
+  color: white;
+  border-bottom: solid 1px white;
+  border-top: solid 1px white;
 }
-main .bienvenue {
+body main .bienvenue {
+  background-color: #ECEFD8;
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   align-items: center;
+  gap: 20px;
+  padding: 20px 0px;
 }
-main .bienvenue h2 {
-  font-family: Roboto Condensed;
+body main .bienvenue :nth-child(1) {
   font-size: 30px;
   font-weight: 700;
   line-height: 35.16px;
   text-align: left;
   color: #393939;
 }
-@media screen and (min-width: 768px) {
-  display: none;
+body main .bienvenue :nth-child(2) {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 35.28px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #191A18;
+  width: 518px;
+}
+body main .bienvenue :nth-child(3) {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28.22px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #EED690;
+  background-color: #849561;
+  border: solid 1px white;
+  padding: 15px 40px;
+}
+body main .moment {
+  background-color: #393939;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 10px;
+  padding-bottom: 80px;
+}
+body main .moment h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.11px;
+  letter-spacing: 0.155em;
+  text-align: center;
+  color: #849561;
+}
+body main .moment .conteneur {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 80px 60px;
+}
+body main .moment .conteneur .fragment {
+  width: 316px;
+  background-color: #849561;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+body main .moment .conteneur .fragment :nth-child(2) {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.13px;
+  text-align: center;
+  color: white;
+}
+body main .moment .conteneur .fragment :nth-child(3) {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 25.78px;
+  text-align: center;
+  color: white;
+}
+body main .moment .conteneur .fragment :nth-child(4) {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23.04px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: white;
+  background-color: #393939;
+  border: solid 1px #9AB464;
+  padding: 15px 40px;
+}
+body main .nympheas {
+  background-color: #1D1B1BFC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+body main .nympheas :nth-child(1) {
+  width: 53px;
+  height: 73px;
+  border: solid 1px white;
+}
+body main .nympheas :nth-child(2) {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 5.4px;
+  text-align: center;
+  color: white;
+}
+body main .nympheas :nth-child(3) {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 39.58px;
+  letter-spacing: 0.015em;
+  text-align: center;
+  color: white;
+}
+body main .echo_fondateur {
+  background-color: #393939;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 10px;
+  padding-bottom: 80px;
+}
+body main .echo_fondateur h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.11px;
+  letter-spacing: 0.155em;
+  text-align: center;
+  color: #849561;
+}
+body main .echo_fondateur .conteneur {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 80px 60px;
+}
+body main .echo_fondateur .conteneur .fragment {
+  width: 316px;
+  background-color: #849561;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+body main .echo_fondateur .conteneur .fragment :nth-child(1) {
+  border-radius: 50%;
+}
+body main .echo_fondateur .conteneur .fragment :nth-child(2) {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.23em;
+  line-height: 37.29px;
+  text-align: center;
+  color: white;
+  border-top: solid 1px white;
+}
+body main .echo_fondateur .conteneur .fragment :nth-child(3) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.15px;
+  letter-spacing: 0.235em;
+  text-align: left;
+  color: white;
+}
+body main .echo_fondateur .conteneur .fragment :nth-child(4) {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 20px;
 }
