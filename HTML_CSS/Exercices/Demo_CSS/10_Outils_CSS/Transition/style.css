@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    /* transition-duration: 2s;
+    transition-property: background-color;
+    transition-timing-function: ease-in; */
+
+    /* transition-property: background-color, height;
+    transition: 2s ease-in-out 1s; */
+    
+    transition: transform 1s ease-out 1s;
+}
+
+.box:hover{
+    background-color: green;
+    height: 800px;
+    transform: rotate(720deg);
+}
