@@ -4,10 +4,10 @@
   padding: 0;
 }
 body {
-  font-family: Roboto Condensed, sans-serif;
   min-width: 558px;
   max-width: 1920px;
   margin: auto;
+  font-family: Roboto Condensed, sans-serif;
 }
 body header .navbar {
   height: 102px;
@@ -24,7 +24,7 @@ body header .navbar .p_nav {
   color: black;
 }
 body header .header {
-  background: url(/Ex_Expose/Images/header-bg.png) no-repeat center;
+  background: url(/Images/header-bg.png) no-repeat center;
   background-size: 100%;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@ body main .bienvenue {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5% 13%;
+  padding: 5% 0%;
   gap: 20px;
 }
 body main .bienvenue :nth-child(1) {
@@ -60,6 +60,7 @@ body main .bienvenue :nth-child(1) {
   color: #393939;
 }
 body main .bienvenue :nth-child(2) {
+  max-width: 560px;
   font-size: 20px;
   font-weight: 300;
   line-height: 35px;
@@ -97,7 +98,7 @@ body main .moment .conteneur {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  gap: 100px 10%;
+  gap: 100px 50px;
 }
 body main .moment .conteneur .fragment {
   width: 316px;
@@ -109,12 +110,12 @@ body main .moment .conteneur .fragment {
   gap: 20px;
 }
 body main .moment .conteneur .fragment :nth-child(2) {
+  max-width: 150px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-align: center;
   color: white;
-  padding: 0% 20%;
 }
 body main .moment .conteneur .fragment :nth-child(3) {
   font-size: 22px;
@@ -141,8 +142,7 @@ body main .nympheas {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3% 4%;
-  padding-top: 8%;
+  padding: 3% 2%;
   gap: 35px;
 }
 body main .nympheas :nth-child(1) {
@@ -159,6 +159,7 @@ body main .nympheas :nth-child(2) {
   color: white;
 }
 body main .nympheas :nth-child(3) {
+  width: 700px;
   font-size: 22px;
   font-weight: 300;
   line-height: 40px;
@@ -197,24 +198,27 @@ body main .echo_fondateur .conteneur .fragment {
   padding: 3%;
   gap: 20px;
 }
-body main .echo_fondateur .conteneur .fragment .personnage {
+body main .echo_fondateur .conteneur .fragment .photo {
+  height: 50px;
+  align-self: center;
+  position: relative;
+  top: -90px;
+}
+body main .echo_fondateur .conteneur .fragment .photo :nth-child(1) {
+  border-radius: 50%;
+}
+body main .echo_fondateur .conteneur .fragment .texte {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
 }
-body main .echo_fondateur .conteneur .fragment .personnage :nth-child(1) {
-  position: relative;
-  top: -17%;
-  align-self: center;
-  border-radius: 50%;
-}
-body main .echo_fondateur .conteneur .fragment .personnage :nth-child(2) {
+body main .echo_fondateur .conteneur .fragment .texte :nth-child(1) {
   align-self: center;
   color: white;
   width: 100%;
 }
-body main .echo_fondateur .conteneur .fragment .personnage :nth-child(3) {
+body main .echo_fondateur .conteneur .fragment .texte :nth-child(2) {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.23em;
@@ -222,7 +226,7 @@ body main .echo_fondateur .conteneur .fragment .personnage :nth-child(3) {
   text-align: left;
   color: white;
 }
-body main .echo_fondateur .conteneur .fragment .personnage :nth-child(4) {
+body main .echo_fondateur .conteneur .fragment .texte :nth-child(3) {
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -231,13 +235,14 @@ body main .echo_fondateur .conteneur .fragment .personnage :nth-child(4) {
   color: white;
 }
 body main .echo_fondateur .conteneur .fragment .icones {
-  width: 50%;
+  height: 39px;
   display: flex;
   flex-flow: row nowrap;
   column-gap: 15px;
 }
 body main .echo_fondateur .conteneur .fragment .icones :nth-child(-n + 3) {
-  padding: 7%;
+  padding: 10px;
+  width: 39px;
   background-color: #393939;
 }
 @media screen and (min-width: 768px) {
@@ -248,16 +253,16 @@ body main .echo_fondateur .conteneur .fragment .icones :nth-child(-n + 3) {
     font-size: 16px;
   }
   body header .header {
-    padding: 5% 0px;
+    height: 400px;
   }
   body header .header h1 {
     font-size: 24px;
   }
-  body main .bienvenue {
-    padding: 5% 32%;
+  body main .bienvenue :nth-child(2) {
+    max-width: 620px;
   }
   body main .moment {
-    padding: 2% 3%;
+    padding: 3%;
     padding-bottom: 5%;
   }
   body main .moment h3 {
@@ -277,7 +282,6 @@ body main .echo_fondateur .conteneur .fragment .icones :nth-child(-n + 3) {
   }
   body main .moment .conteneur .fragment :nth-child(2) {
     font-size: 20px;
-    padding: 0% 20%;
   }
   body main .moment .conteneur .fragment :nth-child(3) {
     font-size: 14px;
@@ -288,10 +292,8 @@ body main .echo_fondateur .conteneur .fragment .icones :nth-child(-n + 3) {
     padding: 15px 30px;
   }
   body main .nympheas {
-    background: url(/Ex_Expose/Images/modern-industrial.png) no-repeat center;
-    background-size: 100%;
-    padding: 3% 25%;
-    padding-top: 2%;
+    background: url(/Images/modern-industrial.png) no-repeat center;
+    background-size: cover;
   }
   body main .nympheas :nth-child(1) {
     width: 90px;
@@ -302,6 +304,7 @@ body main .echo_fondateur .conteneur .fragment .icones :nth-child(-n + 3) {
     font-size: 22px;
   }
   body main .nympheas :nth-child(3) {
+    max-width: 800px;
     font-size: 16px;
     line-height: 30px;
   }
@@ -316,16 +319,17 @@ body main .echo_fondateur .conteneur .fragment .icones :nth-child(-n + 3) {
     width: 460px;
     gap: 20px;
   }
-  body main .echo_fondateur .conteneur .fragment .personnage {
+  body main .echo_fondateur .conteneur .fragment .photo {
+    height: 100px;
+    transform: scale(1.4);
+  }
+  body main .echo_fondateur .conteneur .fragment .texte {
     gap: 20px;
   }
-  body main .echo_fondateur .conteneur .fragment .personnage :nth-child(1) {
-    transform: scale(1.5);
-  }
-  body main .echo_fondateur .conteneur .fragment .personnage :nth-child(3) {
+  body main .echo_fondateur .conteneur .fragment .texte :nth-child(2) {
     font-size: 20px;
   }
-  body main .echo_fondateur .conteneur .fragment .personnage :nth-child(4) {
+  body main .echo_fondateur .conteneur .fragment .texte :nth-child(3) {
     font-size: 14px;
   }
 }
