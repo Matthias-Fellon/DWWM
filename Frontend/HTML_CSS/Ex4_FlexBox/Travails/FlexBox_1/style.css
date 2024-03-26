@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.item {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    background-color: blue;
+    text-align: center;
+    font-size: 100px;
+    margin: 10px;
+    flex-basis: 120px;
+}

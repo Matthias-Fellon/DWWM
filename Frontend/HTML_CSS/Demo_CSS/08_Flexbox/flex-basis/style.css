@@ -1,0 +1,30 @@
+#container{
+    display: flex;
+    flex-direction: row;
+    /* background-color: cadetblue; */
+    height: 500px;
+    /* width: 700px; */
+    border: 2px solid sienna;
+    /* margin: 10% auto; */
+}
+
+#flex-item_1{
+    background-color: red;
+    /* width: 200px; */
+    /* height: 50px; */
+    flex-basis: auto;
+    }
+
+#flex-item_2{
+    background-color: blue;
+    /* width: 200px; */
+    /* height: 500px; */
+    flex-basis: auto;
+}
+
+#flex-item_3{
+    background-color: yellow;
+    /* width: 200px; */
+    /* height: 500px; */
+    flex-basis: auto;
+}

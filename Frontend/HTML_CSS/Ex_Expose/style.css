@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-width: 558px;
+  max-width: 1920px;
+  margin: auto;
+  font-family: Roboto Condensed, sans-serif;
+}
+body header .navbar {
+  height: 102px;
+  background-color: #ECEFD8;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body header .navbar .p_nav {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.23em;
+  text-align: center;
+  color: black;
+}
+body header .header {
+  background: url(/Images/header-bg.png) no-repeat center;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10% 0px;
+  gap: 20px;
+}
+body header .header h1 {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 0.085em;
+  text-align: center;
+  color: white;
+  border-bottom: solid 1px white;
+  border-top: solid 1px white;
+}
+body main .bienvenue {
+  background-color: #ECEFD8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 0%;
+  gap: 20px;
+}
+body main .bienvenue :nth-child(1) {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+  color: #393939;
+}
+body main .bienvenue :nth-child(2) {
+  max-width: 560px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 35px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #191A18;
+}
+body main .bienvenue :nth-child(3) {
+  background-color: #849561;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #EED690;
+  border: solid 1px white;
+  padding: 20px 40px;
+}
+body main .moment {
+  background-color: #393939;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 3%;
+  padding-bottom: 13%;
+  gap: 50px;
+}
+body main .moment h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.155em;
+  text-align: center;
+  color: #849561;
+}
+body main .moment .conteneur {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 100px 50px;
+}
+body main .moment .conteneur .fragment {
+  width: 316px;
+  background-color: #849561;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0% 3%;
+  gap: 20px;
+}
+body main .moment .conteneur .fragment :nth-child(2) {
+  max-width: 150px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: white;
+}
+body main .moment .conteneur .fragment :nth-child(3) {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: white;
+}
+body main .moment .conteneur .fragment :nth-child(4) {
+  position: relative;
+  bottom: -27px;
+  background-color: #393939;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: white;
+  border: solid 1px #9AB464;
+  padding: 15px 40px;
+}
+body main .nympheas {
+  background-color: #1D1B1BFC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3% 2%;
+  gap: 35px;
+}
+body main .nympheas :nth-child(1) {
+  width: 90px;
+  height: 85px;
+  padding: 10px 20px;
+  border: solid 1px white;
+}
+body main .nympheas :nth-child(2) {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  color: white;
+}
+body main .nympheas :nth-child(3) {
+  width: 700px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: 0.015em;
+  text-align: center;
+  color: white;
+}
+body main .echo_fondateur {
+  background-color: #393939;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7% 3.5%;
+  gap: 130px;
+}
+body main .echo_fondateur h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.155em;
+  text-align: center;
+  color: #849561;
+}
+body main .echo_fondateur .conteneur {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 100px 35px ;
+}
+body main .echo_fondateur .conteneur .fragment {
+  width: 336px;
+  background-color: #849561;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3%;
+  gap: 20px;
+}
+body main .echo_fondateur .conteneur .fragment .photo {
+  height: 50px;
+  align-self: center;
+  position: relative;
+  top: -90px;
+}
+body main .echo_fondateur .conteneur .fragment .photo :nth-child(1) {
+  border-radius: 50%;
+}
+body main .echo_fondateur .conteneur .fragment .texte {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+body main .echo_fondateur .conteneur .fragment .texte :nth-child(1) {
+  align-self: center;
+  color: white;
+  width: 100%;
+}
+body main .echo_fondateur .conteneur .fragment .texte :nth-child(2) {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.23em;
+  line-height: 37px;
+  text-align: left;
+  color: white;
+}
+body main .echo_fondateur .conteneur .fragment .texte :nth-child(3) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.235em;
+  text-align: left;
+  color: white;
+}
+body main .echo_fondateur .conteneur .fragment .icones {
+  height: 39px;
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 15px;
+}
+body main .echo_fondateur .conteneur .fragment .icones :nth-child(-n + 3) {
+  padding: 10px;
+  width: 39px;
+  background-color: #393939;
+}
+@media screen and (min-width: 768px) {
+  body header .navbar {
+    height: 60px;
+  }
+  body header .navbar .p_nav {
+    font-size: 16px;
+  }
+  body header .header {
+    height: 400px;
+  }
+  body header .header h1 {
+    font-size: 24px;
+  }
+  body main .bienvenue :nth-child(2) {
+    max-width: 620px;
+  }
+  body main .moment {
+    padding: 3%;
+    padding-bottom: 5%;
+  }
+  body main .moment h3 {
+    font-size: 22px;
+  }
+  body main .moment .conteneur {
+    gap: 100px 7%;
+  }
+  body main .moment .conteneur .fragment {
+    width: 252px;
+    padding: 0% 2%;
+  }
+  body main .moment .conteneur .fragment :nth-child(1) {
+    position: relative;
+    top: -20px;
+    transform: scale(0.8);
+  }
+  body main .moment .conteneur .fragment :nth-child(2) {
+    font-size: 20px;
+  }
+  body main .moment .conteneur .fragment :nth-child(3) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  body main .moment .conteneur .fragment :nth-child(4) {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+  body main .nympheas {
+    background: url(/Images/modern-industrial.png) no-repeat center;
+    background-size: cover;
+  }
+  body main .nympheas :nth-child(1) {
+    width: 90px;
+    height: 85px;
+    padding: 10px 20px;
+  }
+  body main .nympheas :nth-child(2) {
+    font-size: 22px;
+  }
+  body main .nympheas :nth-child(3) {
+    max-width: 800px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  body main .echo_fondateur {
+    padding: 7% 3.5%;
+    gap: 130px;
+  }
+  body main .echo_fondateur h3 {
+    font-size: 22px;
+  }
+  body main .echo_fondateur .conteneur .fragment {
+    width: 460px;
+    gap: 20px;
+  }
+  body main .echo_fondateur .conteneur .fragment .photo {
+    height: 100px;
+    transform: scale(1.4);
+  }
+  body main .echo_fondateur .conteneur .fragment .texte {
+    gap: 20px;
+  }
+  body main .echo_fondateur .conteneur .fragment .texte :nth-child(2) {
+    font-size: 20px;
+  }
+  body main .echo_fondateur .conteneur .fragment .texte :nth-child(3) {
+    font-size: 14px;
+  }
+}

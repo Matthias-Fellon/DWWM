@@ -1,0 +1,19 @@
+.box-red{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border: 1px solid black;
+    position: relative;
+    top: 80px;
+    left: 50px;
+    z-index: 1;
+}
+
+.box-green{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border: 1px solid black;
+    position: relative;
+    z-index: 0;
+}
