@@ -1,18 +1,16 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.container{
-    width: 50%;
-    height: 90vh;
-    margin: 1% auto;
-    padding: 2%;
-    background-color: lightblue;
-
-    display: flex;
-    flex-flow: column wrap;
-    align-items: stretch;
-    gap: 2%;
+.container_1 {
+  width: 50%;
+  height: 90vh;
+  margin: 1% auto;
+  padding: 2%;
+  background-color: lightblue;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: stretch;
+  gap: 2%;
 }
