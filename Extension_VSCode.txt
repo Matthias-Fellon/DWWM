@@ -1,0 +1,11 @@
+Auto Rename Tag
+Better Comments
+Code Runner
+CodeSnap
+CSS Peek
+Easy LESS
+HTML CSS Support
+Hungry Delete
+Live Server
+Material Icon Theme
+Prettier - Code formatter
