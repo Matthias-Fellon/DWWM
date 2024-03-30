@@ -1,0 +1,10 @@
+.global-container {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  video {
+    object-fit: cover;
+  }
+  .parallax-section {
+    background: url('img/parallax.jpg') no-repeat bottom / cover fixed; min-height: 250px;
+  }
