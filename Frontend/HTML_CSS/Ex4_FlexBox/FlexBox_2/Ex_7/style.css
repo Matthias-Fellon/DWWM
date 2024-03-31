@@ -2,15 +2,49 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-size: 1.3rem;
+  color: white;
 }
 .container_1 {
-  width: 50%;
+  width: 30%;
   height: 90vh;
   margin: 1% auto;
-  padding: 2%;
-  background-color: lightblue;
+  padding: 1%;
+  border: solid 2px black;
   display: flex;
   flex-flow: column wrap;
   align-items: stretch;
-  gap: 2%;
+  gap: 1%;
+}
+.container_1 .header {
+  background-color: blue;
+  padding: 2%;
+}
+.container_1 .hero {
+  flex-grow: 3;
+  background-color: red;
+  padding: 2%;
+}
+.container_1 .container_2 {
+  flex-grow: 15;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  gap: 1%;
+}
+.container_1 .container_2 .content {
+  flex-grow: 2;
+  background-color: green;
+  padding: 2%;
+}
+.container_1 .container_2 .sidebar {
+  flex-grow: 1;
+  background-color: purple;
+  padding: 2%;
+}
+.container_1 .footer {
+  background-color: grey;
+  padding: 2%;
 }
