@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container_1{
+    width: 40%;
+    height: 50vh;
+    margin: 10% auto;
+    padding: 2%;
+    background-color: lightblue;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    text-align: center;
+    gap: 2%;
+
+    .container_2{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: stretch;
+        justify-content:space-around;
+        gap: 1%;
+
+        & :nth-child(n+1){
+            
+            background-color: blue;
+        }
+
+    }
+
+    .item{
+        border-radius: 50%;
+        background-color: aqua;
+    }
+
+    .container_3{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: stretch;
+        justify-content:space-around;
+        gap: 1%;
+
+        & :nth-child(n+1){
+            
+            background-color: blue;
+        }
+    }
+}
