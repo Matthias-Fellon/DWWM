@@ -1,0 +1,155 @@
+{
+  "main": {
+    "id": "66a9875c034f8ff0",
+    "type": "split",
+    "children": [
+      {
+        "id": "0dba8afee860a650",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d69bc6077f2d4db2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Aide mémoire - Général.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d51347360e9375e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "5d8d3ca125a44147",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6bfae04e7df5f838",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "29c7463ede2f2548",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b5c9607b03487b6e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a94e1dbd5964696e",
+    "type": "split",
+    "children": [
+      {
+        "id": "2f1988e1a6882dbb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2f2e8f7c0fcd7f80",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Aide mémoire - Général.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "419f3610095c98fa",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Aide mémoire - Général.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d0496e48dd049a5d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ed88ae89d0bc3973",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Aide mémoire - Général.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "d69bc6077f2d4db2",
+  "lastOpenFiles": [
+    "Aide mémoire - Manipulation du DOM.md",
+    "Aide mémoire - Tableaux.md",
+    "Sommaire.md"
+  ]
+}
