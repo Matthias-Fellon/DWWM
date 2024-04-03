@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Aide mémoire - Général.md",
+                "file": "Exercices/Exercices - Conditions & boucles.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Aide mémoire - Général.md",
+                "file": "Exercices/Exercices - Conditions & boucles.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Aide mémoire - Général.md",
+                "file": "Exercices/Exercices - Conditions & boucles.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Aide mémoire - Général.md"
+                "file": "Exercices/Exercices - Conditions & boucles.md"
               }
             }
           }
@@ -148,6 +148,13 @@
   },
   "active": "d69bc6077f2d4db2",
   "lastOpenFiles": [
+    "Cours/2- Syntaxe de base.md",
+    "Cours/5- Fonctions avancées.md",
+    "Cours/4- Gestion des tableaux et Objets.md",
+    "Cours/3- Manipulation du DOM.md",
+    "Cours/1- Introduction à JavaScript.md",
+    "Exercices/Exercices - Fonctions.md",
+    "Aide mémoire - Général.md",
     "Aide mémoire - Manipulation du DOM.md",
     "Aide mémoire - Tableaux.md",
     "Sommaire.md"
