@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cours/4- Gestion des tableaux et Objets.md",
+                "file": "Aide mémoire - Tableaux.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cours/4- Gestion des tableaux et Objets.md",
+                "file": "Exercices/Exercices - Fonctions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cours/4- Gestion des tableaux et Objets.md",
+                "file": "Exercices/Exercices - Fonctions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cours/4- Gestion des tableaux et Objets.md"
+                "file": "Exercices/Exercices - Fonctions.md"
               }
             }
           }
@@ -159,10 +158,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b22644221b3be0dd",
+  "active": "d69bc6077f2d4db2",
   "lastOpenFiles": [
-    "Exercices/Exercices - Fonctions.md",
+    "Aide mémoire - Tableaux.md",
     "Cours/4- Gestion des tableaux et Objets.md",
+    "Exercices/Exercices - Fonctions.md",
     "Cours/2- Syntaxe de base.md",
     "Cours/1- Introduction à JavaScript.md",
     "Cours/6- Concepts Avancés.md",
@@ -172,7 +172,6 @@
     "Cours/3- Manipulation du DOM.md",
     "Aide mémoire - Général.md",
     "Aide mémoire - Manipulation du DOM.md",
-    "Aide mémoire - Tableaux.md",
     "Sommaire.md"
   ]
 }
