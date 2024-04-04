@@ -1,6 +1,6 @@
 //Variables et Opérations Mathémtiques de Base
 const btn_add = document.querySelector(".add")
-btn_add.addEventListener("click", (event) => {
+btn_add.addEventListener("click", () => {
     const a = parseInt(prompt('Entrer un chiffre'));
     const b = parseInt(prompt('Entrer un autre chiffre')); //"parseInt" est utiliser pour spécifier une valeur numérique et non une chaîne de charactère, évite la concaténation lors du calcul 
     const h1 = document.createElement('h1');
