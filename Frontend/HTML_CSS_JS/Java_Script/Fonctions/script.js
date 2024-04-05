@@ -46,8 +46,10 @@ btn_Ex3.addEventListener("click", () => {
     const fruits = ['Apple', 'Banana', 'Apple', 'Orange', 'Banana', 'Apple'];
     console.log("Filtré : " + removeDuplicates(fruits)); // Résultat attendu : ['Apple', 'Banana', 'Orange']
 
+    console.log(fruits);
+    console.log(removeDuplicates(fruits));
     const p3 = document.createElement("p");
-    p3.innerText = `Tableau avec doublons : ${fruits}\nTableau sans doublons : ${removeDuplicates(fruits)}`; //PROBLEMES
+    p3.innerText = `Tableau avec doublons : ${fruits}\nTableau sans doublons : ${removeDuplicates(fruits)}`; // ! PROBLEMES
     document.querySelector(".Ex_3").appendChild(p3);  
 });
 
