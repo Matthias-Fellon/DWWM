@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exercices/Exercices - Fonctions.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b22644221b3be0dd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Aide mémoire - Tableaux.md",
+                "file": "Cours/4- Gestion des tableaux et Objets.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Exercices/Exercices - Fonctions.md",
+                "file": "Cours/4- Gestion des tableaux et Objets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Exercices/Exercices - Fonctions.md",
+                "file": "Cours/4- Gestion des tableaux et Objets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Exercices/Exercices - Fonctions.md"
+                "file": "Cours/4- Gestion des tableaux et Objets.md"
               }
             }
           }
@@ -160,14 +148,17 @@
   },
   "active": "d69bc6077f2d4db2",
   "lastOpenFiles": [
+    "Exercices/Exercices - Fonctions.md",
+    "Exercices/Exercices - Conditions & boucles.md",
+    "Jeu_Tour_par_Tour/Base.md",
+    "Jeu_Tour_par_Tour",
+    "Nouveau dossier",
     "Aide mémoire - Tableaux.md",
     "Cours/4- Gestion des tableaux et Objets.md",
-    "Exercices/Exercices - Fonctions.md",
     "Cours/2- Syntaxe de base.md",
     "Cours/1- Introduction à JavaScript.md",
     "Cours/6- Concepts Avancés.md",
     "Cours/5- Fonctions avancées.md",
-    "Exercices/Exercices - Conditions & boucles.md",
     "Exercices/Exercices - Algo de base.md",
     "Cours/3- Manipulation du DOM.md",
     "Aide mémoire - Général.md",

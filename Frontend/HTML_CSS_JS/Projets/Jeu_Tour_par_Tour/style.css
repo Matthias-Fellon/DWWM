@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+body .ecranAccueil {
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+body .ecranAccueil h1 {
+  font-size: 3rem;
+  color: white;
+  -webkit-text-stroke: 1px #000;
+}
+body .ecranAccueil .boutonsAccueil {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+body .ecranAccueil .boutonsAccueil button:nth-of-type(n+1) {
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+}
+body .ecranAccueil .boutonsAccueil .boutonJouer:hover,
+body .ecranAccueil .boutonsAccueil .boutonRegles:hover,
+body .ecranAccueil .boutonsAccueil .boutonParametes:hover {
+  background-color: aquamarine;
+}
+body .ecranAccueil .boutonsAccueil .modal {
+  display: none;
+  /* Caché par défaut */
+  position: fixed;
+  /* Reste en place */
+  z-index: 1;
+  /* Affiche une couche plus haut */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* Active le scrolling si besoin */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body .ecranAccueil .boutonsAccueil .modal .modalContenu {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+body .ecranAccueil .boutonsAccueil .modal .modalContenu .boutonFermerRegles {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+body .ecranAccueil .boutonsAccueil .modal .modalContenu .boutonFermerRegles:hover {
+  color: #000;
+}
+body .ecranSelection {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+body .ecranSelection .joueurs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+body .ecranSelection .joueurs .joueur_1,
+body .ecranSelection .joueurs .joueur_2 {
+  width: 100%;
+  height: 100%;
+  background-color: lightcoral;
+  text-align: center;
+}
+body .ecranSelection .joueurs .joueur_1 .personnages,
+body .ecranSelection .joueurs .joueur_2 .personnages {
+  display: grid;
+  grid-template-areas: "a a";
+}
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_1,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_1,
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_2,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_2,
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_3,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_3,
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_4,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_4 {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: center;
+}
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_1 .imagePerso,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_1 .imagePerso,
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_2 .imagePerso,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_2 .imagePerso,
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_3 .imagePerso,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_3 .imagePerso,
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_4 .imagePerso,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_4 .imagePerso {
+  width: 100px;
+  height: 100px;
+}
+body .ecranSelection .joueurs .joueur_1 .boutonPret,
+body .ecranSelection .joueurs .joueur_2 .boutonPret {
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+}
+body .ecranSelection .joueurs .joueur_2 {
+  background-color: lightblue;
+}
+body .ecranCombat {
+  display: none;
+}
+body .ecranFin {
+  display: none;
+}
