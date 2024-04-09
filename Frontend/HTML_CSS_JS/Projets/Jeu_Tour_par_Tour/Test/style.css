@@ -1,7 +1,4 @@
-.selected {
-  border: 2px solid blue;
-  /* Par exemple, un style de bordure pour indiquer la sélection */
-}
-.joueur1 .Mage {
-  background-color: red;
+.joueur1 img {
+  width: 10px;
+  height: 10px;
 }

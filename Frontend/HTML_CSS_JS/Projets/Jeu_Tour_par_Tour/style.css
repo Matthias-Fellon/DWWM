@@ -187,7 +187,74 @@ body .ecranSelection .joueurs .joueur2 {
 }
 body .ecranCombat {
   display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+  flex-direction: column;
+  align-items: center;
+}
+body .ecranCombat .champDeBataille {
+  width: 100%;
+  height: 66.6%;
+  background-color: green;
+}
+body .ecranCombat .combatJoueurs {
+  width: 100%;
+  height: 33.3%;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: space-evenly;
+}
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 {
+  display: flex;
+  justify-content: space-around;
+}
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVie,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVie,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVie,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVie {
+  width: 200px;
+  height: 25px;
+  border: 2px solid gray;
+}
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVie::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVie::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVie::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVie::-webkit-progress-bar {
+  background-color: white;
+}
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVie::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVie::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVie::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVie::-webkit-progress-value {
+  background-color: red;
+}
+body .ecranCombat .combatJoueurs .combatJ1 .actionJ1,
+body .ecranCombat .combatJoueurs .combatJ2 .actionJ1,
+body .ecranCombat .combatJoueurs .combatJ1 .actionJ2,
+body .ecranCombat .combatJoueurs .combatJ2 .actionJ2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 50px;
+}
+body .ecranCombat .combatJoueurs .combatJ1 .actionJ1 .boutonAction,
+body .ecranCombat .combatJoueurs .combatJ2 .actionJ1 .boutonAction,
+body .ecranCombat .combatJoueurs .combatJ1 .actionJ2 .boutonAction,
+body .ecranCombat .combatJoueurs .combatJ2 .actionJ2 .boutonAction {
+  width: 70px;
+  height: 30px;
 }
 body .ecranFin {
   display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+  flex-flow: column nowrap;
+  align-items: center;
 }

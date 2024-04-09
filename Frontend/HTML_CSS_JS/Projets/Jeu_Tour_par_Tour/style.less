@@ -8,6 +8,7 @@
 
 body{
     .ecranAccueil{
+        // display: none;
         width: 100vw;
         height: 100vh;
         background-color: aliceblue;
@@ -125,7 +126,7 @@ body{
                         }
                     }
                 }
-                
+
                 .heroSelected {
                     border: 2px solid blue;
                 }
@@ -149,9 +150,74 @@ body{
 
     .ecranCombat{
         display: none;
+        // display: flex;
+        width: 100vw;
+        height: 100vh;
+        background-color: aliceblue;
+        
+        flex-direction: column;
+        align-items: center;
+        
+        .champDeBataille{
+            width: 100%;
+            height: 66.6%;
+            background-color: green;
+        }
+
+        .combatJoueurs{
+            width: 100%;
+            height: 33.3%;
+            background-color: antiquewhite;
+
+            display: flex;
+            justify-content: space-evenly;
+
+            .combatJ1, .combatJ2{
+
+                .heroHudJ1, .heroHudJ2{
+                    display: flex;
+                    justify-content: space-around;
+
+                    #pointDeVie{
+                        width: 200px;
+                        height: 25px;
+                        border: 2px solid gray;
+                    }
+
+                    #pointDeVie::-webkit-progress-bar{
+                        background-color: white;
+                    }
+
+                    #pointDeVie::-webkit-progress-value{
+                        background-color: red;
+                    }
+                }
+
+                .actionJ1, .actionJ2{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: flex-end;
+                    padding: 50px;
+
+                    .boutonAction{
+                        width: 70px;
+                        height: 30px;
+                    }
+                }
+            }
+            
+        }            
     }
 
     .ecranFin{
         display: none;
+        width: 100vw;
+        height: 100vh;
+        background-color: aliceblue;
+        
+        flex-flow: column nowrap;
+        align-items: center;
     }
 }

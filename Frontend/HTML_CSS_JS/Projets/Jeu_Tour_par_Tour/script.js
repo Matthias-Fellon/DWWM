@@ -81,6 +81,8 @@ const joueur1 = document.querySelector('.joueur1 .personnages');
 const joueur2 = document.querySelector('.joueur2 .personnages');
 let selectedDivJoueur1 = null; // Garder une trace de la div sélectionnée
 let selectedDivJoueur2 = null; // Garder une trace de la div sélectionnée
+let j1Personnage = null;
+let j2Personnage = null;
 
 // Parcours le tableau Personnages
 Personnages.forEach(personnage => {
@@ -114,7 +116,6 @@ Personnages.forEach(personnage => {
     </div>
     <img class="image${personnage.nom}" src="${personnage.image}" alt="Image pixel ${personnage.nom}">
 `;
-
     divJoueur1.addEventListener('click', () => {
         // Désélectionne la div précédemment sélectionnée
         if (selectedDivJoueur1) {
@@ -123,6 +124,35 @@ Personnages.forEach(personnage => {
         // Sélectionne la div actuellement cliquée
         selectedDivJoueur1 = divJoueur1;
         selectedDivJoueur1.classList.add('heroSelected');
+        
+        
+        switch(true){
+            case divJoueur1.classList.contains('Mage'):
+                j1Personnage = Personnages[0];
+                console.log(j1Personnage);
+                const test = document.getElementById('pointDeVie').value = j1Personnage.pointDeVie; //TODO : faire la prise d'info pour les autres cas et le joueur 2
+                console.log(test);
+                break;
+            
+            case divJoueur1.classList.contains('Guerrier'):
+                j1Personnage = Personnages[1];
+                console.log(j1Personnage);
+                break;
+
+            case divJoueur1.classList.contains('Prêtre'):
+                j1Personnage = Personnages[2];
+                console.log(j1Personnage);
+                break;
+                
+            case divJoueur1.classList.contains('Archer'):
+                j1Personnage = Personnages[3];
+                console.log(j1Personnage);
+                break;
+
+            default:
+                console.log("non");
+                break;          
+        }
     });
 
     divJoueur2.addEventListener('click', () => {
@@ -133,6 +163,32 @@ Personnages.forEach(personnage => {
         // Sélectionne la div actuellement cliquée
         selectedDivJoueur2 = divJoueur2;
         selectedDivJoueur2.classList.add('heroSelected');
+        
+        switch(true){
+            case divJoueur1.classList.contains('Mage'):
+                j2Personnage = Personnages[0];
+                console.log(j2Personnage);
+                break;
+            
+            case divJoueur1.classList.contains('Guerrier'):
+                j2Personnage = Personnages[1];
+                console.log(j2Personnage);
+                break;
+
+            case divJoueur1.classList.contains('Prêtre'):
+                j2Personnage = Personnages[2];
+                console.log(j2Personnage);
+                break;
+                
+            case divJoueur1.classList.contains('Archer'):
+                j2Personnage = Personnages[3];
+                console.log(j2Personnage);
+                break;
+
+            default:
+                console.log("non");
+                break;          
+        }
     });
 
     // Ajoute la div au conteneur
@@ -147,24 +203,6 @@ const j2BtnPret = document.querySelector('.j2BoutonPret') ;
 j1BtnPret.addEventListener('click', () => {
     j1BtnPret.classList = 'btnSelected';
     if(j2BtnPret.classList == 'btnSelected'){
-        //sauvegarder la classe choisi par le joueur1
-        switch(document.querySelector('.joueur1 .personnages').children.classList){
-            case '.Mage .heroSelected':
-                //prendre l'objet n°1 du tableau "Personnages"
-                break;
-
-            case '.Guerrier .heroSelected':
-                //prendre l'objet n°2 du tableau "Personnages"
-                break;
-
-            case '.Prêtre .heroSelected':
-                //prendre l'objet n°3 du tableau "Personnages"
-                break;
-
-            case '.Archer .heroSelected':
-                //prendre l'objet n°4 du tableau "Personnages"
-                break;
-        };
         ecrSelection.style.display = "none";
         ecrCombat.style.display = "flex";
     }
@@ -173,25 +211,10 @@ j1BtnPret.addEventListener('click', () => {
 j2BtnPret.addEventListener('click', () => {
     j2BtnPret.classList = 'btnSelected';
     if(j1BtnPret.classList == 'btnSelected'){
-        //sauvegarder la classe choisi par le joueur2
-        switch(document.querySelector('.joueur2 .personnages').children.classList){
-            case '.Mage .heroSelected':
-                //prendre l'objet n°1 du tableau "Personnages"
-                break;
-
-            case '.Guerrier .heroSelected':
-                //prendre l'objet n°2 du tableau "Personnages"
-                break;
-
-            case '.Prêtre .heroSelected':
-                //prendre l'objet n°3 du tableau "Personnages"
-                break;
-
-            case '.Archer .heroSelected':
-                //prendre l'objet n°4 du tableau "Personnages"
-                break;
-        };
         ecrSelection.style.display = "none";
         ecrCombat.style.display = "flex";
     }
 });
+
+//PARTIE COMBAT
+

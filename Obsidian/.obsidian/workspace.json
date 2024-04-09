@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cours/4- Gestion des tableaux et Objets.md",
+                "file": "Jeu_Tour_par_Tour/Base.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cours/4- Gestion des tableaux et Objets.md",
+                "file": "Jeu_Tour_par_Tour/Base.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cours/4- Gestion des tableaux et Objets.md",
+                "file": "Jeu_Tour_par_Tour/Base.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cours/4- Gestion des tableaux et Objets.md"
+                "file": "Jeu_Tour_par_Tour/Base.md"
               }
             }
           }
@@ -148,19 +148,19 @@
   },
   "active": "d69bc6077f2d4db2",
   "lastOpenFiles": [
+    "Cours/2- Syntaxe de base.md",
+    "Cours/3- Manipulation du DOM.md",
+    "Cours/6- Concepts Avancés.md",
+    "Cours/5- Fonctions avancées.md",
+    "Cours/4- Gestion des tableaux et Objets.md",
     "Exercices/Exercices - Fonctions.md",
     "Exercices/Exercices - Conditions & boucles.md",
     "Jeu_Tour_par_Tour/Base.md",
     "Jeu_Tour_par_Tour",
     "Nouveau dossier",
     "Aide mémoire - Tableaux.md",
-    "Cours/4- Gestion des tableaux et Objets.md",
-    "Cours/2- Syntaxe de base.md",
     "Cours/1- Introduction à JavaScript.md",
-    "Cours/6- Concepts Avancés.md",
-    "Cours/5- Fonctions avancées.md",
     "Exercices/Exercices - Algo de base.md",
-    "Cours/3- Manipulation du DOM.md",
     "Aide mémoire - Général.md",
     "Aide mémoire - Manipulation du DOM.md",
     "Sommaire.md"
