@@ -80,8 +80,8 @@ body .ecranSelection .joueurs {
   height: 100%;
   display: flex;
 }
-body .ecranSelection .joueurs .joueur_1,
-body .ecranSelection .joueurs .joueur_2 {
+body .ecranSelection .joueurs .joueur1,
+body .ecranSelection .joueurs .joueur2 {
   width: 100%;
   height: 100%;
   background-color: lightcoral;
@@ -90,67 +90,99 @@ body .ecranSelection .joueurs .joueur_2 {
   justify-content: space-around;
   text-align: center;
 }
-body .ecranSelection .joueurs .joueur_1 .personnages,
-body .ecranSelection .joueurs .joueur_2 .personnages {
+body .ecranSelection .joueurs .joueur1 .personnages,
+body .ecranSelection .joueurs .joueur2 .personnages {
   display: grid;
   grid-template-areas: "a a";
   gap: 20px;
 }
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_1,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_1,
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_2,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_2,
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_3,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_3,
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_4,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_4 {
+body .ecranSelection .joueurs .joueur1 .personnages .Mage,
+body .ecranSelection .joueurs .joueur2 .personnages .Mage,
+body .ecranSelection .joueurs .joueur1 .personnages .Guerrier,
+body .ecranSelection .joueurs .joueur2 .personnages .Guerrier,
+body .ecranSelection .joueurs .joueur1 .personnages .Prêtre,
+body .ecranSelection .joueurs .joueur2 .personnages .Prêtre,
+body .ecranSelection .joueurs .joueur1 .personnages .Archer,
+body .ecranSelection .joueurs .joueur2 .personnages .Archer {
   display: flex;
   flex-flow: row-reverse nowrap;
   justify-content: center;
   gap: 20px;
 }
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_1 .description,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_1 .description,
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_2 .description,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_2 .description,
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_3 .description,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_3 .description,
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_4 .description,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_4 .description {
+body .ecranSelection .joueurs .joueur1 .personnages .Mage .description,
+body .ecranSelection .joueurs .joueur2 .personnages .Mage .description,
+body .ecranSelection .joueurs .joueur1 .personnages .Guerrier .description,
+body .ecranSelection .joueurs .joueur2 .personnages .Guerrier .description,
+body .ecranSelection .joueurs .joueur1 .personnages .Prêtre .description,
+body .ecranSelection .joueurs .joueur2 .personnages .Prêtre .description,
+body .ecranSelection .joueurs .joueur1 .personnages .Archer .description,
+body .ecranSelection .joueurs .joueur2 .personnages .Archer .description {
   display: flex;
   flex-flow: column nowrap;
   gap: 20px;
 }
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_1 .description .attributs,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_1 .description .attributs,
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_2 .description .attributs,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_2 .description .attributs,
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_3 .description .attributs,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_3 .description .attributs,
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_4 .description .attributs,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_4 .description .attributs {
+body .ecranSelection .joueurs .joueur1 .personnages .Mage .description .attributs,
+body .ecranSelection .joueurs .joueur2 .personnages .Mage .description .attributs,
+body .ecranSelection .joueurs .joueur1 .personnages .Guerrier .description .attributs,
+body .ecranSelection .joueurs .joueur2 .personnages .Guerrier .description .attributs,
+body .ecranSelection .joueurs .joueur1 .personnages .Prêtre .description .attributs,
+body .ecranSelection .joueurs .joueur2 .personnages .Prêtre .description .attributs,
+body .ecranSelection .joueurs .joueur1 .personnages .Archer .description .attributs,
+body .ecranSelection .joueurs .joueur2 .personnages .Archer .description .attributs {
   display: flex;
   flex-flow: row wrap;
   column-gap: 20px;
 }
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_1 .imagePerso,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_1 .imagePerso,
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_2 .imagePerso,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_2 .imagePerso,
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_3 .imagePerso,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_3 .imagePerso,
-body .ecranSelection .joueurs .joueur_1 .personnages .personnage_4 .imagePerso,
-body .ecranSelection .joueurs .joueur_2 .personnages .personnage_4 .imagePerso {
+body .ecranSelection .joueurs .joueur1 .personnages .Mage .imageMage,
+body .ecranSelection .joueurs .joueur2 .personnages .Mage .imageMage,
+body .ecranSelection .joueurs .joueur1 .personnages .Guerrier .imageMage,
+body .ecranSelection .joueurs .joueur2 .personnages .Guerrier .imageMage,
+body .ecranSelection .joueurs .joueur1 .personnages .Prêtre .imageMage,
+body .ecranSelection .joueurs .joueur2 .personnages .Prêtre .imageMage,
+body .ecranSelection .joueurs .joueur1 .personnages .Archer .imageMage,
+body .ecranSelection .joueurs .joueur2 .personnages .Archer .imageMage,
+body .ecranSelection .joueurs .joueur1 .personnages .Mage .imageGuerrier,
+body .ecranSelection .joueurs .joueur2 .personnages .Mage .imageGuerrier,
+body .ecranSelection .joueurs .joueur1 .personnages .Guerrier .imageGuerrier,
+body .ecranSelection .joueurs .joueur2 .personnages .Guerrier .imageGuerrier,
+body .ecranSelection .joueurs .joueur1 .personnages .Prêtre .imageGuerrier,
+body .ecranSelection .joueurs .joueur2 .personnages .Prêtre .imageGuerrier,
+body .ecranSelection .joueurs .joueur1 .personnages .Archer .imageGuerrier,
+body .ecranSelection .joueurs .joueur2 .personnages .Archer .imageGuerrier,
+body .ecranSelection .joueurs .joueur1 .personnages .Mage .imagePrêtre,
+body .ecranSelection .joueurs .joueur2 .personnages .Mage .imagePrêtre,
+body .ecranSelection .joueurs .joueur1 .personnages .Guerrier .imagePrêtre,
+body .ecranSelection .joueurs .joueur2 .personnages .Guerrier .imagePrêtre,
+body .ecranSelection .joueurs .joueur1 .personnages .Prêtre .imagePrêtre,
+body .ecranSelection .joueurs .joueur2 .personnages .Prêtre .imagePrêtre,
+body .ecranSelection .joueurs .joueur1 .personnages .Archer .imagePrêtre,
+body .ecranSelection .joueurs .joueur2 .personnages .Archer .imagePrêtre,
+body .ecranSelection .joueurs .joueur1 .personnages .Mage .imageArcher,
+body .ecranSelection .joueurs .joueur2 .personnages .Mage .imageArcher,
+body .ecranSelection .joueurs .joueur1 .personnages .Guerrier .imageArcher,
+body .ecranSelection .joueurs .joueur2 .personnages .Guerrier .imageArcher,
+body .ecranSelection .joueurs .joueur1 .personnages .Prêtre .imageArcher,
+body .ecranSelection .joueurs .joueur2 .personnages .Prêtre .imageArcher,
+body .ecranSelection .joueurs .joueur1 .personnages .Archer .imageArcher,
+body .ecranSelection .joueurs .joueur2 .personnages .Archer .imageArcher {
   width: 100px;
   height: 100px;
 }
-body .ecranSelection .joueurs .joueur_1 .boutonPret,
-body .ecranSelection .joueurs .joueur_2 .boutonPret {
+body .ecranSelection .joueurs .joueur1 .heroSelected,
+body .ecranSelection .joueurs .joueur2 .heroSelected {
+  border: 2px solid blue;
+}
+body .ecranSelection .joueurs .joueur1 .boutonPret,
+body .ecranSelection .joueurs .joueur2 .boutonPret {
   border: none;
   background-color: transparent;
   font-size: 2rem;
 }
-body .ecranSelection .joueurs .joueur_2 {
+body .ecranSelection .joueurs .joueur1 .btnSelected,
+body .ecranSelection .joueurs .joueur2 .btnSelected {
+  background-color: red;
+}
+body .ecranSelection .joueurs .joueur2 {
   background-color: lightblue;
 }
 body .ecranCombat {

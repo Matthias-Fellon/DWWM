@@ -88,7 +88,7 @@ body{
             height: 100%;
             display: flex;
 
-            .joueur_1, .joueur_2{
+            .joueur1, .joueur2{
                 width: 100%;
                 height: 100%;
                 background-color: lightcoral;
@@ -102,7 +102,7 @@ body{
                     grid-template-areas: "a a";
                     gap: 20px;
 
-                    .personnage_1, .personnage_2, .personnage_3, .personnage_4{
+                    .Mage, .Guerrier, .Prêtre, .Archer{
                         display: flex;
                         flex-flow: row-reverse nowrap;
                         justify-content: center;
@@ -119,12 +119,15 @@ body{
                                 column-gap: 20px;
                             }
                         }
-                        
-                        .imagePerso{
+                        .imageMage, .imageGuerrier, .imagePrêtre, .imageArcher{
                             width: 100px;
                             height: 100px;
                         }
                     }
+                }
+                
+                .heroSelected {
+                    border: 2px solid blue;
                 }
                 
                 .boutonPret{
@@ -132,12 +135,16 @@ body{
                     background-color: transparent;
                     font-size: 2rem;
                 }
+
+                .btnSelected {
+                    background-color: red;
+                }
             }
     
-            .joueur_2{
+            .joueur2{
                 background-color: lightblue;
             }
-        }
+        }        
     }
 
     .ecranCombat{

@@ -1,42 +1,42 @@
 let Personnages = [
     {
-        nom : 'mage',
+        nom : 'Mage',
         pointDeVie : 30,
-        attaque : 3,
-        defense : 0,
-        // capacite : function(){},
+        attaque : 10,
+        defense : 5,
+        image : 'Images/Mage.png'
     },
     {
-        nom : 'guerrier',
-        pointDeVie : 30,
-        attaque : 3,
-        defense : 0,
-        // capacite : function(){},
+        nom : 'Guerrier',
+        pointDeVie : 40,
+        attaque : 10,
+        defense : 3,
+        image : 'Images/Mage.png'
     },
     {
         nom : 'Prêtre',
-        pointDeVie : 30,
-        attaque : 3,
-        defense : 0,
-        // capacite : function(){},
+        pointDeVie : 50,
+        attaque : 2,
+        defense : 2,
+        image : 'Images/Mage.png'
     },
     {
         nom : 'Archer',
-        pointDeVie : 30,
-        attaque : 3,
-        defense : 0,
-        // capacite : function(){},
+        pointDeVie : 20,
+        attaque : 5,
+        defense : 1,
+        image : 'Images/Mage.png'
     }
 ];
 
-//CRÉATION DES CONSTANTES
 // Les différents écrans
 const ecrAccueil = document.querySelector(".ecranAccueil");
 const ecrSelection = document.querySelector(".ecranSelection");
 const ecrCombat = document.querySelector(".ecranCombat");
 const ecrFin = document.querySelector(".ecranFin");
 
-// Section "ecranAccueil"
+
+//PARTIE ACCUEIL
 const btnJouer = document.querySelector(".boutonJouer");
 const btnRegles = document.querySelector(".boutonRegles");
 const btnParametres = document.querySelector(".boutonParametres");
@@ -49,24 +49,6 @@ const btnFermerRegles = document.querySelector(".boutonFermerRegles");
 
 // Lien avec "btnParamètres"
 
-
-// Section "ecranSelection"
-// Personnages
-const j1Personnage1 = document.querySelector(".personnages").querySelectorAll(".personnage_1")[0];
-const j1Personnage2 = document.querySelector(".personnage_2")[0];
-const j1Personnage3 = document.querySelector(".personnage_3")[0];
-const j1Personnage4 = document.querySelector(".personnage_4")[0];
-console.log("perso 1"+j1Personnage1);
-
-const j2Personnage1 = document.querySelector(".personnage_1").querySelectorAll(".personnage_1")[1];
-const j2Personnage2 = document.querySelector(".personnage_2")[1];
-const j2Personnage3 = document.querySelector(".personnage_3")[1];
-const j2Personnage4 = document.querySelector(".personnage_4")[1];
-console.log("perso 2" +j2Personnage1);
-
-
-
-//PARTIE ACCUEIL
 //Bouton "Jouer"
 btnJouer.addEventListener('click', () => {
     ecrAccueil.style.display="none";
@@ -93,60 +75,123 @@ window.addEventListener('click', (event) => { //Lorsque l'utilisateur clique n'i
 
 
 //PARTIE SELECTION
-//Joueur 1
-/*/j1Personnage1.addEventListener ('click', () => {
-    j1Personnage1.style.border = "solid 2px white";
-    j1Personnage2.style.border = "none";
-    j1Personnage3.style.border = "none";
-    j1Personnage4.style.border = "none";
+//PERSONNAGES
+// Sélectionne l'élément où tu veux ajouter les divs
+const joueur1 = document.querySelector('.joueur1 .personnages');
+const joueur2 = document.querySelector('.joueur2 .personnages');
+let selectedDivJoueur1 = null; // Garder une trace de la div sélectionnée
+let selectedDivJoueur2 = null; // Garder une trace de la div sélectionnée
+
+// Parcours le tableau Personnages
+Personnages.forEach(personnage => {
+    // Crée un nouvel élément div
+    const divJoueur1 = document.createElement('div');
+    const divJoueur2 = document.createElement('div');
+    divJoueur1.classList.add(`${personnage.nom}`);
+    divJoueur2.classList.add(`${personnage.nom}`);
+
+    // Remplit le contenu de la div avec les données du personnage
+    divJoueur1.innerHTML = `
+        <div class="description">
+            <p><strong>Nom:</strong> ${personnage.nom}</p>
+            <div class="attributs">
+                <p><strong>Points de Vie:</strong> ${personnage.pointDeVie}</p>
+                <p><strong>Attaque:</strong> ${personnage.attaque}</p>
+                <p><strong>Défense:</strong> ${personnage.defense}</p>
+            </div>
+        </div>
+        <img class="image${personnage.nom}" src="${personnage.image}" alt="Image pixel ${personnage.nom}">
+    `;
+
+    divJoueur2.innerHTML = `
+    <div class="description">
+        <p><strong>Nom:</strong> ${personnage.nom}</p>
+        <div class="attributs">
+            <p><strong>Points de Vie:</strong> ${personnage.pointDeVie}</p>
+            <p><strong>Attaque:</strong> ${personnage.attaque}</p>
+            <p><strong>Défense:</strong> ${personnage.defense}</p>
+        </div>
+    </div>
+    <img class="image${personnage.nom}" src="${personnage.image}" alt="Image pixel ${personnage.nom}">
+`;
+
+    divJoueur1.addEventListener('click', () => {
+        // Désélectionne la div précédemment sélectionnée
+        if (selectedDivJoueur1) {
+            selectedDivJoueur1.classList.remove('heroSelected');
+        }
+        // Sélectionne la div actuellement cliquée
+        selectedDivJoueur1 = divJoueur1;
+        selectedDivJoueur1.classList.add('heroSelected');
+    });
+
+    divJoueur2.addEventListener('click', () => {
+        // Désélectionne la div précédemment sélectionnée
+        if (selectedDivJoueur2) {
+            selectedDivJoueur2.classList.remove('heroSelected');
+        }
+        // Sélectionne la div actuellement cliquée
+        selectedDivJoueur2 = divJoueur2;
+        selectedDivJoueur2.classList.add('heroSelected');
+    });
+
+    // Ajoute la div au conteneur
+    joueur1.appendChild(divJoueur1);
+    joueur2.appendChild(divJoueur2);
 });
 
-j1Personnage2.addEventListener ('click', () => {
-    j1Personnage1.style.border = "none";
-    j1Personnage2.style.border = "solid 2px white";
-    j1Personnage3.style.border = "none";
-    j1Personnage4.style.border = "none";
+//BOUTON "PRÊT"
+const j1BtnPret = document.querySelector('.j1BoutonPret') ;
+const j2BtnPret = document.querySelector('.j2BoutonPret') ;
+
+j1BtnPret.addEventListener('click', () => {
+    j1BtnPret.classList = 'btnSelected';
+    if(j2BtnPret.classList == 'btnSelected'){
+        //sauvegarder la classe choisi par le joueur1
+        switch(document.querySelector('.joueur1 .personnages').children.classList){
+            case '.Mage .heroSelected':
+                //prendre l'objet n°1 du tableau "Personnages"
+                break;
+
+            case '.Guerrier .heroSelected':
+                //prendre l'objet n°2 du tableau "Personnages"
+                break;
+
+            case '.Prêtre .heroSelected':
+                //prendre l'objet n°3 du tableau "Personnages"
+                break;
+
+            case '.Archer .heroSelected':
+                //prendre l'objet n°4 du tableau "Personnages"
+                break;
+        };
+        ecrSelection.style.display = "none";
+        ecrCombat.style.display = "flex";
+    }
 });
 
-j1Personnage3.addEventListener ('click', () => {
-    j1Personnage1.style.border = "none";
-    j1Personnage2.style.border = "none";
-    j1Personnage3.style.border = "solid 2px white";
-    j1Personnage4.style.border = "none";
-});
+j2BtnPret.addEventListener('click', () => {
+    j2BtnPret.classList = 'btnSelected';
+    if(j1BtnPret.classList == 'btnSelected'){
+        //sauvegarder la classe choisi par le joueur2
+        switch(document.querySelector('.joueur2 .personnages').children.classList){
+            case '.Mage .heroSelected':
+                //prendre l'objet n°1 du tableau "Personnages"
+                break;
 
-j1Personnage4.addEventListener ('click', () => {
-    j1Personnage1.style.border = "none";
-    j1Personnage2.style.border = "none";
-    j1Personnage3.style.border = "none";
-    j1Personnage4.style.border = "solid 2px white";
-});
+            case '.Guerrier .heroSelected':
+                //prendre l'objet n°2 du tableau "Personnages"
+                break;
 
-//Joueur 2
-j2Personnage1.addEventListener ('click', () => {
-    j2Personnage1.style.border = "solid 2px white";
-    j2Personnage2.style.border = "none";
-    j2Personnage3.style.border = "none";
-    j2Personnage4.style.border = "none";
-});
+            case '.Prêtre .heroSelected':
+                //prendre l'objet n°3 du tableau "Personnages"
+                break;
 
-j2Personnage2.addEventListener ('click', () => {
-    j2Personnage1.style.border = "none";
-    j2Personnage2.style.border = "solid 2px white";
-    j2Personnage3.style.border = "none";
-    j2Personnage4.style.border = "none";
+            case '.Archer .heroSelected':
+                //prendre l'objet n°4 du tableau "Personnages"
+                break;
+        };
+        ecrSelection.style.display = "none";
+        ecrCombat.style.display = "flex";
+    }
 });
-
-j2Personnage3.addEventListener ('click', () => {
-    j2Personnage1.style.border = "none";
-    j2Personnage2.style.border = "none";
-    j2Personnage3.style.border = "solid 2px white";
-    j2Personnage4.style.border = "none";
-});
-
-j2Personnage4.addEventListener ('click', () => {
-    j2Personnage1.style.border = "none";
-    j2Personnage2.style.border = "none";
-    j2Personnage3.style.border = "none";
-    j2Personnage4.style.border = "solid 2px white";
-});*/
