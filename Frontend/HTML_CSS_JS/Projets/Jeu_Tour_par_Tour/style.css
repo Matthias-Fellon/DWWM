@@ -85,12 +85,16 @@ body .ecranSelection .joueurs .joueur_2 {
   width: 100%;
   height: 100%;
   background-color: lightcoral;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
   text-align: center;
 }
 body .ecranSelection .joueurs .joueur_1 .personnages,
 body .ecranSelection .joueurs .joueur_2 .personnages {
   display: grid;
   grid-template-areas: "a a";
+  gap: 20px;
 }
 body .ecranSelection .joueurs .joueur_1 .personnages .personnage_1,
 body .ecranSelection .joueurs .joueur_2 .personnages .personnage_1,
@@ -103,6 +107,31 @@ body .ecranSelection .joueurs .joueur_2 .personnages .personnage_4 {
   display: flex;
   flex-flow: row-reverse nowrap;
   justify-content: center;
+  gap: 20px;
+}
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_1 .description,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_1 .description,
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_2 .description,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_2 .description,
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_3 .description,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_3 .description,
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_4 .description,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_4 .description {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_1 .description .attributs,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_1 .description .attributs,
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_2 .description .attributs,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_2 .description .attributs,
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_3 .description .attributs,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_3 .description .attributs,
+body .ecranSelection .joueurs .joueur_1 .personnages .personnage_4 .description .attributs,
+body .ecranSelection .joueurs .joueur_2 .personnages .personnage_4 .description .attributs {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 20px;
 }
 body .ecranSelection .joueurs .joueur_1 .personnages .personnage_1 .imagePerso,
 body .ecranSelection .joueurs .joueur_2 .personnages .personnage_1 .imagePerso,

@@ -51,6 +51,18 @@ const btnFermerRegles = document.querySelector(".boutonFermerRegles");
 
 
 // Section "ecranSelection"
+// Personnages
+const j1Personnage1 = document.querySelector(".personnages").querySelectorAll(".personnage_1")[0];
+const j1Personnage2 = document.querySelector(".personnage_2")[0];
+const j1Personnage3 = document.querySelector(".personnage_3")[0];
+const j1Personnage4 = document.querySelector(".personnage_4")[0];
+console.log("perso 1"+j1Personnage1);
+
+const j2Personnage1 = document.querySelector(".personnage_1").querySelectorAll(".personnage_1")[1];
+const j2Personnage2 = document.querySelector(".personnage_2")[1];
+const j2Personnage3 = document.querySelector(".personnage_3")[1];
+const j2Personnage4 = document.querySelector(".personnage_4")[1];
+console.log("perso 2" +j2Personnage1);
 
 
 
@@ -81,3 +93,60 @@ window.addEventListener('click', (event) => { //Lorsque l'utilisateur clique n'i
 
 
 //PARTIE SELECTION
+//Joueur 1
+/*/j1Personnage1.addEventListener ('click', () => {
+    j1Personnage1.style.border = "solid 2px white";
+    j1Personnage2.style.border = "none";
+    j1Personnage3.style.border = "none";
+    j1Personnage4.style.border = "none";
+});
+
+j1Personnage2.addEventListener ('click', () => {
+    j1Personnage1.style.border = "none";
+    j1Personnage2.style.border = "solid 2px white";
+    j1Personnage3.style.border = "none";
+    j1Personnage4.style.border = "none";
+});
+
+j1Personnage3.addEventListener ('click', () => {
+    j1Personnage1.style.border = "none";
+    j1Personnage2.style.border = "none";
+    j1Personnage3.style.border = "solid 2px white";
+    j1Personnage4.style.border = "none";
+});
+
+j1Personnage4.addEventListener ('click', () => {
+    j1Personnage1.style.border = "none";
+    j1Personnage2.style.border = "none";
+    j1Personnage3.style.border = "none";
+    j1Personnage4.style.border = "solid 2px white";
+});
+
+//Joueur 2
+j2Personnage1.addEventListener ('click', () => {
+    j2Personnage1.style.border = "solid 2px white";
+    j2Personnage2.style.border = "none";
+    j2Personnage3.style.border = "none";
+    j2Personnage4.style.border = "none";
+});
+
+j2Personnage2.addEventListener ('click', () => {
+    j2Personnage1.style.border = "none";
+    j2Personnage2.style.border = "solid 2px white";
+    j2Personnage3.style.border = "none";
+    j2Personnage4.style.border = "none";
+});
+
+j2Personnage3.addEventListener ('click', () => {
+    j2Personnage1.style.border = "none";
+    j2Personnage2.style.border = "none";
+    j2Personnage3.style.border = "solid 2px white";
+    j2Personnage4.style.border = "none";
+});
+
+j2Personnage4.addEventListener ('click', () => {
+    j2Personnage1.style.border = "none";
+    j2Personnage2.style.border = "none";
+    j2Personnage3.style.border = "none";
+    j2Personnage4.style.border = "solid 2px white";
+});*/
