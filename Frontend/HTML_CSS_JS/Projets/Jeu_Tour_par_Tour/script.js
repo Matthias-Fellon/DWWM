@@ -81,8 +81,8 @@ const joueur1 = document.querySelector('.joueur1 .personnages');
 const joueur2 = document.querySelector('.joueur2 .personnages');
 let selectedDivJoueur1 = null; // Garder une trace de la div sélectionnée
 let selectedDivJoueur2 = null; // Garder une trace de la div sélectionnée
-let j1Personnage = null;
-let j2Personnage = null;
+let j1Personnage;
+let j2Personnage;
 
 // Parcours le tableau Personnages
 Personnages.forEach(personnage => {
@@ -128,25 +128,35 @@ Personnages.forEach(personnage => {
         
         switch(true){
             case divJoueur1.classList.contains('Mage'):
-                j1Personnage = Personnages[0];
-                console.log(j1Personnage);
-                const test = document.getElementById('pointDeVie').value = j1Personnage.pointDeVie; //TODO : faire la prise d'info pour les autres cas et le joueur 2
-                console.log(test);
+                j1Personnage = Object.assign({}, Personnages[0]);
+                document.getElementById('pointDeVieJ1').value = j1Personnage.pointDeVie;
+                document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Personnage.pointDeVie}`);
+                document.getElementById('attaqueJ1').innerText = (`Attk : ${j1Personnage.attaque}`);
+                document.getElementById('defenseJ1').innerText = (`Déf : ${j1Personnage.defense}`);
                 break;
             
             case divJoueur1.classList.contains('Guerrier'):
-                j1Personnage = Personnages[1];
-                console.log(j1Personnage);
+                j1Personnage = Object.assign({}, Personnages[1]);
+                document.getElementById('pointDeVieJ1').value = j1Personnage.pointDeVie;
+                document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Personnage.pointDeVie}`);
+                document.getElementById('attaqueJ1').innerText = (`Attk : ${j1Personnage.attaque}`);
+                document.getElementById('defenseJ1').innerText = (`Déf : ${j1Personnage.defense}`);
                 break;
 
             case divJoueur1.classList.contains('Prêtre'):
-                j1Personnage = Personnages[2];
-                console.log(j1Personnage);
+                j1Personnage = Object.assign({}, Personnages[2]);
+                document.getElementById('pointDeVieJ1').value = j1Personnage.pointDeVie;
+                document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Personnage.pointDeVie}`);
+                document.getElementById('attaqueJ1').innerText = (`Attk : ${j1Personnage.attaque}`);
+                document.getElementById('defenseJ1').innerText = (`Déf : ${j1Personnage.defense}`);
                 break;
                 
             case divJoueur1.classList.contains('Archer'):
-                j1Personnage = Personnages[3];
-                console.log(j1Personnage);
+                j1Personnage = Object.assign({}, Personnages[3]);
+                document.getElementById('pointDeVieJ1').value = j1Personnage.pointDeVie;
+                document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Personnage.pointDeVie}`);
+                document.getElementById('attaqueJ1').innerText = (`Attk : ${j1Personnage.attaque}`);
+                document.getElementById('defenseJ1').innerText = (`Déf : ${j1Personnage.defense}`);
                 break;
 
             default:
@@ -165,24 +175,36 @@ Personnages.forEach(personnage => {
         selectedDivJoueur2.classList.add('heroSelected');
         
         switch(true){
-            case divJoueur1.classList.contains('Mage'):
-                j2Personnage = Personnages[0];
-                console.log(j2Personnage);
+            case divJoueur2.classList.contains('Mage'):
+                j2Personnage = Object.assign({}, Personnages[0]);
+                document.getElementById('pointDeVieJ2').value = j2Personnage.pointDeVie;
+                document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Personnage.pointDeVie}`);
+                document.getElementById('attaqueJ2').innerText = (`Attk : ${j2Personnage.attaque}`);
+                document.getElementById('defenseJ2').innerText = (`Déf : ${j2Personnage.defense}`);
                 break;
             
-            case divJoueur1.classList.contains('Guerrier'):
-                j2Personnage = Personnages[1];
-                console.log(j2Personnage);
+            case divJoueur2.classList.contains('Guerrier'):
+                j2Personnage = Object.assign({}, Personnages[1]);
+                document.getElementById('pointDeVieJ2').value = j2Personnage.pointDeVie;
+                document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Personnage.pointDeVie}`);
+                document.getElementById('attaqueJ2').innerText = (`Attk : ${j2Personnage.attaque}`);
+                document.getElementById('defenseJ2').innerText = (`Déf : ${j2Personnage.defense}`);
                 break;
 
-            case divJoueur1.classList.contains('Prêtre'):
-                j2Personnage = Personnages[2];
-                console.log(j2Personnage);
+            case divJoueur2.classList.contains('Prêtre'):
+                j2Personnage = Object.assign({}, Personnages[2]);
+                document.getElementById('pointDeVieJ2').value = j2Personnage.pointDeVie;
+                document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Personnage.pointDeVie}`);
+                document.getElementById('attaqueJ2').innerText = (`Attk : ${j2Personnage.attaque}`);
+                document.getElementById('defenseJ2').innerText = (`Déf : ${j2Personnage.defense}`);
                 break;
                 
             case divJoueur1.classList.contains('Archer'):
-                j2Personnage = Personnages[3];
-                console.log(j2Personnage);
+                j2Personnage = Object.assign({}, Personnages[3]);
+                document.getElementById('pointDeVieJ2').value = j2Personnage.pointDeVie;
+                document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Personnage.pointDeVie}`);
+                document.getElementById('attaqueJ2').innerText = (`Attk : ${j2Personnage.attaque}`);
+                document.getElementById('defenseJ2').innerText = (`Déf : ${j2Personnage.defense}`);
                 break;
 
             default:
@@ -217,4 +239,28 @@ j2BtnPret.addEventListener('click', () => {
 });
 
 //PARTIE COMBAT
+const j1BtnAttk = document.querySelector('.J1boutonAttaque');
+const j2BtnAttk = document.querySelector('.J2boutonAttaque');
+
+//Le joueur 1 attaque
+j1BtnAttk.addEventListener('click', () => {
+    j2Personnage.pointDeVie = j2Personnage.pointDeVie - j1Personnage.attaque;
+    document.getElementById('pointDeVieJ2').value = j2Personnage.pointDeVie;
+    document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Personnage.pointDeVie}`);
+    if((j1Personnage.pointDeVie <= 0) || (j2Personnage.pointDeVie <= 0)) {
+        ecrCombat.style.display = "none";
+        ecrFin.style.display = "flex";
+    }
+});
+
+//Le joueur 2 attaque
+j2BtnAttk.addEventListener('click', () => {
+    j1Personnage.pointDeVie = j1Personnage.pointDeVie - j2Personnage.attaque;
+    document.getElementById('pointDeVieJ1').value = j1Personnage.pointDeVie;
+    document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Personnage.pointDeVie}`);
+    if((j1Personnage.pointDeVie <= 0) || (j2Personnage.pointDeVie <= 0)) {
+        ecrCombat.style.display = "none";
+        ecrFin.style.display = "flex";
+    }
+});
 

@@ -212,24 +212,36 @@ body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 {
   display: flex;
   justify-content: space-around;
 }
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVie,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVie,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVie,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVie {
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVieJ1,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVieJ1,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVieJ1,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVieJ1,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVieJ2,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVieJ2,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVieJ2,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVieJ2 {
   width: 200px;
   height: 25px;
   border: 2px solid gray;
 }
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVie::-webkit-progress-bar,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVie::-webkit-progress-bar,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVie::-webkit-progress-bar,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVie::-webkit-progress-bar {
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVieJ1::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVieJ1::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVieJ1::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVieJ1::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVieJ2::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVieJ2::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVieJ2::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVieJ2::-webkit-progress-bar {
   background-color: white;
 }
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVie::-webkit-progress-value,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVie::-webkit-progress-value,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVie::-webkit-progress-value,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVie::-webkit-progress-value {
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVieJ1::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVieJ1::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVieJ1::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVieJ1::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVieJ2::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVieJ2::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVieJ2::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVieJ2::-webkit-progress-value {
   background-color: red;
 }
 body .ecranCombat .combatJoueurs .combatJ1 .actionJ1,
