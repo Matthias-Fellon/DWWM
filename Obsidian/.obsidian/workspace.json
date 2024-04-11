@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "1411644c8db32039",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Jeu_Tour_par_Tour/Mon code.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Jeu_Tour_par_Tour/Base.md",
+                "file": "Jeu_Tour_par_Tour/Mon code.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Jeu_Tour_par_Tour/Base.md",
+                "file": "Jeu_Tour_par_Tour/Mon code.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Jeu_Tour_par_Tour/Base.md"
+                "file": "Jeu_Tour_par_Tour/Mon code.md"
               }
             }
           }
@@ -146,8 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d69bc6077f2d4db2",
+  "active": "1411644c8db32039",
   "lastOpenFiles": [
+    "Jeu_Tour_par_Tour/Base.md",
+    "Jeu_Tour_par_Tour/Mon code.md",
     "Cours/2- Syntaxe de base.md",
     "Cours/3- Manipulation du DOM.md",
     "Cours/6- Concepts Avancés.md",
@@ -155,7 +170,6 @@
     "Cours/4- Gestion des tableaux et Objets.md",
     "Exercices/Exercices - Fonctions.md",
     "Exercices/Exercices - Conditions & boucles.md",
-    "Jeu_Tour_par_Tour/Base.md",
     "Jeu_Tour_par_Tour",
     "Nouveau dossier",
     "Aide mémoire - Tableaux.md",

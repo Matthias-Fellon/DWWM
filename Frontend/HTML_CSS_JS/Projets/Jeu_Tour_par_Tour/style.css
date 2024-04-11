@@ -76,13 +76,11 @@ body .ecranSelection {
   align-items: center;
 }
 body .ecranSelection .joueurs {
-  width: 100%;
   height: 100%;
   display: flex;
 }
 body .ecranSelection .joueurs .joueur1,
 body .ecranSelection .joueurs .joueur2 {
-  width: 100%;
   height: 100%;
   background-color: lightcoral;
   display: flex;
@@ -90,86 +88,96 @@ body .ecranSelection .joueurs .joueur2 {
   justify-content: space-around;
   text-align: center;
 }
-body .ecranSelection .joueurs .joueur1 .personnages,
-body .ecranSelection .joueurs .joueur2 .personnages {
+body .ecranSelection .joueurs .joueur1 .pokemonJ1,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 {
   display: grid;
   grid-template-areas: "a a";
   gap: 20px;
 }
-body .ecranSelection .joueurs .joueur1 .personnages .Mage,
-body .ecranSelection .joueurs .joueur2 .personnages .Mage,
-body .ecranSelection .joueurs .joueur1 .personnages .Guerrier,
-body .ecranSelection .joueurs .joueur2 .personnages .Guerrier,
-body .ecranSelection .joueurs .joueur1 .personnages .Prêtre,
-body .ecranSelection .joueurs .joueur2 .personnages .Prêtre,
-body .ecranSelection .joueurs .joueur1 .personnages .Archer,
-body .ecranSelection .joueurs .joueur2 .personnages .Archer {
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Pikachu,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Pikachu,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Pikachu,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Pikachu,
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Dracaufeu,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Dracaufeu,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Dracaufeu,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Dracaufeu,
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Tortank,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Tortank,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Tortank,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Tortank,
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Florizarre,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Florizarre,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Florizarre,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Florizarre {
   display: flex;
   flex-flow: row-reverse nowrap;
   justify-content: center;
   gap: 20px;
 }
-body .ecranSelection .joueurs .joueur1 .personnages .Mage .description,
-body .ecranSelection .joueurs .joueur2 .personnages .Mage .description,
-body .ecranSelection .joueurs .joueur1 .personnages .Guerrier .description,
-body .ecranSelection .joueurs .joueur2 .personnages .Guerrier .description,
-body .ecranSelection .joueurs .joueur1 .personnages .Prêtre .description,
-body .ecranSelection .joueurs .joueur2 .personnages .Prêtre .description,
-body .ecranSelection .joueurs .joueur1 .personnages .Archer .description,
-body .ecranSelection .joueurs .joueur2 .personnages .Archer .description {
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Pikachu .description,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Pikachu .description,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Pikachu .description,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Pikachu .description,
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Dracaufeu .description,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Dracaufeu .description,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Dracaufeu .description,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Dracaufeu .description,
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Tortank .description,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Tortank .description,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Tortank .description,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Tortank .description,
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Florizarre .description,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Florizarre .description,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Florizarre .description,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Florizarre .description {
   display: flex;
   flex-flow: column nowrap;
   gap: 20px;
 }
-body .ecranSelection .joueurs .joueur1 .personnages .Mage .description .attributs,
-body .ecranSelection .joueurs .joueur2 .personnages .Mage .description .attributs,
-body .ecranSelection .joueurs .joueur1 .personnages .Guerrier .description .attributs,
-body .ecranSelection .joueurs .joueur2 .personnages .Guerrier .description .attributs,
-body .ecranSelection .joueurs .joueur1 .personnages .Prêtre .description .attributs,
-body .ecranSelection .joueurs .joueur2 .personnages .Prêtre .description .attributs,
-body .ecranSelection .joueurs .joueur1 .personnages .Archer .description .attributs,
-body .ecranSelection .joueurs .joueur2 .personnages .Archer .description .attributs {
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Pikachu .description .attributs,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Pikachu .description .attributs,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Pikachu .description .attributs,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Pikachu .description .attributs,
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Dracaufeu .description .attributs,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Dracaufeu .description .attributs,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Dracaufeu .description .attributs,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Dracaufeu .description .attributs,
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Tortank .description .attributs,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Tortank .description .attributs,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Tortank .description .attributs,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Tortank .description .attributs,
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Florizarre .description .attributs,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Florizarre .description .attributs,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Florizarre .description .attributs,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Florizarre .description .attributs {
   display: flex;
   flex-flow: row wrap;
   column-gap: 20px;
 }
-body .ecranSelection .joueurs .joueur1 .personnages .Mage .imageMage,
-body .ecranSelection .joueurs .joueur2 .personnages .Mage .imageMage,
-body .ecranSelection .joueurs .joueur1 .personnages .Guerrier .imageMage,
-body .ecranSelection .joueurs .joueur2 .personnages .Guerrier .imageMage,
-body .ecranSelection .joueurs .joueur1 .personnages .Prêtre .imageMage,
-body .ecranSelection .joueurs .joueur2 .personnages .Prêtre .imageMage,
-body .ecranSelection .joueurs .joueur1 .personnages .Archer .imageMage,
-body .ecranSelection .joueurs .joueur2 .personnages .Archer .imageMage,
-body .ecranSelection .joueurs .joueur1 .personnages .Mage .imageGuerrier,
-body .ecranSelection .joueurs .joueur2 .personnages .Mage .imageGuerrier,
-body .ecranSelection .joueurs .joueur1 .personnages .Guerrier .imageGuerrier,
-body .ecranSelection .joueurs .joueur2 .personnages .Guerrier .imageGuerrier,
-body .ecranSelection .joueurs .joueur1 .personnages .Prêtre .imageGuerrier,
-body .ecranSelection .joueurs .joueur2 .personnages .Prêtre .imageGuerrier,
-body .ecranSelection .joueurs .joueur1 .personnages .Archer .imageGuerrier,
-body .ecranSelection .joueurs .joueur2 .personnages .Archer .imageGuerrier,
-body .ecranSelection .joueurs .joueur1 .personnages .Mage .imagePrêtre,
-body .ecranSelection .joueurs .joueur2 .personnages .Mage .imagePrêtre,
-body .ecranSelection .joueurs .joueur1 .personnages .Guerrier .imagePrêtre,
-body .ecranSelection .joueurs .joueur2 .personnages .Guerrier .imagePrêtre,
-body .ecranSelection .joueurs .joueur1 .personnages .Prêtre .imagePrêtre,
-body .ecranSelection .joueurs .joueur2 .personnages .Prêtre .imagePrêtre,
-body .ecranSelection .joueurs .joueur1 .personnages .Archer .imagePrêtre,
-body .ecranSelection .joueurs .joueur2 .personnages .Archer .imagePrêtre,
-body .ecranSelection .joueurs .joueur1 .personnages .Mage .imageArcher,
-body .ecranSelection .joueurs .joueur2 .personnages .Mage .imageArcher,
-body .ecranSelection .joueurs .joueur1 .personnages .Guerrier .imageArcher,
-body .ecranSelection .joueurs .joueur2 .personnages .Guerrier .imageArcher,
-body .ecranSelection .joueurs .joueur1 .personnages .Prêtre .imageArcher,
-body .ecranSelection .joueurs .joueur2 .personnages .Prêtre .imageArcher,
-body .ecranSelection .joueurs .joueur1 .personnages .Archer .imageArcher,
-body .ecranSelection .joueurs .joueur2 .personnages .Archer .imageArcher {
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Pikachu .images,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Pikachu .images,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Pikachu .images,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Pikachu .images,
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Dracaufeu .images,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Dracaufeu .images,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Dracaufeu .images,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Dracaufeu .images,
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Tortank .images,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Tortank .images,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Tortank .images,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Tortank .images,
+body .ecranSelection .joueurs .joueur1 .pokemonJ1 .Florizarre .images,
+body .ecranSelection .joueurs .joueur2 .pokemonJ1 .Florizarre .images,
+body .ecranSelection .joueurs .joueur1 .pokemonJ2 .Florizarre .images,
+body .ecranSelection .joueurs .joueur2 .pokemonJ2 .Florizarre .images {
   width: 100px;
   height: 100px;
 }
-body .ecranSelection .joueurs .joueur1 .heroSelected,
-body .ecranSelection .joueurs .joueur2 .heroSelected {
+body .ecranSelection .joueurs .joueur1 .pokemonSelected,
+body .ecranSelection .joueurs .joueur2 .pokemonSelected {
   border: 2px solid blue;
 }
 body .ecranSelection .joueurs .joueur1 .boutonPret,
@@ -197,70 +205,106 @@ body .ecranCombat .champDeBataille {
   width: 100%;
   height: 66.6%;
   background-color: green;
+  display: flex;
+}
+body .ecranCombat .champDeBataille .champJ1 {
+  width: 100%;
+  height: 100%;
+  border: solid 2px red;
+}
+body .ecranCombat .champDeBataille .champJ2 {
+  width: 100%;
+  height: 100%;
+  border: solid 2px blue;
 }
 body .ecranCombat .combatJoueurs {
   width: 100%;
   height: 33.3%;
   background-color: antiquewhite;
+  border: solid 2px purple;
   display: flex;
   justify-content: space-evenly;
 }
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 {
+body .ecranCombat .combatJoueurs .combatJ1,
+body .ecranCombat .combatJoueurs .combatJ2 {
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-flow: column nowrap;
+  border: solid 3px pink;
 }
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVieJ1,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVieJ1,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVieJ1,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVieJ1,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVieJ2,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVieJ2,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVieJ2,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVieJ2 {
-  width: 200px;
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ1,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ1,
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ2,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ2 {
+  flex-grow: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: solid 2px yellow;
+}
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ1 #pointDeVieJ1,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ1 #pointDeVieJ1,
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ2 #pointDeVieJ1,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ2 #pointDeVieJ1,
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ1 #pointDeVieJ2,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ1 #pointDeVieJ2,
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ2 #pointDeVieJ2,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ2 #pointDeVieJ2 {
+  width: 150px;
   height: 25px;
   border: 2px solid gray;
 }
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVieJ1::-webkit-progress-bar,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVieJ1::-webkit-progress-bar,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVieJ1::-webkit-progress-bar,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVieJ1::-webkit-progress-bar,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVieJ2::-webkit-progress-bar,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVieJ2::-webkit-progress-bar,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVieJ2::-webkit-progress-bar,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVieJ2::-webkit-progress-bar {
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ1 #pointDeVieJ1::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ1 #pointDeVieJ1::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ2 #pointDeVieJ1::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ2 #pointDeVieJ1::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ1 #pointDeVieJ2::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ1 #pointDeVieJ2::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ2 #pointDeVieJ2::-webkit-progress-bar,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ2 #pointDeVieJ2::-webkit-progress-bar {
   background-color: white;
 }
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVieJ1::-webkit-progress-value,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVieJ1::-webkit-progress-value,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVieJ1::-webkit-progress-value,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVieJ1::-webkit-progress-value,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ1 #pointDeVieJ2::-webkit-progress-value,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ1 #pointDeVieJ2::-webkit-progress-value,
-body .ecranCombat .combatJoueurs .combatJ1 .heroHudJ2 #pointDeVieJ2::-webkit-progress-value,
-body .ecranCombat .combatJoueurs .combatJ2 .heroHudJ2 #pointDeVieJ2::-webkit-progress-value {
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ1 #pointDeVieJ1::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ1 #pointDeVieJ1::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ2 #pointDeVieJ1::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ2 #pointDeVieJ1::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ1 #pointDeVieJ2::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ1 #pointDeVieJ2::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ1 .pokemonHudJ2 #pointDeVieJ2::-webkit-progress-value,
+body .ecranCombat .combatJoueurs .combatJ2 .pokemonHudJ2 #pointDeVieJ2::-webkit-progress-value {
   background-color: red;
 }
 body .ecranCombat .combatJoueurs .combatJ1 .actionJ1,
 body .ecranCombat .combatJoueurs .combatJ2 .actionJ1,
 body .ecranCombat .combatJoueurs .combatJ1 .actionJ2,
 body .ecranCombat .combatJoueurs .combatJ2 .actionJ2 {
+  flex-grow: 10;
   width: 100%;
-  height: 100%;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
   padding: 50px;
+  border: solid 2px green;
 }
 body .ecranCombat .combatJoueurs .combatJ1 .actionJ1 .boutonAction,
 body .ecranCombat .combatJoueurs .combatJ2 .actionJ1 .boutonAction,
 body .ecranCombat .combatJoueurs .combatJ1 .actionJ2 .boutonAction,
 body .ecranCombat .combatJoueurs .combatJ2 .actionJ2 .boutonAction {
-  width: 70px;
-  height: 30px;
+  transform: scale(3);
+}
+body .ecranCombat .combatJoueurs .combatJ1 .attaquesJ1,
+body .ecranCombat .combatJoueurs .combatJ2 .attaquesJ1,
+body .ecranCombat .combatJoueurs .combatJ1 .attaquesJ2,
+body .ecranCombat .combatJoueurs .combatJ2 .attaquesJ2 {
+  flex-grow: 10;
+  width: 100%;
+  display: none;
+  grid-template-areas: "a a";
+  padding: 20px;
+  border: solid 2px green;
+  gap: 10px;
 }
 body .ecranFin {
   display: none;
@@ -269,4 +313,23 @@ body .ecranFin {
   background-color: aliceblue;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+body .ecranFin .gagnant {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+body .ecranFin .actionsEcranFin {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+}
+body .ecranFin .actionsEcranFin .boutonAction1 {
+  transform: scale(3);
 }

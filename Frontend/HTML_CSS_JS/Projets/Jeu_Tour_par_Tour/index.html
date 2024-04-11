@@ -28,12 +28,12 @@
         <div class="joueurs">
             <div class="joueur1">
                 <h3>Joueur 1</h3>
-                <div class="personnages"></div>
+                <div class="pokemonJ1"></div>
                 <button class="j1BoutonPret">Prêt</button>
             </div>
             <div class="joueur2">
                 <h3>Joueur 2</h3>
-                <div class="personnages"></div>
+                <div class="pokemonJ2"></div>
                 <button class="j2BoutonPret">Prêt</button>
             </div>
         </div>
@@ -41,33 +41,42 @@
 
     <section class="ecranCombat">
         <h2>Phase de Combat</h2>
-        <div class="champDeBataille"></div>
+        <div class="champDeBataille">
+            <div class="champJ1"></div>
+            <div class="champJ2"></div>
+        </div>
         <div class="combatJoueurs">
             <div class="combatJ1">
-                <div class="heroHudJ1">
-                    <label id="txtPointDeVieJ1" for="pointDeVie">Vie :</label>
+                <div class="pokemonHudJ1">
+                    <label id="txtPointDeVieJ1" for="pointDeVieJ1">Vie :</label>
                     <progress id="pointDeVieJ1" max="100" value="50"></progress>
-                    <label id="attaqueJ1">Attk :</label> 
-                    <label id="defenseJ1">Déf :</label>
                 </div>
                 <div class="actionJ1">
-                    <button class="J1boutonAttaque boutonAction">Attaque</button>
-                    <button class="boutonAction">Defense</button>
-                    <button class="boutonAction">Capacité</button>
+                    <button class="J1boutonAttaques boutonAction">Attaque</button>
+                    <button class="boutonAction">Objets</button>
+                </div>
+                <div class="attaquesJ1">
+                    <button class="j1BoutonAttaque1 boutonAction">Attaque1</button>
+                    <button class="j1BoutonAttaque2 boutonAction">Attaque2</button>
+                    <button class="j1BoutonAttaque3 boutonAction">Attaque3</button>
+                    <button class="j1BoutonAttaque4 boutonAction">Attaque4</button>
                 </div>
             </div>
             
             <div class="combatJ2">
-                <div class="heroHudJ2">
-                    <label id="txtPointDeVieJ2" for="pointDeVie">Vie :</label>
+                <div class="pokemonHudJ2">
+                    <label id="txtPointDeVieJ2" for="pointDeVieJ2">Vie :</label>
                     <progress id="pointDeVieJ2" max="100" value="50"></progress>
-                    <label id="attaqueJ2">Attk :</label> 
-                    <label id="defenseJ2">Déf :</label>
                 </div>
                 <div class="actionJ2">
-                    <button class="J2boutonAttaque boutonAction">Attaque</button>
-                    <button class="boutonAction">Defense</button>
-                    <button class="boutonAction">Capacité</button>
+                    <button class="J2boutonAttaques boutonAction">Attaque</button>
+                    <button class="boutonAction">Objets</button>
+                </div>
+                <div class="attaquesJ2">
+                    <button class="j2BoutonAttaque1 boutonAction">Attaque1</button>
+                    <button class="j2BoutonAttaque2 boutonAction">Attaque2</button>
+                    <button class="j2BoutonAttaque3 boutonAction">Attaque3</button>
+                    <button class="j2BoutonAttaque4 boutonAction">Attaque4</button>
                 </div>
             </div>
         </div>
@@ -75,6 +84,14 @@
 
     <section class="ecranFin">
         <h2>Fin du combat</h2>
+        <div class="gagnant">
+            <h2 class="textGagnant">Aucun joueur n'a gagné !</h2>
+        </div>
+        <div class="actionsEcranFin">
+            <button class="rejouer boutonAction1">Rejouer</button>
+            <button class="changerHero boutonAction1">Changer de personnages</button>
+            <button class="retourAccueil boutonAction1">Retour au menu</button>
+        </div>  
     </section>
 
     <script src="script.js"></script>

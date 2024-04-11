@@ -1,31 +1,55 @@
 let Personnages = [
     {
-        nom : 'Mage',
-        pointDeVie : 30,
-        attaque : 10,
-        defense : 5,
-        image : 'Images/Mage.png'
+        nom         : 'Pikachu',
+        pointDeVie  : 280,
+        attaques    :
+        {
+            attaque_1 : {nom : 'Électacle',     degats : 120},
+            attaque_2 : {nom : 'Tonerre',       degats : 90},
+            attaque_3 : {nom : 'Queue de Fer',  degats : 75},
+            attaque_4 : {nom : 'Fatal-Foudre',  degats  : 110}
+        },
+        niveau      : 88,
+        image       : 'Images/Pikachu.png'
     },
     {
-        nom : 'Guerrier',
-        pointDeVie : 40,
-        attaque : 10,
-        defense : 3,
-        image : 'Images/Mage.png'
+        nom         : 'Dracaufeu',
+        pointDeVie  : 320,
+        attaques    :
+        {
+            attaque_1 : {nom : 'Lance-Flammes', degats  : 90},
+            attaque_2 : {nom : 'Aéropique',     degats  : 60},
+            attaque_3 : {nom : 'Draco-Griffe',  degats  : 85},
+            attaque_4 : {nom : 'Aire de Feu',   degats  : 80}
+        },
+        niveau      : 86,
+        image       : 'Images/Dracaufeu.png'
     },
     {
-        nom : 'Prêtre',
-        pointDeVie : 50,
-        attaque : 2,
-        defense : 2,
-        image : 'Images/Mage.png'
+        nom         : 'Tortank',
+        pointDeVie  : 300,
+        attaques    :
+        {
+            attaque_1 : {nom : 'Hydrocanon',    degats : 110},
+            attaque_2 : {nom : 'Tour Rapide',   degats : 50},
+            attaque_3 : {nom : 'Luminocanon',   degats : 85},
+            attaque_4 : {nom : 'Aire d\'Eau',   degats : 80}
+        },
+        niveau      : 2,
+        image       : 'Images/Tortank.png'
     },
     {
-        nom : 'Archer',
-        pointDeVie : 20,
-        attaque : 5,
-        defense : 1,
-        image : 'Images/Mage.png'
+        nom         : 'Florizarre',
+        pointDeVie  : 340,
+        attaques    :
+        {
+            attaque_1 : {nom : 'Giga-Sangsue',  degats : 75},
+            attaque_2 : {nom : 'Tempête Verte', degats : 130},
+            attaque_3 : {nom : 'Lance-Soleil',  degats : 120},
+            attaque_4 : {nom : 'Aire d\'Herbe', degats : 80},
+        },
+        niveau      : 82,
+        image       : 'Images/Florizarre.png'
     }
 ];
 
@@ -44,10 +68,6 @@ const btnParametres = document.querySelector(".boutonParametres");
 // Lien avec "btnRegles" 
 const modal = document.querySelector(".modal");
 const btnFermerRegles = document.querySelector(".boutonFermerRegles");
-
-// Lien avec "btnJouer"
-
-// Lien avec "btnParamètres"
 
 //Bouton "Jouer"
 btnJouer.addEventListener('click', () => {
@@ -77,12 +97,12 @@ window.addEventListener('click', (event) => { //Lorsque l'utilisateur clique n'i
 //PARTIE SELECTION
 //PERSONNAGES
 // Sélectionne l'élément où tu veux ajouter les divs
-const joueur1 = document.querySelector('.joueur1 .personnages');
-const joueur2 = document.querySelector('.joueur2 .personnages');
+const joueur1 = document.querySelector('.pokemonJ1');
+const joueur2 = document.querySelector('.pokemonJ2');
 let selectedDivJoueur1 = null; // Garder une trace de la div sélectionnée
 let selectedDivJoueur2 = null; // Garder une trace de la div sélectionnée
-let j1Personnage;
-let j2Personnage;
+let j1Pokemon;
+let j2Pokemon;
 
 // Parcours le tableau Personnages
 Personnages.forEach(personnage => {
@@ -92,125 +112,125 @@ Personnages.forEach(personnage => {
     divJoueur1.classList.add(`${personnage.nom}`);
     divJoueur2.classList.add(`${personnage.nom}`);
 
-    // Remplit le contenu de la div avec les données du personnage
+    // Remplit le contenu de la div avec les données du pokemon
     divJoueur1.innerHTML = `
         <div class="description">
             <p><strong>Nom:</strong> ${personnage.nom}</p>
             <div class="attributs">
-                <p><strong>Points de Vie:</strong> ${personnage.pointDeVie}</p>
-                <p><strong>Attaque:</strong> ${personnage.attaque}</p>
-                <p><strong>Défense:</strong> ${personnage.defense}</p>
+                <div class="pointsDeVie">
+                    <label id="txtPDVJ1" for="pDVJ1"><strong>HP : </strong>${personnage.pointDeVie}</label>
+                    <progress id="pDVJ1" max="${personnage.pointDeVie}" value="${personnage.pointDeVie}"></progress>
+                </div>
+                <div class="attaques">
+                    <p><strong>${personnage.attaques.attaque_1.nom} : </strong> ${personnage.attaques.attaque_1.degats}</p>
+                    <p><strong>${personnage.attaques.attaque_2.nom} : </strong> ${personnage.attaques.attaque_2.degats}</p>
+                    <p><strong>${personnage.attaques.attaque_3.nom} : </strong> ${personnage.attaques.attaque_3.degats}</p>
+                    <p><strong>${personnage.attaques.attaque_4.nom} : </strong> ${personnage.attaques.attaque_4.degats}</p>
+                </div>
             </div>
         </div>
-        <img class="image${personnage.nom}" src="${personnage.image}" alt="Image pixel ${personnage.nom}">
+        <img class="images image${personnage.nom}" src="${personnage.image}" alt="Image ${personnage.nom}">
     `;
 
     divJoueur2.innerHTML = `
-    <div class="description">
-        <p><strong>Nom:</strong> ${personnage.nom}</p>
-        <div class="attributs">
-            <p><strong>Points de Vie:</strong> ${personnage.pointDeVie}</p>
-            <p><strong>Attaque:</strong> ${personnage.attaque}</p>
-            <p><strong>Défense:</strong> ${personnage.defense}</p>
+        <div class="description">
+            <p><strong>Nom:</strong> ${personnage.nom}</p>
+            <div class="attributs">
+                <div class="pointsDeVie">
+                    <label id="txtPDVJ2" for="pDVJ2"><strong>HP : </strong>${personnage.pointDeVie}</label>
+                    <progress id="pDVJ2" max="${personnage.pointDeVie}" value="${personnage.pointDeVie}"></progress>
+                </div>
+                <div class="attaques">
+                    <p><strong>${personnage.attaques.attaque_1.nom} : </strong> ${personnage.attaques.attaque_1.degats}</p>
+                    <p><strong>${personnage.attaques.attaque_2.nom} : </strong> ${personnage.attaques.attaque_2.degats}</p>
+                    <p><strong>${personnage.attaques.attaque_3.nom} : </strong> ${personnage.attaques.attaque_3.degats}</p>
+                    <p><strong>${personnage.attaques.attaque_4.nom} : </strong> ${personnage.attaques.attaque_4.degats}</p>
+                </div>
+            </div>
         </div>
-    </div>
-    <img class="image${personnage.nom}" src="${personnage.image}" alt="Image pixel ${personnage.nom}">
-`;
+        <img class="images image${personnage.nom}" src="${personnage.image}" alt="Image ${personnage.nom}">
+    `;
+
     divJoueur1.addEventListener('click', () => {
         // Désélectionne la div précédemment sélectionnée
         if (selectedDivJoueur1) {
-            selectedDivJoueur1.classList.remove('heroSelected');
+            selectedDivJoueur1.classList.remove('pokemonSelected');
         }
         // Sélectionne la div actuellement cliquée
         selectedDivJoueur1 = divJoueur1;
-        selectedDivJoueur1.classList.add('heroSelected');
+        selectedDivJoueur1.classList.add('pokemonSelected');
         
-        
+        //Atribution des valeurs pour le joueur 1
         switch(true){
-            case divJoueur1.classList.contains('Mage'):
-                j1Personnage = Object.assign({}, Personnages[0]);
-                document.getElementById('pointDeVieJ1').value = j1Personnage.pointDeVie;
-                document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Personnage.pointDeVie}`);
-                document.getElementById('attaqueJ1').innerText = (`Attk : ${j1Personnage.attaque}`);
-                document.getElementById('defenseJ1').innerText = (`Déf : ${j1Personnage.defense}`);
+            case divJoueur1.classList.contains('Pikachu'):
+                j1Pokemon = Object.assign({}, Personnages[0]);
                 break;
             
-            case divJoueur1.classList.contains('Guerrier'):
-                j1Personnage = Object.assign({}, Personnages[1]);
-                document.getElementById('pointDeVieJ1').value = j1Personnage.pointDeVie;
-                document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Personnage.pointDeVie}`);
-                document.getElementById('attaqueJ1').innerText = (`Attk : ${j1Personnage.attaque}`);
-                document.getElementById('defenseJ1').innerText = (`Déf : ${j1Personnage.defense}`);
+            case divJoueur1.classList.contains('Dracaufeu'):
+                j1Pokemon = Object.assign({}, Personnages[1]);
                 break;
 
-            case divJoueur1.classList.contains('Prêtre'):
-                j1Personnage = Object.assign({}, Personnages[2]);
-                document.getElementById('pointDeVieJ1').value = j1Personnage.pointDeVie;
-                document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Personnage.pointDeVie}`);
-                document.getElementById('attaqueJ1').innerText = (`Attk : ${j1Personnage.attaque}`);
-                document.getElementById('defenseJ1').innerText = (`Déf : ${j1Personnage.defense}`);
+            case divJoueur1.classList.contains('Tortank'):
+                j1Pokemon = Object.assign({}, Personnages[2]);
                 break;
                 
-            case divJoueur1.classList.contains('Archer'):
-                j1Personnage = Object.assign({}, Personnages[3]);
-                document.getElementById('pointDeVieJ1').value = j1Personnage.pointDeVie;
-                document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Personnage.pointDeVie}`);
-                document.getElementById('attaqueJ1').innerText = (`Attk : ${j1Personnage.attaque}`);
-                document.getElementById('defenseJ1').innerText = (`Déf : ${j1Personnage.defense}`);
+            case divJoueur1.classList.contains('Florizarre'):
+                j1Pokemon = Object.assign({}, Personnages[3]);
                 break;
 
             default:
-                console.log("non");
+                console.log("nonJ1");
                 break;          
         }
+        console.log("J1 point de ve : " + j1Pokemon.pointDeVie);
+        document.getElementById('pointDeVieJ1').value = j1Pokemon.pointDeVie;
+        document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Pokemon.pointDeVie}`);
+        document.querySelector('.j1BoutonAttaque1').innerText = (`${j1Pokemon.attaques.attaque_1.nom}`);
+        document.querySelector('.j1BoutonAttaque2').innerText = (`${j1Pokemon.attaques.attaque_2.nom}`);
+        document.querySelector('.j1BoutonAttaque3').innerText = (`${j1Pokemon.attaques.attaque_3.nom}`);
+        document.querySelector('.j1BoutonAttaque4').innerText = (`${j1Pokemon.attaques.attaque_4.nom}`);
+        document.querySelector('.') // ! Afficher l'image sur le champ de bataille
     });
 
     divJoueur2.addEventListener('click', () => {
         // Désélectionne la div précédemment sélectionnée
         if (selectedDivJoueur2) {
-            selectedDivJoueur2.classList.remove('heroSelected');
+            selectedDivJoueur2.classList.remove('pokemonSelected');
         }
         // Sélectionne la div actuellement cliquée
         selectedDivJoueur2 = divJoueur2;
-        selectedDivJoueur2.classList.add('heroSelected');
+        selectedDivJoueur2.classList.add('pokemonSelected');
         
+         //Atribution des valeurs pour le joueur 1
         switch(true){
-            case divJoueur2.classList.contains('Mage'):
-                j2Personnage = Object.assign({}, Personnages[0]);
-                document.getElementById('pointDeVieJ2').value = j2Personnage.pointDeVie;
-                document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Personnage.pointDeVie}`);
-                document.getElementById('attaqueJ2').innerText = (`Attk : ${j2Personnage.attaque}`);
-                document.getElementById('defenseJ2').innerText = (`Déf : ${j2Personnage.defense}`);
+            case divJoueur2.classList.contains('Pikachu'):
+                j2Pokemon = Object.assign({}, Personnages[0]);
                 break;
             
-            case divJoueur2.classList.contains('Guerrier'):
-                j2Personnage = Object.assign({}, Personnages[1]);
-                document.getElementById('pointDeVieJ2').value = j2Personnage.pointDeVie;
-                document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Personnage.pointDeVie}`);
-                document.getElementById('attaqueJ2').innerText = (`Attk : ${j2Personnage.attaque}`);
-                document.getElementById('defenseJ2').innerText = (`Déf : ${j2Personnage.defense}`);
+            case divJoueur2.classList.contains('Dracaufeu'):
+                j2Pokemon = Object.assign({}, Personnages[1]);
                 break;
 
-            case divJoueur2.classList.contains('Prêtre'):
-                j2Personnage = Object.assign({}, Personnages[2]);
-                document.getElementById('pointDeVieJ2').value = j2Personnage.pointDeVie;
-                document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Personnage.pointDeVie}`);
-                document.getElementById('attaqueJ2').innerText = (`Attk : ${j2Personnage.attaque}`);
-                document.getElementById('defenseJ2').innerText = (`Déf : ${j2Personnage.defense}`);
+            case divJoueur2.classList.contains('Tortank'):
+                j2Pokemon = Object.assign({}, Personnages[2]);
                 break;
                 
-            case divJoueur1.classList.contains('Archer'):
-                j2Personnage = Object.assign({}, Personnages[3]);
-                document.getElementById('pointDeVieJ2').value = j2Personnage.pointDeVie;
-                document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Personnage.pointDeVie}`);
-                document.getElementById('attaqueJ2').innerText = (`Attk : ${j2Personnage.attaque}`);
-                document.getElementById('defenseJ2').innerText = (`Déf : ${j2Personnage.defense}`);
+            case divJoueur2.classList.contains('Florizarre'):
+                j2Pokemon = Object.assign({}, Personnages[3]);
                 break;
 
             default:
-                console.log("non");
+                console.log("nonJ2");
                 break;          
         }
+        console.log("J2 point de ve : " + j2Pokemon.pointDeVie);
+        document.getElementById('pointDeVieJ2').value = j2Pokemon.pointDeVie;
+        document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Pokemon.pointDeVie}`);
+        document.querySelector('.j2BoutonAttaque1').innerText = (`${j2Pokemon.attaques.attaque_1.nom}`);
+        document.querySelector('.j2BoutonAttaque2').innerText = (`${j2Pokemon.attaques.attaque_2.nom}`);
+        document.querySelector('.j2BoutonAttaque3').innerText = (`${j2Pokemon.attaques.attaque_3.nom}`);
+        document.querySelector('.j2BoutonAttaque4').innerText = (`${j2Pokemon.attaques.attaque_4.nom}`);
+        // ! Afficher l'image sur le champ de bataille
     });
 
     // Ajoute la div au conteneur
@@ -218,7 +238,7 @@ Personnages.forEach(personnage => {
     joueur2.appendChild(divJoueur2);
 });
 
-//BOUTON "PRÊT"
+//Bouton "prêt"
 const j1BtnPret = document.querySelector('.j1BoutonPret') ;
 const j2BtnPret = document.querySelector('.j2BoutonPret') ;
 
@@ -239,28 +259,148 @@ j2BtnPret.addEventListener('click', () => {
 });
 
 //PARTIE COMBAT
-const j1BtnAttk = document.querySelector('.J1boutonAttaque');
-const j2BtnAttk = document.querySelector('.J2boutonAttaque');
+const j1BtnAttques = document.querySelector('.J1boutonAttaques');
+const j2BtnAttques = document.querySelector('.J2boutonAttaques');
+const txtGagnant = document.querySelector('.textGagnant');
+
+const j1Attaque1 = document.querySelector('.j1BoutonAttaque1');
+const j1Attaque2 = document.querySelector('.j1BoutonAttaque2');
+const j1Attaque3 = document.querySelector('.j1BoutonAttaque3');
+const j1Attaque4 = document.querySelector('.j1BoutonAttaque4');
+
+const j2Attaque1 = document.querySelector('.j1BoutonAttaque1');
+const j2Attaque2 = document.querySelector('.j1BoutonAttaque2');
+const j2Attaque3 = document.querySelector('.j1BoutonAttaque3');
+const j2Attaque4 = document.querySelector('.j1BoutonAttaque4');
+
+let attaqueChoisi = null;
 
 //Le joueur 1 attaque
-j1BtnAttk.addEventListener('click', () => {
-    j2Personnage.pointDeVie = j2Personnage.pointDeVie - j1Personnage.attaque;
-    document.getElementById('pointDeVieJ2').value = j2Personnage.pointDeVie;
-    document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Personnage.pointDeVie}`);
-    if((j1Personnage.pointDeVie <= 0) || (j2Personnage.pointDeVie <= 0)) {
-        ecrCombat.style.display = "none";
-        ecrFin.style.display = "flex";
-    }
+j1BtnAttques.addEventListener('click', () => {
+    document.querySelector('.actionJ1').style.display = "none";
+    document.querySelector('.attaquesJ1').style.display = "grid";
+
+    j1Attaque1.addEventListener('click', () => {
+        attaqueChoisi = j1Pokemon.attaques.attaque_1;
+        j2Pokemon.pointDeVie = j2Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
+        document.getElementById('pointDeVieJ2').value = j2Pokemon.pointDeVie;
+        document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Pokemon.pointDeVie}`);
+        if(j2Pokemon.pointDeVie <= 0) {
+            txtGagnant.innerText ='Le joueur 1 à gagné !!!';
+            ecrCombat.style.display = "none";
+            ecrFin.style.display = "flex";
+        }
+    });
+    
+    j1Attaque2.addEventListener('click', () => {
+        attaqueChoisi = j1Pokemon.attaques.attaque_2;
+        j2Pokemon.pointDeVie = j2Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
+        document.getElementById('pointDeVieJ2').value = j2Pokemon.pointDeVie;
+        document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Pokemon.pointDeVie}`);
+        if(j2Pokemon.pointDeVie <= 0) {
+            txtGagnant.innerText ='Le joueur 1 à gagné !!!';
+            ecrCombat.style.display = "none";
+            ecrFin.style.display = "flex";
+        }
+    });
+    
+    j1Attaque3.addEventListener('click', () => {
+        attaqueChoisi = j1Pokemon.attaques.attaque_3;
+        j2Pokemon.pointDeVie = j2Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
+        document.getElementById('pointDeVieJ2').value = j2Pokemon.pointDeVie;
+        document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Pokemon.pointDeVie}`);
+        if(j2Pokemon.pointDeVie <= 0) {
+            txtGagnant.innerText ='Le joueur 1 à gagné !!!';
+            ecrCombat.style.display = "none";
+            ecrFin.style.display = "flex";
+        }
+    });
+    
+    j1Attaque4.addEventListener('click', () => {
+        attaqueChoisi = j1Pokemon.attaques.attaque_4;
+        j2Pokemon.pointDeVie = j2Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
+        document.getElementById('pointDeVieJ2').value = j2Pokemon.pointDeVie;
+        document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Pokemon.pointDeVie}`);
+        if(j2Pokemon.pointDeVie <= 0) {
+            txtGagnant.innerText ='Le joueur 1 à gagné !!!';
+            ecrCombat.style.display = "none";
+            ecrFin.style.display = "flex";
+        }
+    });
 });
+
 
 //Le joueur 2 attaque
-j2BtnAttk.addEventListener('click', () => {
-    j1Personnage.pointDeVie = j1Personnage.pointDeVie - j2Personnage.attaque;
-    document.getElementById('pointDeVieJ1').value = j1Personnage.pointDeVie;
-    document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Personnage.pointDeVie}`);
-    if((j1Personnage.pointDeVie <= 0) || (j2Personnage.pointDeVie <= 0)) {
-        ecrCombat.style.display = "none";
-        ecrFin.style.display = "flex";
-    }
+j2BtnAttques.addEventListener('click', () => {
+    document.querySelector('.actionJ2').style.display = "none";
+    document.querySelector('.attaquesJ2').style.display = "grid";
+
+    j2Attaque1.addEventListener('click', () => {
+        attaqueChoisi = j2Pokemon.attaques.attaque_1;
+        j1Pokemon.pointDeVie = j1Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
+        document.getElementById('pointDeVieJ1').value = j1Pokemon.pointDeVie;
+        document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Pokemon.pointDeVie}`);
+        if(j1Pokemon.pointDeVie <= 0)  {
+            txtGagnant.innerText = 'Le joueur 2 à gagné !!!';
+            ecrCombat.style.display = "none";
+            ecrFin.style.display = "flex";
+        }
+    });
+    
+    j2Attaque2.addEventListener('click', () => {
+        attaqueChoisi = j2Pokemon.attaques.attaque_2;
+        j1Pokemon.pointDeVie = j1Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
+        document.getElementById('pointDeVieJ1').value = j1Pokemon.pointDeVie;
+        document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Pokemon.pointDeVie}`);
+        if(j1Pokemon.pointDeVie <= 0)  {
+            txtGagnant.innerText = 'Le joueur 2 à gagné !!!';
+            ecrCombat.style.display = "none";
+            ecrFin.style.display = "flex";
+        }
+    });
+    
+    j2Attaque3.addEventListener('click', () => {
+        attaqueChoisi = j2Pokemon.attaques.attaque_3;
+        j1Pokemon.pointDeVie = j1Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
+        document.getElementById('pointDeVieJ1').value = j1Pokemon.pointDeVie;
+        document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Pokemon.pointDeVie}`);
+        if(j1Pokemon.pointDeVie <= 0)  {
+            txtGagnant.innerText = 'Le joueur 2 à gagné !!!';
+            ecrCombat.style.display = "none";
+            ecrFin.style.display = "flex";
+        }
+    });
+    
+    j2Attaque4.addEventListener('click', () => {
+        attaqueChoisi = j2Pokemon.attaques.attaque_4;
+        j1Pokemon.pointDeVie = j1Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
+        document.getElementById('pointDeVieJ1').value = j1Pokemon.pointDeVie;
+        document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Pokemon.pointDeVie}`);
+        if(j1Pokemon.pointDeVie <= 0)  {
+            txtGagnant.innerText = 'Le joueur 2 à gagné !!!';
+            ecrCombat.style.display = "none";
+            ecrFin.style.display = "flex";
+        }
+    });
 });
 
+
+//PARTIE FIN
+const btnRejouer = document.querySelector('.rejouer');
+const btnChangerHero = document.querySelector('.changerHero');
+let btnRetourAccueil = document.querySelector('.retourAccueil');
+
+btnRejouer.addEventListener('click', () => {
+    ecrFin.style.display = "none";
+    ecrCombat.style.display = "flex";
+});
+
+btnChangerHero.addEventListener('click', () => {
+    ecrFin.style.display = "none";
+    ecrSelection.style.display = "flex";
+});
+
+btnRetourAccueil.addEventListener('click', () => {
+    ecrFin.style.display = "none";
+    ecrAccueil.style.display = "flex";
+});

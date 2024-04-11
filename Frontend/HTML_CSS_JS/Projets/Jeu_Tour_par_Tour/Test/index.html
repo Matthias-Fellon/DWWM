@@ -3,14 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Test</title>
 </head>
 <body>
-    <div class="joueur1">
-        <img id="test" src="../Images/Mage.png" alt="Mage">
-    </div>
-    <div class="joueur2"></div>
+    <section class="ecranCombat">
+        <h2>Phase de Combat</h2>
+        <div class="combatJoueurs">
+            <div class="combatJ1">
+                <div class="pokemonHudJ1">
+                    <label id="txtPointDeVieJ1" for="pointDeVieJ1">Vie :</label>
+                    <progress id="pointDeVieJ1" max="100" value="50"></progress>
+                </div>
+                <div class="attaquesJ1">
+                    <button class="j1BoutonAttaque1 boutonAction">Attaque1</button>
+                    <button class="j1BoutonAttaque2 boutonAction">Attaque2</button>
+                    <button class="j1BoutonAttaque3 boutonAction">Attaque3</button>
+                    <button class="j1BoutonAttaque4 boutonAction">Attaque4</button>
+                </div>
+            </div>
+            
+            <!-- <div class="combatJ2">
+                <div class="pokemonHudJ2">
+                    <label id="txtPointDeVieJ2" for="pointDeVieJ2">Vie :</label>
+                    <progress id="pointDeVieJ2" max="100" value="50"></progress>
+                </div>
+                <div class="attaquesJ2">
+                    <button class="j2BoutonAttaque1 boutonAction">Attaque1</button>
+                    <button class="j2BoutonAttaque2 boutonAction">Attaque2</button>
+                    <button class="j2BoutonAttaque3 boutonAction">Attaque3</button>
+                    <button class="j2BoutonAttaque4 boutonAction">Attaque4</button>
+                </div>
+            </div> -->
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

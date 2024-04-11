@@ -85,12 +85,10 @@ body{
         align-items: center;
 
         .joueurs{
-            width: 100%;
             height: 100%;
             display: flex;
 
             .joueur1, .joueur2{
-                width: 100%;
                 height: 100%;
                 background-color: lightcoral;
                 display: flex;
@@ -98,12 +96,12 @@ body{
                 justify-content: space-around;
                 text-align: center;
 
-                .personnages{
+                .pokemonJ1, .pokemonJ2{
                     display: grid;
                     grid-template-areas: "a a";
                     gap: 20px;
 
-                    .Mage, .Guerrier, .Prêtre, .Archer{
+                    .Pikachu, .Dracaufeu, .Tortank, .Florizarre{
                         display: flex;
                         flex-flow: row-reverse nowrap;
                         justify-content: center;
@@ -118,16 +116,24 @@ body{
                                 display: flex;
                                 flex-flow: row wrap;
                                 column-gap: 20px;
+
+                                // .pointsDeVie{
+
+                                // }
+
+                                // .attaques{
+
+                                // }
                             }
                         }
-                        .imageMage, .imageGuerrier, .imagePrêtre, .imageArcher{
+                        .images{
                             width: 100px;
                             height: 100px;
                         }
                     }
                 }
 
-                .heroSelected {
+                .pokemonSelected {
                     border: 2px solid blue;
                 }
                 
@@ -162,24 +168,49 @@ body{
             width: 100%;
             height: 66.6%;
             background-color: green;
+            display: flex;
+
+            .champJ1{
+                width: 100%;
+                height: 100%;
+                border: solid 2px red;
+            }
+
+            .champJ2{
+                width: 100%;
+                height: 100%;
+                border: solid 2px blue;
+            }
         }
 
         .combatJoueurs{
             width: 100%;
             height: 33.3%;
+
             background-color: antiquewhite;
+            border: solid 2px purple;
 
             display: flex;
             justify-content: space-evenly;
 
             .combatJ1, .combatJ2{
+                width: 100%;
+                height: 100%;
 
-                .heroHudJ1, .heroHudJ2{
+                display: flex;
+                flex-flow: column nowrap;
+                border: solid 3px pink;
+
+                .pokemonHudJ1, .pokemonHudJ2{
+                    flex-grow: 2;
+                    width: 100%;
+
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: center;
+                    border: solid 2px yellow;
 
                     #pointDeVieJ1, #pointDeVieJ2{
-                        width: 200px;
+                        width: 150px;
                         height: 25px;
                         border: 2px solid gray;
                     }
@@ -190,24 +221,37 @@ body{
 
                     #pointDeVieJ1::-webkit-progress-value, #pointDeVieJ2::-webkit-progress-value{
                         background-color: red;
-                    }
+                    } 
                 }
 
                 .actionJ1, .actionJ2{
+                    flex-grow: 10;
                     width: 100%;
-                    height: 100%;
+
                     display: flex;
+                    flex-flow: row nowrap;
                     justify-content: space-around;
-                    align-items: flex-end;
+                    align-items: center;
                     padding: 50px;
+                    border: solid 2px green;
 
                     .boutonAction{
-                        width: 70px;
-                        height: 30px;
+                        transform: scale(3);
+                        
                     }
                 }
-            }
-            
+
+                .attaquesJ1, .attaquesJ2{
+                    flex-grow: 10;
+                    width: 100%;
+
+                    display: none;
+                    grid-template-areas: "a a";
+                    padding: 20px;
+                    border: solid 2px green;
+                    gap: 10px;
+                }
+            }  
         }            
     }
 
@@ -216,8 +260,32 @@ body{
         width: 100vw;
         height: 100vh;
         background-color: aliceblue;
-        
+
+        // display: flex;
         flex-flow: column nowrap;
         align-items: center;
+        justify-content: center;
+        gap: 10px;
+        
+        .gagnant{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .actionsEcranFin{
+            width: 100%;
+            height: 100%;
+             
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            gap: 15%;
+
+            .boutonAction1{
+                transform: scale(3);
+            }
+        }
     }
 }
