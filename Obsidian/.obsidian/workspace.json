@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Jeu_Tour_par_Tour/Mon code.md",
+                "file": "Jeu_Tour_par_Tour/Mon code Javascript.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Jeu_Tour_par_Tour/Mon code.md",
+                "file": "Jeu_Tour_par_Tour/Mon code Javascript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Jeu_Tour_par_Tour/Mon code.md",
+                "file": "Jeu_Tour_par_Tour/Mon code Javascript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Jeu_Tour_par_Tour/Mon code.md"
+                "file": "Jeu_Tour_par_Tour/Mon code Javascript.md"
               }
             }
           }
@@ -162,7 +162,7 @@
   "active": "1411644c8db32039",
   "lastOpenFiles": [
     "Jeu_Tour_par_Tour/Base.md",
-    "Jeu_Tour_par_Tour/Mon code.md",
+    "Jeu_Tour_par_Tour/Mon code Javascript.md",
     "Cours/2- Syntaxe de base.md",
     "Cours/3- Manipulation du DOM.md",
     "Cours/6- Concepts Avancés.md",

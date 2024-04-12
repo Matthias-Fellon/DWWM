@@ -182,14 +182,15 @@ Personnages.forEach(personnage => {
                 console.log("nonJ1");
                 break;          
         }
-        console.log("J1 point de ve : " + j1Pokemon.pointDeVie);
+        console.log("J1 point de vie : " + j1Pokemon.pointDeVie);
+        document.getElementById('pointDeVieJ1').max = j1Pokemon.pointDeVie;
         document.getElementById('pointDeVieJ1').value = j1Pokemon.pointDeVie;
         document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Pokemon.pointDeVie}`);
         document.querySelector('.j1BoutonAttaque1').innerText = (`${j1Pokemon.attaques.attaque_1.nom}`);
         document.querySelector('.j1BoutonAttaque2').innerText = (`${j1Pokemon.attaques.attaque_2.nom}`);
         document.querySelector('.j1BoutonAttaque3').innerText = (`${j1Pokemon.attaques.attaque_3.nom}`);
         document.querySelector('.j1BoutonAttaque4').innerText = (`${j1Pokemon.attaques.attaque_4.nom}`);
-        document.querySelector('.') // ! Afficher l'image sur le champ de bataille
+        document.querySelector('.imagePokemonJ1').src = j1Pokemon.image;
     });
 
     divJoueur2.addEventListener('click', () => {
@@ -223,14 +224,15 @@ Personnages.forEach(personnage => {
                 console.log("nonJ2");
                 break;          
         }
-        console.log("J2 point de ve : " + j2Pokemon.pointDeVie);
+        console.log("J2 point de vie : " + j2Pokemon.pointDeVie);
+        document.getElementById('pointDeVieJ2').max = j2Pokemon.pointDeVie;
         document.getElementById('pointDeVieJ2').value = j2Pokemon.pointDeVie;
         document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Pokemon.pointDeVie}`);
         document.querySelector('.j2BoutonAttaque1').innerText = (`${j2Pokemon.attaques.attaque_1.nom}`);
         document.querySelector('.j2BoutonAttaque2').innerText = (`${j2Pokemon.attaques.attaque_2.nom}`);
         document.querySelector('.j2BoutonAttaque3').innerText = (`${j2Pokemon.attaques.attaque_3.nom}`);
         document.querySelector('.j2BoutonAttaque4').innerText = (`${j2Pokemon.attaques.attaque_4.nom}`);
-        // ! Afficher l'image sur le champ de bataille
+        document.querySelector('.imagePokemonJ2').src = j2Pokemon.image;
     });
 
     // Ajoute la div au conteneur
@@ -258,131 +260,101 @@ j2BtnPret.addEventListener('click', () => {
     }
 });
 
+
 //PARTIE COMBAT
-const j1BtnAttques = document.querySelector('.J1boutonAttaques');
-const j2BtnAttques = document.querySelector('.J2boutonAttaques');
 const txtGagnant = document.querySelector('.textGagnant');
-
-const j1Attaque1 = document.querySelector('.j1BoutonAttaque1');
-const j1Attaque2 = document.querySelector('.j1BoutonAttaque2');
-const j1Attaque3 = document.querySelector('.j1BoutonAttaque3');
-const j1Attaque4 = document.querySelector('.j1BoutonAttaque4');
-
-const j2Attaque1 = document.querySelector('.j1BoutonAttaque1');
-const j2Attaque2 = document.querySelector('.j1BoutonAttaque2');
-const j2Attaque3 = document.querySelector('.j1BoutonAttaque3');
-const j2Attaque4 = document.querySelector('.j1BoutonAttaque4');
-
 let attaqueChoisi = null;
 
-//Le joueur 1 attaque
-j1BtnAttques.addEventListener('click', () => {
-    document.querySelector('.actionJ1').style.display = "none";
-    document.querySelector('.attaquesJ1').style.display = "grid";
+function leJ1Attaque() {
+    const j1BtnAttques = document.querySelector('.J1boutonAttaques');
+    const j1Attaque1 = document.querySelector('.j1BoutonAttaque1');
+    const j1Attaque2 = document.querySelector('.j1BoutonAttaque2');
+    const j1Attaque3 = document.querySelector('.j1BoutonAttaque3');
+    const j1Attaque4 = document.querySelector('.j1BoutonAttaque4');
 
-    j1Attaque1.addEventListener('click', () => {
-        attaqueChoisi = j1Pokemon.attaques.attaque_1;
-        j2Pokemon.pointDeVie = j2Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
+    function attaqueJ1() {
+        j2Pokemon.pointDeVie = j2Pokemon.pointDeVie - attaqueChoisi.degats;
         document.getElementById('pointDeVieJ2').value = j2Pokemon.pointDeVie;
         document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Pokemon.pointDeVie}`);
         if(j2Pokemon.pointDeVie <= 0) {
             txtGagnant.innerText ='Le joueur 1 à gagné !!!';
             ecrCombat.style.display = "none";
             ecrFin.style.display = "flex";
-        }
-    });
-    
-    j1Attaque2.addEventListener('click', () => {
-        attaqueChoisi = j1Pokemon.attaques.attaque_2;
-        j2Pokemon.pointDeVie = j2Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
-        document.getElementById('pointDeVieJ2').value = j2Pokemon.pointDeVie;
-        document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Pokemon.pointDeVie}`);
-        if(j2Pokemon.pointDeVie <= 0) {
-            txtGagnant.innerText ='Le joueur 1 à gagné !!!';
-            ecrCombat.style.display = "none";
-            ecrFin.style.display = "flex";
-        }
-    });
-    
-    j1Attaque3.addEventListener('click', () => {
-        attaqueChoisi = j1Pokemon.attaques.attaque_3;
-        j2Pokemon.pointDeVie = j2Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
-        document.getElementById('pointDeVieJ2').value = j2Pokemon.pointDeVie;
-        document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Pokemon.pointDeVie}`);
-        if(j2Pokemon.pointDeVie <= 0) {
-            txtGagnant.innerText ='Le joueur 1 à gagné !!!';
-            ecrCombat.style.display = "none";
-            ecrFin.style.display = "flex";
-        }
-    });
-    
-    j1Attaque4.addEventListener('click', () => {
-        attaqueChoisi = j1Pokemon.attaques.attaque_4;
-        j2Pokemon.pointDeVie = j2Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
-        document.getElementById('pointDeVieJ2').value = j2Pokemon.pointDeVie;
-        document.getElementById('txtPointDeVieJ2').innerText = (`Vie : ${j2Pokemon.pointDeVie}`);
-        if(j2Pokemon.pointDeVie <= 0) {
-            txtGagnant.innerText ='Le joueur 1 à gagné !!!';
-            ecrCombat.style.display = "none";
-            ecrFin.style.display = "flex";
-        }
-    });
-});
+        };
+      
+    };
 
+    //Le joueur 1 attaque
+    j1BtnAttques.addEventListener('click', () => {
+        document.querySelector('.actionJ1').style.display = "none";
+        document.querySelector('.attaquesJ1').style.display = "grid";
 
-//Le joueur 2 attaque
-j2BtnAttques.addEventListener('click', () => {
-    document.querySelector('.actionJ2').style.display = "none";
-    document.querySelector('.attaquesJ2').style.display = "grid";
+        j1Attaque1.addEventListener('click', () => {
+            attaqueChoisi = j1Pokemon.attaques.attaque_1;
+            attaqueJ1();
+        });
+        
+        j1Attaque2.addEventListener('click', () => {
+            attaqueChoisi = j1Pokemon.attaques.attaque_2;
+            attaqueJ1();
+        });
+        
+        j1Attaque3.addEventListener('click', () => {
+            attaqueChoisi = j1Pokemon.attaques.attaque_3;
+            attaqueJ1();
+        });
+        
+        j1Attaque4.addEventListener('click', () => {
+            attaqueChoisi = j1Pokemon.attaques.attaque_4;
+            attaqueJ1();
+        });
+    });
+}
 
-    j2Attaque1.addEventListener('click', () => {
-        attaqueChoisi = j2Pokemon.attaques.attaque_1;
-        j1Pokemon.pointDeVie = j1Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
+function leJ2Attaque() {
+    const j2BtnAttques = document.querySelector('.J2boutonAttaques');
+    const j2Attaque1 = document.querySelector('.j2BoutonAttaque1');
+    const j2Attaque2 = document.querySelector('.j2BoutonAttaque2');
+    const j2Attaque3 = document.querySelector('.j2BoutonAttaque3');
+    const j2Attaque4 = document.querySelector('.j2BoutonAttaque4');
+
+    function attaqueJ2() {
+        j1Pokemon.pointDeVie = j1Pokemon.pointDeVie - attaqueChoisi.degats;
         document.getElementById('pointDeVieJ1').value = j1Pokemon.pointDeVie;
         document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Pokemon.pointDeVie}`);
         if(j1Pokemon.pointDeVie <= 0)  {
             txtGagnant.innerText = 'Le joueur 2 à gagné !!!';
             ecrCombat.style.display = "none";
             ecrFin.style.display = "flex";
-        }
-    });
+        };
+    };
     
-    j2Attaque2.addEventListener('click', () => {
-        attaqueChoisi = j2Pokemon.attaques.attaque_2;
-        j1Pokemon.pointDeVie = j1Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
-        document.getElementById('pointDeVieJ1').value = j1Pokemon.pointDeVie;
-        document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Pokemon.pointDeVie}`);
-        if(j1Pokemon.pointDeVie <= 0)  {
-            txtGagnant.innerText = 'Le joueur 2 à gagné !!!';
-            ecrCombat.style.display = "none";
-            ecrFin.style.display = "flex";
-        }
+    //Le joueur 2 attaque
+    j2BtnAttques.addEventListener('click', () => {
+        document.querySelector('.actionJ2').style.display = "none";
+        document.querySelector('.attaquesJ2').style.display = "grid";
+
+        j2Attaque1.addEventListener('click', () => {
+            attaqueChoisi = j2Pokemon.attaques.attaque_1;
+            attaqueJ2();
+        });
+        
+        j2Attaque2.addEventListener('click', () => {
+            attaqueChoisi = j2Pokemon.attaques.attaque_2;
+            attaqueJ2();
+        });
+        
+        j2Attaque3.addEventListener('click', () => {
+            attaqueChoisi = j2Pokemon.attaques.attaque_3;
+            attaqueJ2();
+        });
+        
+        j2Attaque4.addEventListener('click', () => {
+            attaqueChoisi = j2Pokemon.attaques.attaque_4;
+            attaqueJ2();
+        });
     });
-    
-    j2Attaque3.addEventListener('click', () => {
-        attaqueChoisi = j2Pokemon.attaques.attaque_3;
-        j1Pokemon.pointDeVie = j1Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
-        document.getElementById('pointDeVieJ1').value = j1Pokemon.pointDeVie;
-        document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Pokemon.pointDeVie}`);
-        if(j1Pokemon.pointDeVie <= 0)  {
-            txtGagnant.innerText = 'Le joueur 2 à gagné !!!';
-            ecrCombat.style.display = "none";
-            ecrFin.style.display = "flex";
-        }
-    });
-    
-    j2Attaque4.addEventListener('click', () => {
-        attaqueChoisi = j2Pokemon.attaques.attaque_4;
-        j1Pokemon.pointDeVie = j1Pokemon.pointDeVie - attaqueChoisi.degats; // ! factoriser
-        document.getElementById('pointDeVieJ1').value = j1Pokemon.pointDeVie;
-        document.getElementById('txtPointDeVieJ1').innerText = (`Vie : ${j1Pokemon.pointDeVie}`);
-        if(j1Pokemon.pointDeVie <= 0)  {
-            txtGagnant.innerText = 'Le joueur 2 à gagné !!!';
-            ecrCombat.style.display = "none";
-            ecrFin.style.display = "flex";
-        }
-    });
-});
+}
 
 
 //PARTIE FIN
@@ -391,6 +363,7 @@ const btnChangerHero = document.querySelector('.changerHero');
 let btnRetourAccueil = document.querySelector('.retourAccueil');
 
 btnRejouer.addEventListener('click', () => {
+
     ecrFin.style.display = "none";
     ecrCombat.style.display = "flex";
 });
@@ -401,6 +374,8 @@ btnChangerHero.addEventListener('click', () => {
 });
 
 btnRetourAccueil.addEventListener('click', () => {
-    ecrFin.style.display = "none";
-    ecrAccueil.style.display = "flex";
+    location.reload()
 });
+
+leJ1Attaque();
+leJ2Attaque();
