@@ -28,3 +28,5 @@ for(let i = 0; i<160; i+=20){
         });
     });
 }
+// ? Les images ne s'affichent pas dans l'ordre, probleme lier a js:
+// ?    - Soit les données ne sont pas reçu dans l'ordre
