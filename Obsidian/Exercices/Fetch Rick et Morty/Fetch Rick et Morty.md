@@ -26,6 +26,3 @@ Pour la page episode, il faudra indiquer dans un tableau :
 - le numéro de l'épisode
 - l'intitulé de l'épisode
 - La date de sortie
-
-
-documentation : https://rickandmortyapi.com/documentation/
