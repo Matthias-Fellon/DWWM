@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.sectionAccueil{
+    height: 100vh;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionSelectCharacter{
+    height: 100vh;
+    background-color: blue;
+    display: none;
+    flex-direction: column;
+}
+
+
+.sectionBattle{
+    height: 100vh;
+    background-color: violet;
+    display: none;
+}
+
+.btnStartGame{
+    height: 50px;
+    font-size: 30px;
+    width: 500px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.accueilH1{
+    margin-bottom: 40px;
+    font-size: 100px;
+}
+
+.imgSelectPlayer1{
+    height: 150px;
+    width: 250px;
+    border: white solid 3px;
+}
+
+.imgSelectPlayer2{
+    height: 150px;
+    width: 250px;
+    border: white solid 3px;
+}
+
+.selectCharacterPlayer1{
+    width: 50%;
+}
+.selectCharacterPlayer2{
+    width: 50%;
+}
+
+.selectPlayer1Player2{
+    display: flex;
+}
+
+.battlePlayer1Player2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.battlePlayer1{
+    width: 50%;
+}
+
+.battlePlayer2{
+    width: 50%;
+}
