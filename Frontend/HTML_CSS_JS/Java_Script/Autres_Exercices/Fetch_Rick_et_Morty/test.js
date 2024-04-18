@@ -47,7 +47,7 @@ function fetchData(apiURL, donneesVoulus, typeAffichage) {
     .then(response => response.json())
     .then(data => {
         const pages = data.info.pages;
-        setTimeout(() => { // ! Pourquoi avoir mis un setTimeout ? (regerde le principe du setTimeout)
+        setTimeout(() => {
             for (let i = 1; i <= pages; i++) {
                 fetch(apiURL + i)
                 .then(response => response.json())

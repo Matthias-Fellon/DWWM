@@ -76,19 +76,36 @@ function formulaire() {
     functCreerInput("Topping", data.topping, document.querySelector('.formulaire .topping')); //Affichage des topping
 
     const divSelection = document.createElement('div');
+    divSelection.style.display = "flex";
+    divSelection.style.flexDirection = "column";
+    divSelection.style.alignItemst = "center";
     formulaire.appendChild(divSelection);
 
     const bouton = document.createElement('button');
     bouton.textContent = "Valider";
     bouton.addEventListener("click", () => {
+        const inputValues = [];
+        // Sélection de tous les inputs du formulaire
+        const inputs = document.querySelectorAll('input');
+
+        // Parcours de tous les inputs et récupération de leurs valeurs
+        inputs.forEach(input => {
+            // Si c'est une case à cocher, récupérer la propriété 'checked' plutôt que 'value'
+            if (input.checked) {
+                inputValues.push(input.value);
+            }
+        });
+        console.log("Input Values:", inputValues);
         const h2 = document.createElement('h2');
-        // ! Récupèrer les inputs séléctionnés
+        h2.textContent = `Nappages : ${inputValues[0]} / Topping : ${inputValues[1]}`;
+        divSelection.appendChild(h2);
     })
     divSelection.appendChild(bouton);
+
 }
 formulaire();
 
-function functCreerInput(nom, data ,parent) {
+function functCreerInput(nom, data, parent) {
     const titre = document.createElement('h1');
     titre.textContent = nom;
     titre.style.textAlign = "center";
@@ -96,13 +113,13 @@ function functCreerInput(nom, data ,parent) {
     data.forEach(element => {
         const inputRadio = document.createElement('input')
         inputRadio.type = "radio"
-        inputRadio.id = `nappage${element.type}`
-        inputRadio.name = "nappage"
+        inputRadio.id = `${nom}${element.type}`
+        inputRadio.name = nom;
         inputRadio.value = element.type
         parent.appendChild(inputRadio)
         
         const labelRadio = document.createElement('label')
-        labelRadio.htmlFor = `nappage${element.type}`
+        labelRadio.htmlFor = `${nom}${element.type}`
         labelRadio.textContent = element.type
         parent.appendChild(labelRadio)
     });

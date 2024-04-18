@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exercices/Fetch Rick et Morty/Fetch Rick et Morty.md",
+                "file": "Cours/4- Gestion des tableaux et Objets.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Exercices/Fetch Rick et Morty/Fetch Rick et Morty.md",
+                "file": "Cours/4- Gestion des tableaux et Objets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Exercices/Fetch Rick et Morty/Fetch Rick et Morty.md",
+                "file": "Cours/4- Gestion des tableaux et Objets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Exercices/Fetch Rick et Morty/Fetch Rick et Morty.md"
+                "file": "Cours/4- Gestion des tableaux et Objets.md"
               }
             }
           }
@@ -148,6 +148,11 @@
   },
   "active": "1411644c8db32039",
   "lastOpenFiles": [
+    "Aide mémoire - Tableaux.md",
+    "Cours/3- Manipulation du DOM.md",
+    "Cours/7- AJAX (Asynchronous JavaScript and XML).md",
+    "Cours/6- Concepts Avancés.md",
+    "Cours/5- Fonctions avancées.md",
     "Cours/4- Gestion des tableaux et Objets.md",
     "Exercices/Fetch Rick et Morty/Fetch Rick et Morty.md",
     "Jeu_Tour_par_Tour/Jeu Tour par Tour (architecture).md",
@@ -157,14 +162,10 @@
     "Exercices/Jeu_Tour_par_Tour",
     "Jeu_Tour_par_Tour/Base.md",
     "Cours/2- Syntaxe de base.md",
-    "Cours/3- Manipulation du DOM.md",
-    "Cours/6- Concepts Avancés.md",
-    "Cours/5- Fonctions avancées.md",
     "Exercices/Exercices - Fonctions.md",
     "Exercices/Exercices - Conditions & boucles.md",
     "Jeu_Tour_par_Tour",
     "Nouveau dossier",
-    "Aide mémoire - Tableaux.md",
     "Cours/1- Introduction à JavaScript.md",
     "Exercices/Exercices - Algo de base.md",
     "Aide mémoire - Général.md",
