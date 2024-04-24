@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <select id="mySelect" size="8">
+    <option>Apple</option>
+    <option>Pear</option>
+    <option>Banana</option>
+    <option>Orange</option>
+  </select>
+</form>
+<br>
+
+<p>Click the button to add a "Kiwi" option at the end of the dropdown list.</p>
+
+<button type="button" onclick="myFunction()">Insert option</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mySelect");
+  var option = document.createElement("option");
+  option.text = "Kiwi";
+  x.add(option);
+}
+</script>
+
+</body>
+</html>

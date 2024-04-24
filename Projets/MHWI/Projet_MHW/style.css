@@ -1,0 +1,20 @@
+  <style>
+    .blanc{background-color: #FFFFFF;}
+    .gris{background-color: #cccc99;}
+    .cyan {background-color: #33CCFF;}
+    .violet {background-color: #9900FF;}
+    .rouge {background-color: #FF0000;}
+    .bleu {background-color: #3333FF;}
+    .vert{ background-color: #04B404;}
+    .noir {background-color: #A4A4A4;}
+    .jaune{background-color: #F7FE2E;}
+    .contour{border: 1px solid black;}
+
+    table, td, th 
+    {border: 1px solid #000000; text-align: center;}
+
+    table 
+    {border-collapse: collapse; width: 100%;}
+
+    th, td {padding: 15px;}
+  </style>

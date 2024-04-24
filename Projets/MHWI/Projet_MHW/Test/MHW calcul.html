@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calcul des armes MH WORLD</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    .blanc{background-color: #FFFFFF;}
+    .gris{background-color: #cccc99;}
+    .cyan {background-color: #33CCFF;}
+    .violet {background-color: #9900FF;}
+    .rouge {background-color: #FF0000;}
+    .bleu {background-color: #3333FF;}
+    .vert{ background-color: #04B404;}
+    .noir {background-color: #A4A4A4;}
+    .jaune{background-color: #F7FE2E;}
+    .contour{border: 1px solid black;}
+
+    table, td, th 
+    {border: 1px solid #000000; text-align: center;}
+
+    table 
+    {border-collapse: collapse; width: 100%;}
+
+    th, td {padding: 15px;}
+  </style>
+
+  <script type="text/javascript">
+    var ARMES=0;  
+    var TRUERAW,RAW=0; 
+    var AFFINITÉ,AFFINITÉ_NEG=0;
+    var TRANCHANT,TRANCHANT_ATTQ,TRANCHANT_ELEM=0;
+    var VALCRIT=125;//125,130,135,140
+    var CRITIQUE=0;
+    var FLOP=0;
+    var NORMAL=0;
+    var RAW_MOYENNE=0;
+
+
+    function Calcul() {
+    ARMES = document.getElementById("Armes").value;
+    RAW = document.getElementById("Attaque").value;
+    AFFINITÉ = document.getElementById("Affinité").value;
+    TRANCHANT = document.getElementById("Tranchant").value;
+
+    if (TRANCHANT==6)
+      {TRANCHANT_ATTQ=1.44; TRANCHANT_ELEM=1.2;}
+
+    if (TRANCHANT==5)
+      {TRANCHANT_ATTQ=1.32; TRANCHANT_ELEM=1.125;}
+
+    if (TRANCHANT==4)
+      {TRANCHANT_ATTQ=1.2; TRANCHANT_ELEM=1.0625;}
+
+    if (TRANCHANT==3)
+      {TRANCHANT_ATTQ=1.05; TRANCHANT_ELEM=1;}
+
+    if (TRANCHANT==2)
+      {TRANCHANT_ATTQ=1; TRANCHANT_ELEM=1.75;}
+
+    if (TRANCHANT==1)
+      {TRANCHANT_ATTQ=0.75; TRANCHANT_ELEM=1.5;}
+
+    if (TRANCHANT==0)
+      {TRANCHANT_ATTQ=0.5; TRANCHANT_ELEM=0.25;}
+
+    if (AFFINITÉ<0)
+      {AFFINITÉ_NEG = -AFFINITÉ;
+      RAW = (RAW/ARMES)*TRANCHANT_ATTQ;
+      FLOP = RAW*75/100;
+      NORMAL = (100-AFFINITÉ_NEG);
+      RAW_MOYENNE = (NORMAL*RAW/100) + (FLOP-(NORMAL*FLOP/100));}
+
+    if (AFFINITÉ>0)
+      {RAW = (RAW/ARMES)*TRANCHANT_ATTQ;
+      CRITIQUE = RAW*VALCRIT/100;
+      NORMAL = (100-AFFINITÉ)/100;
+      RAW_MOYENNE = (AFFINITÉ*CRITIQUE/100)+NORMAL*RAW;}
+
+    if (AFFINITÉ==0)
+      {RAW = (RAW/ARMES)*TRANCHANT_ATTQ;
+      NORMAL = (100-AFFINITÉ)/100;
+      RAW_MOYENNE = AFFINITÉ*CRITIQUE+NORMAL*RAW;}
+
+    document.getElementById('TrueRAW').value = RAW_MOYENNE;
+    }
+
+  </script>
+
+  <body>
+    <div class="container-fluid">
+      <H2 class='text-center'> Monster Hunter World : Calcul des armes</H2>
+      <div class="row row-no-gutters">
+        <div class="col-sm-4" style="background-color:lavender;">
+          <table>
+            <th colspan=2>Stats de l'arme</th>
+            <tr>
+              <td>Type d'arme</td>
+              <td>
+                <select id="Armes" onChange="Calcul()">
+                  <option value="4.8">Grande &Eacutepée</option>
+                  <option value="3.3">&Eacutepée longue</option>
+                  <option value="1.4">&Eacutepée/bouclier</option>
+                  <option value="1.4">Lames double</option>
+                  <option value="5.2">Marteau</option>
+                  <option value="4.2">Corne de chasse</option>
+                  <option value="2.3">Lance</option>
+                  <option value="2.3">Lancecanon</option>
+                  <option value="3.5">Morpho-hache</option>
+                  <option value="3.6">Volto-hache</option>
+                  <option value="3.1">Insectoglaive</option>
+                  <option value="1.3">fusarbalète lourd</option>
+                  <option value="1.5">fusarbalète léger</option>
+                  <option value="1.2">Arc</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Attaque</td>
+              <td><input type="number" id="Attaque" onChange="Calcul()" step="8" value="0" min="0" max="2000"></td>
+            </tr>
+            <tr>
+              <td>Affinité</td>
+              <td><input type="number" id="Affinité" onChange="Calcul()" step="1" value="0" min="-100" max="100"></td>
+            </tr>
+            <tr>
+              <td>
+                <select id="Elément">
+                  <option value="variable">&Eacutelément</option>
+                  <option value="variable">Affliction</option>
+                </select>
+              </td>
+              <td><input type="number" onChange="Calcul()" step="10" value="0" min="0" max="999"></td>
+            </tr>
+          </table>
+
+          </br></br></br>
+
+          <table>
+            <tr>
+              <th colspan=3>Transcendances</th>
+            </tr>
+            <tr>
+              <td>Nombre de transcendances</td>
+              <td>Type</td>
+              <td>Lvl</td>
+            </tr>
+            <tr>
+              <td>Transcendances 1</td>
+              <td>
+                <select id="Type">
+                  <option value="variable">-</option>
+                  <option value="variable">RAW</option>
+                  <option value="variable">Affinité</option>
+                  <option value="variable">Tranchant</option>
+                </select>
+              </td>
+              <td>
+                <select id="Level">
+                  <option value="variable">0</option>
+                  <option value="variable">1</option>
+                  <option value="variable">2</option>
+                  <option value="variable">3</option>
+                  <option value="variable">4</option>
+                  <option value="variable">5</option>
+                  <option value="variable">6</option>
+                </select>
+              </td>
+            <tr>
+              <td>Transcendances 2</td>
+              <td>
+                <select id="Type">
+                  <option value="variable">-</option>
+                  <option value="variable">RAW</option>
+                  <option value="variable">Affinité</option>
+                  <option value="variable">Tranchant</option>
+                </select>
+              </td>
+              <td>
+                <select id="Level">
+                  <option value="variable">0</option>
+                  <option value="variable">1</option>
+                  <option value="variable">2</option>
+                  <option value="variable">3</option>
+                  <option value="variable">4</option>
+                  <option value="variable">5</option>
+                  <option value="variable">6</option>
+                </select>
+              </td>
+            <tr>
+              <td>Transcendances 3</td>
+              <td>
+                <select id="Type">
+                  <option value="variable">-</option>
+                  <option value="variable">RAW</option>
+                  <option value="variable">Affinité</option>
+                  <option value="variable">Tranchant</option>
+                </select>
+              </td>
+              <td>
+                <select id="Level">
+                  <option value="variable">0</option>
+                  <option value="variable">1</option>
+                  <option value="variable">2</option>
+                  <option value="variable">3</option>
+                  <option value="variable">4</option>
+                  <option value="variable">5</option>
+                  <option value="variable">6</option>
+                </select>
+              </td>
+            <tr>
+              <td>Transcendances 4</td>
+              <td>
+                <select id="Type">
+                  <option value="variable">-</option>
+                  <option value="variable">RAW</option>
+                  <option value="variable">Affinité</option>
+                  <option value="variable">Tranchant</option>
+                </select>
+              </td>
+              <td>
+                <select id="Level">
+                  <option value="variable">0</option>
+                  <option value="variable">1</option>
+                  <option value="variable">2</option>
+                  <option value="variable">3</option>
+                  <option value="variable">4</option>
+                  <option value="variable">5</option>
+                  <option value="variable">6</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Transcendances 5</td>
+              <td>
+                <select id="Type">
+                  <option value="variable">-</option>
+                  <option value="variable">RAW</option>
+                  <option value="variable">Affinité</option>
+                  <option value="variable">Tranchant</option>
+                </select>
+              </td>
+              <td>
+                <select id="Level">
+                  <option value="variable">0</option>
+                  <option value="variable">1</option>
+                  <option value="variable">2</option>
+                  <option value="variable">3</option>
+                  <option value="variable">4</option>
+                  <option value="variable">5</option>
+                  <option value="variable">6</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+          </br></br></br>
+          <table>
+            <tr>
+              <th colspan=2>Objets</th>
+            </tr>
+            <tr>
+              <td>
+                <select id="Potion">
+                  <option value="variable">Potion</option>
+                  <option value="variable">Potion+</option>
+                </select>
+              </td>
+              <td>
+                <select id="choix">
+                  <option value="variable">oui</option>
+                  <option value="variable">non</option>
+                </select>
+              </td>
+            <tr>
+              <td>Poudre</td>
+              <td>
+                <select id="choix">
+                  <option value="variable">oui</option>
+                  <option value="variable">non</option>
+                </select>
+              </td>
+            <tr>
+              <td>
+                <select id="Philtre Graine">
+                  <option value="variable">Philtre</option>
+                  <option value="variable">Graine</option>
+                </select>
+              </td>
+              <td>
+                <select id="choix">
+                  <option value="variable">oui</option>
+                  <option value="variable">non</option>
+                </select>
+              </td>
+            <tr>
+              <td>Amulette</td>
+              <td>
+                <select id="choix">
+                  <option value="variable">oui</option>
+                  <option value="variable">non</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Griffe</td>
+              <td>
+                <select id="choix">
+                  <option value="variable">oui</option>
+                  <option value="variable">non</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+          </br></br></br>
+          <table>
+            <tr>
+              <th colspan=2>Cantine</th>
+            </tr>
+            <tr>
+              <td>Boost d'attaque</td>
+              <td>
+                <select id="choix">
+                  <option value="variable">Aucun</option>
+                  <option value="variable">Petit</option>
+                  <option value="variable">Moyen</option>
+                  <option value="variable">Grand</option>
+                </select>
+              </td>
+            <tr>
+          </table>
+        </div>
+
+        <div class="col-sm-4" style="background-color:lavenderblush;">
+          <table>
+            <tr>
+              <th colspan=2>Talents</th>
+            </tr>
+            <tr>
+              <td>Nom</td>
+              <td>Lvl</td>
+            </tr>
+            <tr>
+              <td>
+                <select id="Talent">
+                  <option value="variable">-</option>
+                  <option value="variable">Maître d'armes</option>
+                  <option value="variable">Secret de l'acier</option>
+                  <option value="variable">Machine de guerre</option>
+                  <option value="variable">Berserker</option>
+                  <option value="variable">Mise à mort</option>
+                </select>
+              </td>
+              <td>
+                <select id="Level">
+                  <option value="variable">1</option>
+                  <option value="variable">2</option>
+                  <option value="variable">3</option>
+                  <option value="variable">4</option>
+                  <option value="variable">5</option>
+                  <option value="variable">6</option>
+                  <option value="variable">7</option>
+                </select>
+              </td>
+            <tr>
+              <td>
+                <select id="Talent">
+                  <option value="variable">-</option>
+                  <option value="variable">Maître d'armes</option>
+                  <option value="variable">Secret de l'acier</option>
+                  <option value="variable">Machine de guerre</option>
+                  <option value="variable">Berserker</option>
+                  <option value="variable">Mise à mort</option>
+                </select>
+              </td>
+              <td>
+                <select id="Level">
+                  <option value="variable">1</option>
+                  <option value="variable">2</option>
+                  <option value="variable">3</option>
+                  <option value="variable">4</option>
+                  <option value="variable">5</option>
+                  <option value="variable">6</option>
+                  <option value="variable">7</option>
+                </select>
+              </td>
+            <tr>
+              <td>
+                <select id="Talent">
+                  <option value="variable">-</option>
+                  <option value="variable">Maître d'armes</option>
+                  <option value="variable">Secret de l'acier</option>
+                  <option value="variable">Machine de guerre</option>
+                  <option value="variable">Berserker</option>
+                  <option value="variable">Mise à mort</option>
+                </select>
+              </td>
+              <td>
+                <select id="Level">
+                  <option value="variable">1</option>
+                  <option value="variable">2</option>
+                  <option value="variable">3</option>
+                  <option value="variable">4</option>
+                  <option value="variable">5</option>
+                  <option value="variable">6</option>
+                  <option value="variable">7</option>
+                </select>
+              </td>
+            <tr>
+              <td>
+                <select id="Talent">
+                  <option value="variable">-</option>
+                  <option value="variable">Maître d'armes</option>
+                  <option value="variable">Secret de l'acier</option>
+                  <option value="variable">Machine de guerre</option>
+                  <option value="variable">Berserker</option>
+                  <option value="variable">Mise à mort</option>
+                </select>
+              </td>
+              <td>
+                <select id="Level">
+                  <option value="variable">1</option>
+                  <option value="variable">2</option>
+                  <option value="variable">3</option>
+                  <option value="variable">4</option>
+                  <option value="variable">5</option>
+                  <option value="variable">6</option>
+                  <option value="variable">7</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <select id="Talent">
+                  <option value="variable">-</option>
+                  <option value="variable">Maître d'armes</option>
+                  <option value="variable">Secret de l'acier</option>
+                  <option value="variable">Machine de guerre</option>
+                  <option value="variable">Berserker</option>
+                  <option value="variable">Mise à mort</option>
+                </select>
+              </td>
+              <td>
+                <select id="Level">
+                  <option value="variable">1</option>
+                  <option value="variable">2</option>
+                  <option value="variable">3</option>
+                  <option value="variable">4</option>
+                  <option value="variable">5</option>
+                  <option value="variable">6</option>
+                  <option value="variable">7</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="col-sm-4" style="background-color:lavender;">
+          <table>
+            <tr>
+              <th>True RAW</th>
+              <th>&Eacutelément</th>
+              <th>Affliction</th>
+            <tr>
+            <tr>
+              <td><input type="text" id="TrueRAW" value="0" disabled="disabled" /></td>
+              <td></td>
+              <td></td>
+          </table>
+
+          </br></br></br>
+
+          <table>
+            <tr>
+              <th>Tranchant</th>
+              <th>Potentiel Brut</th>
+              <th>Potentiel élémentaire</th>
+            <tr>
+            <tr>
+              <td>
+                <select id="Tranchant" onChange="Calcul()"><!--Attaque  Élément-->
+                  <option value="6">Violet</option>         <!--x1.44   x1.2  -->
+                  <option value="5">Blanc</option>          <!--x1.32   x1.125 -->
+                  <option value="4">Bleu</option>           <!--x1.2    x1.0625 -->
+                  <option value="3">Vert</option>           <!--x1.05   x1 -->
+                  <option value="2">Jaune</option>          <!--x1      x0.75 -->
+                  <option value="1">Orange</option>         <!--x0.75   x0.5-->
+                  <option value="0">Rouge</option>          <!--x0.5    x0.25-->
+                </select>
+              </td>
+              <td></td>
+              <td></td>
+            <tr>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
