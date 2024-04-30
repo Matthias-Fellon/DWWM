@@ -13,7 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exercices/Ex_1 Les bases des requêtes de selection.md",
+                "file": "Exercices/Ex_1 Les Bases des Requêtes de Selection.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "559ae53388ab6592",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Exercices/Ex_2 Les Jointures.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6d02d421cc374f1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Exercices/Ex_3 Les Groupements.md",
                 "mode": "source",
                 "source": false
               }
@@ -32,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -99,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Exercices Site SQL.md",
+                "file": "Exercices/Ex_3 Les Groupements.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Exercices Site SQL.md",
+                "file": "Exercices/Ex_3 Les Groupements.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Exercices Site SQL.md"
+                "file": "Exercices/Ex_3 Les Groupements.md"
               }
             }
           }
@@ -160,10 +184,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7d03833c73b907a6",
+  "active": "6d02d421cc374f1c",
   "lastOpenFiles": [
-    "Exercices/Ex_1 Les bases des requêtes de selection.md",
+    "Exercices/Ex_2 Les Jointures.md",
+    "Exercices/Ex_3 Les Groupements.md",
     "Exercices Site SQL.md",
+    "Exercices/Ex_1 Les Bases des Requêtes de Selection.md",
     "Exercices"
   ]
 }

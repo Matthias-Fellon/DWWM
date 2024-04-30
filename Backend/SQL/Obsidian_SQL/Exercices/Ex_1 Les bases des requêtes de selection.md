@@ -74,7 +74,7 @@
 ### Récupérer les armes commençant par A et ayant en troisième lettre B :
 ➢ SELECT * FROM arme WHERE nom LIKE "a_b%";
 ### Récupérer les armes ayant comme identifiant 1,2,4,5,7 :
-➢ SELECT * FROM arme WHERE idArme IN (1,2,4,5,7);
+➢ SELECT * FROM arme WHERE idArme IN(1,2,4,5,7);
 ### Récupérer les personnages ayant l’identifiant 2,3,4 et 6 et qui ont un « level » 10 :
 ➢ SELECT * FROM personnage WHERE idPersonnage IN (2,3,4,6) AND level=10;
 ### Récupérer les personnages ayant un surnom :
@@ -84,4 +84,4 @@
 ### Récupérer les 3 premières lignes de personnages :
 ➢ SELECT * FROM personnage LIMIT 3;
 ### Récupérer les lignes 4 et 5 de la table « personnage » :
-➢ SELECT * FROM personnage LIMIT 2 OFFSET 2;
+➢ SELECT * FROM personnage LIMIT 2 OFFSET 3;
