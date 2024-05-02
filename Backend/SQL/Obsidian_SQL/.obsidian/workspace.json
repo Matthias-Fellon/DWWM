@@ -8,36 +8,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "157ebe8c4eda19cb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Exercices/Ex_1 Les Bases des Requêtes de Selection.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "559ae53388ab6592",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Exercices/Ex_2 Les Jointures.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "6d02d421cc374f1c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Exercices/Ex_3 Les Groupements.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c6c33129b3df3176",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Exercices/Ex_4 Les Requêtes Imbriquées.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5fa4589bbe02dc9f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Exercices/Ex_5 Les Requêtes de Gestion CRUD.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Exercices/Ex_3 Les Groupements.md",
+                "file": "Exercices Site SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Exercices/Ex_3 Les Groupements.md",
+                "file": "Exercices Site SQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Exercices/Ex_3 Les Groupements.md"
+                "file": "Exercices Site SQL.md"
               }
             }
           }
@@ -184,11 +184,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6d02d421cc374f1c",
+  "active": "7d03833c73b907a6",
   "lastOpenFiles": [
-    "Exercices/Ex_2 Les Jointures.md",
-    "Exercices/Ex_3 Les Groupements.md",
+    "Exercices/Ex_5 Les Requêtes de Gestion CRUD.md",
+    "Exercices/Ex_4 Les Requêtes Imbriquées.md",
     "Exercices Site SQL.md",
+    "Exercices/Ex_3 Les Groupements.md",
+    "Exercices/Ex_1 Les Bases des Requêtes de Sélection.md",
+    "Exercices/Ex_2 Les Jointures.md",
     "Exercices/Ex_1 Les Bases des Requêtes de Selection.md",
     "Exercices"
   ]
