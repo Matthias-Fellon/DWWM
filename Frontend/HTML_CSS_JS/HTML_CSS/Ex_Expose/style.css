@@ -10,7 +10,7 @@ body {
   font-family: Roboto Condensed, sans-serif;
 }
 body header .navbar {
-  height: 102px;
+  height: 102 px;
   background-color: #ECEFD8;
   display: flex;
   justify-content: space-evenly;
