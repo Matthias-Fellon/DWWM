@@ -1,1 +1,2 @@
-Obsidian
+Obsidian 	: https://obsidian.md/download
+Arc		: https://resources.arc.net/hc/en-us/articles/19400082392215-Arc-for-Windows
