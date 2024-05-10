@@ -11,8 +11,12 @@
             "id": "b3d92ebfeb9f9ad9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Exercices/Ex_1 Les Bases des Requêtes de Sélection.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Exercices/Ex_1 Les Bases des Requêtes de Sélection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Exercices/Ex_1 Les Bases des Requêtes de Sélection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Exercices/Ex_1 Les Bases des Requêtes de Sélection.md"
+              }
             }
           }
         ]
@@ -138,14 +146,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c6e9a4c975e0c1b2",
+  "active": "b3d92ebfeb9f9ad9",
   "lastOpenFiles": [
-    "Exercices/Ex_3 Les Groupements.md",
+    "Exercices/Ex_2 Les Jointures.md",
     "Exercices/Ex_4 Les Requêtes Imbriquées.md",
+    "Exercices/Ex_1 Les Bases des Requêtes de Sélection.md",
+    "Exercices/Ex_3 Les Groupements.md",
     "Exercices Site SQL.md",
     "Exercices/Ex_5 Les Requêtes de Gestion CRUD.md",
-    "Exercices/Ex_1 Les Bases des Requêtes de Sélection.md",
-    "Exercices/Ex_2 Les Jointures.md",
     "Exercices/Ex_1 Les Bases des Requêtes de Selection.md",
     "Exercices"
   ]
