@@ -86,4 +86,39 @@
 //     default:
 //     echo "Pas de nom";
 // }
+
+// $prenom = "Paul";
+// echo match($prenom){
+//     "Jean" => "Bonjour Jean",
+//     "Paul" => "Bonjour Paul",
+//     default => "Qui êtes vous ?"
+// };
+
+// $age = 10;
+// $isallowed;
+// if($age > 10){
+//     $isallowed = true;
+// }else{
+//     $isallowed = false;
+// }
+// $isallowed = $age > 10 ? true : false;
+
+
+
+//FUSION NULL
+// $a = null;
+// $b = "hello";
+// $c;
+
+// if($a){
+//     $c = $a;
+// }elseif($b){
+//     $c = $b;
+// }else{
+//     $c = "Inconnue";
+// }
+
+// $c = $a ?? $b ?? "Inconnue"; //Autre manière d'écrire 
+
+// echo $c;
 ?>
