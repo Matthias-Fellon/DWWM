@@ -1,18 +1,22 @@
 {
   "main": {
-    "id": "10524781e89ce812",
+    "id": "cf0c7b7be070c000",
     "type": "split",
     "children": [
       {
-        "id": "fc61a546b94f3eff",
+        "id": "092b519113a9d176",
         "type": "tabs",
         "children": [
           {
-            "id": "1387afdf5b1113b3",
+            "id": "e341065a5e6a2e0e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Commandes.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -21,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "bbf70f2befd0f975",
+    "id": "a7dc631f55501fd8",
     "type": "split",
     "children": [
       {
-        "id": "a463f5831bd7bdc3",
+        "id": "9fc2171d7a15e64e",
         "type": "tabs",
         "children": [
           {
-            "id": "449cff60b8fcd719",
+            "id": "756385c42fa89b19",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +43,7 @@
             }
           },
           {
-            "id": "94971309af154fa0",
+            "id": "a7e3405384aba73e",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,7 +58,7 @@
             }
           },
           {
-            "id": "fe939c2a2747e029",
+            "id": "60645801a98457b5",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -65,23 +69,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "d8d98e70209d0125",
+    "id": "b52dd3798b92c322",
     "type": "split",
     "children": [
       {
-        "id": "b433ae98b56bb682",
+        "id": "422b70c565a06ea8",
         "type": "tabs",
         "children": [
           {
-            "id": "7ff707509a8e5db2",
+            "id": "725a21fc7bf86449",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Commandes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,18 +97,19 @@
             }
           },
           {
-            "id": "112775d5c38a8bac",
+            "id": "4ab349e15712b98a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Commandes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "4749a859c639425d",
+            "id": "9086edab2b159a06",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -115,11 +120,13 @@
             }
           },
           {
-            "id": "1761594361731ff6",
+            "id": "7cee5fad9839eb3f",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Commandes.md"
+              }
             }
           }
         ]
@@ -139,9 +146,8 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1387afdf5b1113b3",
+  "active": "e341065a5e6a2e0e",
   "lastOpenFiles": [
-    "Commandes.md",
-    "Exercices World.md"
+    "Commandes.md"
   ]
 }

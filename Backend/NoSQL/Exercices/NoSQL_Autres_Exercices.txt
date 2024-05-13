@@ -1,0 +1,5 @@
+11.Calculer pour chaque pays le nombre de villes (pour les pays ayant au moins 100 villes), en les triant par ordre décroissant du nombre de villes
+12.Lister les 10 villes les plus habitées, ainsi que leur pays, dans l'ordre décroissant de la population
+13.Lister les pays pour lesquels le français est une langue officielle
+14.Lister les 5 pays avec le plus de langues parlées
+15.Lister les pays pour lesquels la somme des populations des villes est supérieure à la population du pays

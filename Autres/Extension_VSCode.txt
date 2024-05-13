@@ -9,3 +9,5 @@ Hungry Delete
 Live Server
 Material Icon Theme
 Prettier - Code formatter
+PHP Intelephense
+PHP IntelliSense
