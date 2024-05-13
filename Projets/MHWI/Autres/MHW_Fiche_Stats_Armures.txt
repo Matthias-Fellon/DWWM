@@ -1,0 +1,69 @@
+Talent (T) Emplacement(E) : 
+dégainage éclaire (DE)	: 3 ; E : 2
+régainage éclaire (RE) 	: 3 ; E : 1
+concentration (C)		: 3 ; E : 2
+machine de guerre (MG) 	: 7 ; E : 1
+bouchon d'oreille (BO) 	: 5 ; E : 3
+maitre d'arme (MA)	: 7 ; E : 1
+
+
+Tete 	 	: vespoid(B)/stratège(A)/rathalos(B)/diablos(B)/diablos noir(A)/bazelgeuse
+Plastron 	: os(A)/scarabé(B)/damascus(B)/dober(B)
+Bras	 	: Bazelgeuse(A/B)/putride(B)
+Jambes 	: mailles(A)/odogaron(B)/bazelgeuse(B)/damascus(B)/nergigante(B)
+Pieds 	: kulu-ya-ku(B)/jyuratodus(A)/odogaron(A/B)/ame rathalos(B)/dober(B)
+
+
+Tete : 	Vespoid(B)		: 60/1JP/-2/1/1/1/2/RE1
+		Stratège(A) 	: 76/1JP/2/2/2/2/2/MD2
+		Rathalos(B) 	: 74/1JP/3/1/-2/1/-3/MG2
+		Diablos(B)      	: 74/1JM/3/-2/0/-3/2/DE2
+		Diablos noir(A) 	: 68/1JP/2/-3/0/-4/2/C2
+		Bazelgeuse(B)	: 70/1JG+1JP/3/1/-4/-2/-2/BO2
+
+Plastron :	Os(A) 		: 58/0J/2/0/2/0/2/MG2
+		Scarabé(B)		: 64/1JP/-1/-1/2/0/2/RE2
+		Damascus(B)		: 72/3JP/4/-2/0/0/0/C2
+		Dober(B)		: 72/1JG/-2/0/-1/-1/4/MG2
+
+Bras:		Bazelgeuse(A)	: 70/0J/3/1/-4/-2/-2/DE2+BO1
+		Bazelgeuse(B)	: 70/1JG/3/1/-4/-2/-2/DE2
+		Putride(B)		: 74/2JP/3/2/-2/3/-4/C2
+
+Jambes :	Mailles(A)		: 54/0J/0/2/0/0/0/RE1
+		Odogaron(B)		: 74/1JM/2/2/-2/-3/0/MA2
+		Bazelgeuse(B)	: 70/1JM/3/1/-4/-2/-2/BO2
+		Damascus(B)		: 72/3JP/4/-2/0/0/0/C1
+		Nergigante(B)	: 70/1JM/1/1/-3/1/-3/MG2
+
+pieds :	Kulu-Ya-Ku(B)	: 62/1JP/0/-3/0/1/0/MA1
+		Jyuratodus(A)	: 66/0J/-1/2/-3/0/0/C2
+		Odogaron(A)		: 74/0J/2/2/-2/-3/0/RE1+MA1
+		Odogaron(B) 	: 74/1JP/2/2/-2/-3/0/RE1
+		Ame rathalos(B)	: 68/1JP/3/2/2/-3/-4/C1
+		Dober(B)		: 72/1JP/-2/0/-1/-1/4/MG2
+
+
+Joyeaux (J) :
+Petit (P) : MA/MG/RE
+Moyen (M) : C/DE
+Grand(G)  : BO
+
+
+Amulettes : Collier de guerre 	: MG3
+		Collier spirituel 	: MA3
+		Collier du sensei 	: RE3
+		Taliseman du battosai 	: DE2
+		Taliseman de banshee 	: BO3
+		Taliseman de clarté 	: C2
+		
+		
+
+
+
+Tete 	 	: Bazelgeuse(B) 		BO2(+MG1+RE1)
+Plastron 	: Damascus(B) 		C2(+MA1+MA1+MA1)
+Bras 	 	: Bazelgeuse(A/B)		DE2(+DE1)
+Jambes 	: Damascus(B)		C1(+MA1+MA1+MA1)
+Pieds 	: Dober(B)			MG2(+MA1)
+Taliseman Banshee 			BO3
