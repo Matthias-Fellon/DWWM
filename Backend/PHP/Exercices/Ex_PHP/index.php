@@ -27,6 +27,63 @@
 
 // echo gettype($b);
 
-$operation = 2 + 2 * 5;
-echo $operation;
+// $operation = 2 + 2 * 5;
+// echo $operation;
+
+// const PI = 3.14;
+
+// if(true){
+//     define('MACONST','Hello');
+// }else{
+//     define('MACONST','Hello World');
+// }
+// echo MACONST;
+
+// $saisie = readline("Saisir un nombre : ");
+// echo $saisie . "\n";
+// $saisie = $saisie +5;
+// echo $saisie;
+
+// $age = 12;
+// if($age === 10){
+//     echo "Age est égale à 10";
+// }else{
+//     echo "N'est pas égal à 10";
+// }
+
+// $nbre = 10;
+// if($nbre > 50){
+//     echo "Supérieur à 50";
+// }elseif($nbre > 20){
+//     echo "Supérieur à 20";
+// }elseif($nbre > 5){
+//     echo "Supérieur à 5";
+// }else{
+//     echo "Inférieur à 5";
+// }
+// echo "\n\n****************************\n\n";
+// if($nbre > 50)
+//     echo "Supérieur à 50";
+// elseif($nbre > 20)
+//     echo "Supérieur à 20";
+// elseif($nbre > 5)
+//     echo "Supérieur à 5";
+// else
+//     echo "Inférieur à 5";
+// endif;
+
+// $prenom = "";
+// switch($prenom){
+//     case "Jean":
+//         echo "Bonjour Jean";
+//         break;
+//     case "Paul":
+//         echo "Bonjour Paul";
+//         break;
+//     case "Pierre":
+//         echo "Bonjour Pierre";
+//         break;
+//     default:
+//     echo "Pas de nom";
+// }
 ?>
