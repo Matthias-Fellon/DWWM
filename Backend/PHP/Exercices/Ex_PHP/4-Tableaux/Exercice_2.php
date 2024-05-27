@@ -1,15 +1,15 @@
 <?php 
-    $notes = [];
-    $nbNotes = readline("Nombre de valeurs : ");
-    for($i=0; $i<$nbNotes; $i++){
-        $note = readline("Entrez une valeur : ");
-        $notes[$i] = $note;
+    $tab = [];
+    $nbValeurs = readline("Nombre de valeurs : ");
+    for($i=0; $i<$nbValeurs; $i++){
+        $valeur = readline("Entrez une valeur : ");
+        $tab[$i] = $valeur;
     }
 
     $positif = 0;
     $negatif = 0;
 
-    foreach($notes as $valeur){
+    foreach($tab as $valeur){
         if($valeur < 0){
             $negatif++; 
         }elseif($valeur > 0){

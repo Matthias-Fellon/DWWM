@@ -6,9 +6,6 @@
         $notes[$i] = $note;
     }
 
-    $somme = 0;
-    foreach($notes as $index => $valeur){
-        $somme = $somme + $valeur;  
-    }
-    echo "Moyenne = " .($somme/count($notes));
+    $moyenne = array_sum($notes)/count($notes);
+    echo "Moyenne = " .$moyenne;
 ?>
