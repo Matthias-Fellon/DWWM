@@ -10,10 +10,9 @@ for($i = 0; $i < 9; $i++) {
 // Afficher le tableau
 for($i = 0; $i < 9; $i++) {
     for($j = 0; $j < 13; $j++) {
-        // Formater l'affichage pour que les nombres soient alignés
         printf("%4d ", $T[$i][$j]);
     }
-    echo PHP_EOL; // Nouvelle ligne pour chaque rangée
+    echo PHP_EOL;
 }
 
 $valeurMax = -1;
