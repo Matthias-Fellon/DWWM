@@ -1,7 +1,6 @@
 <?php
 $choix='';
 while($choix != "Q" && $choix != "q"){
-    system('clear');
     echo("\nQue choisissez-vous ?\n"
         . "1.Triangle isocèle\n"
         . "2.Triangle rectangle\n");
@@ -12,24 +11,23 @@ while($choix != "Q" && $choix != "q"){
     switch($choix){
         case 1:
             triangleIsocele();
-            readline();
             break;
     
         case 2:
             triangleRectangle();
-            readline();
             break;
     
         case "Q":
         case "q":
-            readline("Au revoir !");
+            echo "Au revoir !";
             break;
         
         default:
-            readline("Erreur de synthaxe, veuillez réessayer !");
+            echo "Erreur de synthaxe, veuillez réessayer !";
             break;
     }  
-    system('clear');              
+    readline("\n\nAppuyez sur \"entrée\" pour continuer...");
+    system('clear');               
 }
 
 function triangleIsocele(){

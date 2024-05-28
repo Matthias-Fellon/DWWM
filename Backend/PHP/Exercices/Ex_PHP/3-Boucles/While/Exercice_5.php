@@ -9,6 +9,7 @@
             $nbre2 = $nbre % $nbre2 ;
             $nbre = $nbre3 ;
         }
+        echo "Le PGCM des deux nombres est : $nbre\n";
         return $nbre;
     }
 
