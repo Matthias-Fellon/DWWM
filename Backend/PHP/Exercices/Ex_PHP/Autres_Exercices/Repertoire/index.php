@@ -1,15 +1,14 @@
 <?php
 require "fonctions.php";
 
-if(!file_exists("Contact.csv")){
-    //Création du fichier
-    $f = fopen("Contact.csv", "x+");
+if(!file_exists("Contacts.json")){
+    $f = fopen("Contacts.json", "x+");
+    fclose($f);
 }
 
-$tabContact = []; //Tableau associatif
 $choix='';
 
-while($choix != "Q" && $choix != "q"){
+while($choix != "Q" && $choix != "q" && $choix !="Quitter" && $choix !="quitter" && $choix !=4){
     echo("\nQue choisissez-vous ?[1-4]\n"
         . "1.Ajouter un nouveau contact au répertoire\n"
         . "2.Rechercher un contact\n"
@@ -21,15 +20,15 @@ while($choix != "Q" && $choix != "q"){
 
     switch($choix){
         case 1:
-            ajouterContact($tabContact);
+            ajouterContact();
             break;
     
         case 2:
-            rechercherContact($tabContact);
+            rechercherContact();
             break;
         
         case 3:
-            afficherAllContact($tabContact);
+            afficherAllContact();
             break;
 
         case 4:
