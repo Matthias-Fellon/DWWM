@@ -1,20 +1,93 @@
 <?php
 //Exercice 1
-function perimetreCercle($rayonCercle) {
-    return round((2 * pi() * $rayonCercle), 2, PHP_ROUND_HALF_UP);
-}
+function calculCercle() {
+    system('clear'); 
+    echo("************************\n"
+        . "* CALCUL SUR LE CERCLE *\n"
+        . "************************\n\n");
+    $quitter = "";
+    while ($quitter != "n" && $quitter != "non") {
+        echo "\n";
+        $rayonCercle = readline("Entrez le rayon du cercle : ");
 
-function aireCercle($rayonCercle) {
-   return round((pi() * pow($rayonCercle, 2)), 2, PHP_ROUND_HALF_UP);
+        echo("La circonférence du cercle est : "
+            . round((2 * pi() * $rayonCercle), 2, PHP_ROUND_HALF_UP)
+            . "\n");
+        echo("La surface du cercle est : "
+            . round((pi() * pow($rayonCercle, 2)), 2, PHP_ROUND_HALF_UP)
+            . "\n\n");
+        
+        $quitter = strtolower(readline("Voulez-vous faire un autre calcul ? (o/n) : "));
+        while ($quitter != "o" && $quitter != "n" && $quitter != "oui" && $quitter != "non") {
+            echo "Entrez une réponse valide.\n\n";
+            $quitter = strtolower(readline("Voulez-vous faire un autre calcul ? (o/n) : "));
+        }
+    }
+    echo "Au revoir à bientôt";
 }
 
 
 //Exercice 2
-function calculNombres($nombre_1, $nombre_2, $operateur, $nomOperateur){
-    echo("\n-------------------------------------------\n\n"
-        . "Le résultat de $nomOperateur est : "
-        . round(($nombre_1 . $operateur . $nombre_2), 2, PHP_ROUND_HALF_UP)
-        . "\n\n");
+function calculatice(){
+    system('clear');   
+    echo("*************************************\n"
+        . "*          Ma Calculatrice          *\n"
+        . "*************************************\n\n");
+    $quitter = "";
+    while($quitter != "n" && $quitter != "non"){
+        $nombre_1 = nombreValide("premier");
+        $nombre_2 = nombreValide("deuxième");
+    
+        echo("\n-------------------------------------------\n"
+            . "Menu:\n"
+            . "1. Addition\n"
+            . "2. Soustraction\n"
+            . "3. Multiplication\n"
+            . "4. Division\n");
+    
+        $choix = readline("Entrez le numéro de l'opération que vous voulez effectuer : ");
+    
+        switch($choix){
+            case 1:
+                echo("\n-------------------------------------------\n\n"
+                    . "Le résultat de l'addition est : "
+                    . round(($nombre_1 + $nombre_2), 2, PHP_ROUND_HALF_UP)
+                    . "\n\n");
+                break;
+        
+            case 2:
+                echo("\n-------------------------------------------\n\n"
+                    . "Le résultat de la soustraction est : "
+                    . round(($nombre_1 - $nombre_2), 2, PHP_ROUND_HALF_UP)
+                    . "\n\n");
+                break;
+            
+            case 3:
+                echo("\n-------------------------------------------\n\n"
+                    . "Le résultat de la multiplication est : "
+                    . round(($nombre_1 * $nombre_2), 2, PHP_ROUND_HALF_UP)
+                    . "\n\n");
+                break;
+    
+            case 4:
+                echo("\n-------------------------------------------\n\n"
+                    . "Le résultat de la division est : "
+                    . round(($nombre_1 / $nombre_2), 2, PHP_ROUND_HALF_UP)
+                    . "\n\n");
+                break;
+            
+            default:
+                echo("\n-------------------------------------------\n"
+                    . "Choix invalide.\n\n");
+                break;
+        }
+        $quitter = strtolower(readline("Voulez-vous effectuer une autre opération ? (o/n) : "));
+        while($quitter != "o" && $quitter != "n" && $quitter != "oui" && $quitter != "non"){
+            echo "Réponse invalide.";
+            $quitter = strtolower(readline("Voulez-vous effectuer une autre opération ? (o/n) : "));
+        }
+    }
+    echo "Au revoir !";
 }
 
 function nombreValide($indexNombre){

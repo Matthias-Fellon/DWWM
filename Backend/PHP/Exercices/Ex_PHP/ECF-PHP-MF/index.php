@@ -1,8 +1,5 @@
 <?php
-require "exercice1.php";
-require "exercice2.php";
-require "exercice3.php";
-require "exercice4.php";
+require "fonctions.php";
 
 system('clear');   
 $choix='';
