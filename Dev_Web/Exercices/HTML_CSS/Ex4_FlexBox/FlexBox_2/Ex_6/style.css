@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6 {
+  font-family: "roboto", sans-serif;
+  padding: 2%;
+}
+.container_1 {
+  width: 60%;
+  height: 75vh;
+  background-color: wheat;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  margin: 1% auto;
+  padding: 2%;
+  gap: 1%;
+}
+.container_1 .item1 {
+  flex-grow: 1;
+  background-color: blue;
+}
+.container_1 .container_2 {
+  flex-grow: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1%;
+}
+.container_1 .container_2 .item2 {
+  flex-grow: 3;
+  background-color: #41d241;
+}
+.container_1 .container_2 .container_3 {
+  flex-grow: 2;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  gap: 1%;
+}
+.container_1 .container_2 .container_3 .item3 {
+  flex-grow: 1;
+  background-color: gray;
+}
+.container_1 .container_2 .container_3 .container_4 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+}
+.container_1 .container_2 .container_3 .container_4 .item4 {
+  flex-grow: 1;
+  background-color: #d967d9;
+}
+.container_1 .container_2 .container_3 .container_4 .item5 {
+  flex-grow: 1;
+  background-color: aqua;
+}
+.container_1 .container_2 .item6 {
+  flex-grow: 1;
+  background-color: #d69999;
+}

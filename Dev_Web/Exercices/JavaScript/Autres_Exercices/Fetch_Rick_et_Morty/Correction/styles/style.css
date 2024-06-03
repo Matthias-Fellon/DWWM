@@ -1,0 +1,9 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div{
+    border: 3px solid black;
+    margin: 5px;
+}

@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.item1, .item2, .item3, .item4, .item5, .item6{
+    font-family: "roboto", sans-serif;
+    padding: 2%;
+}
+
+.container_1{
+    width: 60%;
+    height: 75vh;
+    background-color: wheat;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    margin: 1% auto;
+    padding: 2%;
+    gap: 1%;
+
+    .item1{
+        flex-grow: 1;
+        background-color: blue;
+    }
+
+    .container_2{
+        flex-grow: 2;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1%;
+
+        .item2{
+            flex-grow: 3;
+            background-color: rgb(65, 210, 65);
+        }
+
+        .container_3{
+            flex-grow: 2;
+            display: flex;
+            flex-flow: row-reverse nowrap;
+            gap: 1%;
+
+            .item3{
+                flex-grow: 1;
+                background-color: gray;
+            }
+
+            .container_4{
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 3%;
+
+                .item4{
+                    flex-grow: 1;
+                    background-color: rgb(217, 103, 217)
+                }
+
+                .item5{
+                    flex-grow: 1;
+                    background-color: aqua;
+                }
+            }
+        }
+
+        .item6{
+            flex-grow: 1;
+            background-color: rgb(214, 153, 153);
+        }
+    }
+}

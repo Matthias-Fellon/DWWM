@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  background-color: #EFE784;
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+}
+body h1 {
+  display: inline-block;
+  color: #EFE784;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 24px;
+  text-indent: 25px;
+}
+body header {
+  position: relative;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header .Img_Entête {
+  position: absolute;
+}
+body header .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+body header .header .Logo_header,
+body header .header .h1 {
+  z-index: 1;
+}
+body main {
+  background-color: #7fa99b;
+  display: flex;
+  flex-direction: column;
+}
+body main .intro {
+  display: flex;
+  flex-direction: column;
+  background-color: #3E3838;
+  align-items: center;
+  padding: 5.4% 17%;
+}
+body main .intro h2 {
+  display: inline-block;
+  color: #EFE784;
+  font-size: 24px;
+  font-weight: 400;
+  text-indent: 12px;
+  letter-spacing: 12px;
+  border-top: 1px solid #EFE784;
+  border-bottom: 1px solid #EFE784;
+  margin-bottom: 16px;
+  padding: 5px 0px;
+}
+body main .intro .p_intro {
+  color: #EFE784;
+  text-align: center;
+  line-height: 28px;
+  font-weight: 300;
+}
+body main .conteneur_1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  padding: 5.4% 17%;
+}
+body main .conteneur_1 .titre_1 {
+  font-size: 36px;
+  font-weight: 400;
+  color: #6CBCB3;
+}
+body main .conteneur_1 .p_conteneur_1 {
+  color: gray;
+  line-height: 26px;
+  font-weight: 400;
+  padding-top: 1rem;
+}
+body main .conteneur_1 #Img_Avengers {
+  width: 705px;
+  padding: 5% 0%;
+  padding-left: -165px;
+}
+body main .conteneur_1 .legende_1 {
+  font-size: 14px;
+  color: #6CBCB3;
+}
+body main .conteneur_2 {
+  display: flex;
+  flex-direction: column;
+  background-color: #6CBCB3;
+  padding: 5.4% 17%;
+}
+body main .conteneur_2 .titre_2 {
+  font-size: 36px;
+  font-weight: 400;
+  color: #282828;
+}
+body main .conteneur_2 .p_conteneur_2 {
+  color: #282828;
+  line-height: 26px;
+  font-weight: 400;
+  padding-top: 1rem;
+}
+body main .conteneur_2 #Img_Star {
+  width: 705px;
+  padding: 5% 0%;
+  padding-left: -165px;
+}
+body main .conteneur_2 .legende_2 {
+  font-size: 14px;
+  color: white;
+}
+body main .conteneur_3 {
+  display: flex;
+  flex-direction: column;
+  background-color: #3E3838;
+  padding: 5.4% 17%;
+}
+body main .conteneur_3 .titre_3 {
+  font-size: 36px;
+  font-weight: 400;
+  color: white;
+}
+body main .conteneur_3 .p_conteneur_3 {
+  color: white;
+  line-height: 26px;
+  font-weight: 400;
+  padding-top: 1rem;
+}
+body main .conteneur_3 #Img_Woman {
+  width: 705px;
+  padding: 5% 0%;
+  padding-left: -165px;
+}
+body main .conteneur_3 .legende_3 {
+  font-size: 14px;
+  color: white;
+}
+body footer {
+  background-color: black;
+  padding: 5% 10%;
+}
+body footer #Logo_footer {
+  padding-bottom: 3%;
+}
+body footer .p_footer {
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+}
+body footer .p_footer .footer {
+  color: #EFE784;
+}

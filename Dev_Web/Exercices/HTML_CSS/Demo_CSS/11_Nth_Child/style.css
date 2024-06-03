@@ -1,0 +1,30 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+.premiere :nth-child(1){
+    font-size: 30px;
+    color: red;
+}
+
+.premiere :nth-child(3){
+    font-size: 30px;
+    color: green;
+}
+
+.deuxieme :nth-child(1){
+    font-size: 50px;
+    color: blueviolet;
+}
+
+.deuxieme :nth-child(2){
+    color: blue;
+}
+
+.premiere p:nth-of-type(1){
+    font-weight: bold;
+    color: brown;
+    font-size: 50px;
+}

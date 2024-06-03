@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container_1{
+    width: 40vw;
+    height: 50vh;
+    margin: 10% auto;
+    padding: 10px;
+    background-color: lightblue;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 2%;
+
+    .container_2{
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: stretch;
+        justify-content:space-around;
+        
+        gap: 1%;
+
+        & :nth-child(1){
+            background-color: green;
+        }
+
+        & :nth-child(2){
+            background-color: blue;
+        }
+
+        & :nth-child(3){
+            background-color: purple;
+        }
+
+        & :nth-child(4){
+            background-color: orange;
+        }
+
+        .itemMiddle{
+            background-color: aqua;
+        }
+    }
+
+}

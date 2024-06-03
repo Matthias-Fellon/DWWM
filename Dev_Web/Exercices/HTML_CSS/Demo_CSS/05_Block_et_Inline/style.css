@@ -1,0 +1,17 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+} */
+
+p{
+    background-color: brown;
+    border: 1px solid blue;
+    display: inline-block;
+    width: 300px;
+}
+
+a{
+    background-color: orange;
+    display: block;
+}

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+body .pokedex {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+body .pokedex .conteneur {
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px;
+}
+body .pokedex .conteneur .pokemon {
+  width: 100px;
+  height: 150px;
+  background-color: bisque;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+body .pokedex .conteneur .pokemon .descriptions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

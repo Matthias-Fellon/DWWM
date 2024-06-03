@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+body .navBar {
+  height: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+body .navBar .categorie {
+  height: 50px;
+  flex-grow: 1;
+  background-color: azure;
+  border: solid 2px gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .navBar .categorie:hover {
+  background-color: #b4fafa;
+}
+body .conteneur {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+body .conteneur .card {
+  height: fit-content;
+  width: fit-content;
+  background-color: bisque;
+  border: solid 2px gray;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 5px;
+}
+body .conteneur .card .image {
+  height: 200px;
+  width: 200px;
+}
+body .conteneur .tab {
+  width: fit-content;
+  border-collapse: collapse;
+  border: 2px solid #8c8c8c;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+body .conteneur .tab thead {
+  background-color: #e4f0f5;
+}
+body .conteneur .tab th,
+body .conteneur .tab td {
+  border: 1px solid #a0a0a0;
+  padding: 8px 10px;
+}
+body .conteneur .tab tbody > tr:nth-of-type(even) {
+  background-color: #e1e1e1;
+}

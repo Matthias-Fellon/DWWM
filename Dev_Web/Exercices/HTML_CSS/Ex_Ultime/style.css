@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 8000px;
+}
+
+.bandeau{
+    background-color: white;
+}
+
+.flex{
+    display: flex;
+}
+
+.sidebar{
+    background-color: #F1720B;
+}
