@@ -1,8 +1,9 @@
 <?php ob_start(); ?>
 
-<h1>Bonjour !</h1>
+<h2>Bonjour !</h2>
 
 <?php
     $content = ob_get_clean();
+    $titre = "Ma page d'accueil";
     require "template.php";
 ?>
