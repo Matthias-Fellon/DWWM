@@ -24,5 +24,5 @@ function calculerCercle($rayon){
         'circonference' =>round($circonference,2),
         'surface' => round($surface,2)
     ];
-
 }
+?>

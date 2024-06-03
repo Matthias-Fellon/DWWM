@@ -23,7 +23,6 @@ do{
             echo "Réponse invalide (o/n) \n";
         }
     } while($reponse !== 'o' && $reponse !== 'n');
-
 }while($reponse === 'o');
 
 echo "Au revoir ";
