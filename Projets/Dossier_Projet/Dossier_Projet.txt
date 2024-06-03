@@ -1,4 +1,0 @@
-Dossier Projet = Stage
-
-Rapport de stage :
-	- Min 30 Pages
