@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
     <title>Formulaire</title>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Exemple 1</a></li>
-                <li><a href="#">Exemple 2</a></li>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="/Formulaire/formulaire.php">Formulaire</a></li>
+                <li><a href="/Cercle/cercle.php">Calcul sur le cercle</a></li>
+                <li><a href="/Calculatrice/calculatrice.php">Calculatrice</a></li>
             </ul>
         </nav>
     </header>
-    
-    <h1> <?= $titre ?> </h1>
-    <?= $content ?>
 
+    <main>
+        <h1> <?= $titre ?> </h1>
+        <?= $content ?>
+    </main>
+
+    <footer>
+        <p>Copyright © - 2024 - Matthias Fellon - Formulaire</p>
+    </footer>
 </body>
 </html>
