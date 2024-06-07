@@ -1,5 +1,4 @@
 <?php
-
 function displayAuthor(string $authorEmail, array $users): string
 {
     foreach ($users as $user) {
@@ -7,6 +6,7 @@ function displayAuthor(string $authorEmail, array $users): string
             return $user['full_name'] . '(' . $user['age'] . ' ans)';
         }
     }
+    return 'Auteur inconnu';
 }
 
 function isValidRecipe(array $recipe): bool
@@ -16,7 +16,6 @@ function isValidRecipe(array $recipe): bool
     } else {
         $isEnabled = false;
     }
-
     return $isEnabled;
 }
 
@@ -29,7 +28,6 @@ function getRecipes(array $recipes): array
             $valid_recipes[] = $recipe;
         }
     }
-
     return $valid_recipes;
 }
 ?>

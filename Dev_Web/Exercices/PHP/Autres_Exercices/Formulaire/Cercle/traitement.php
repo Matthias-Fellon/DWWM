@@ -4,7 +4,7 @@
 
     if(isset($_POST['rayon'])){
         $rayon = $_POST['rayon']; 
-        if(verifierSaisie($rayon)){
+        if(verifierSaisieCercle($rayon)){
             $resultats = calculerCercle($rayon);
         }else{
             $message = "Veuillez entrer un nombre valide";

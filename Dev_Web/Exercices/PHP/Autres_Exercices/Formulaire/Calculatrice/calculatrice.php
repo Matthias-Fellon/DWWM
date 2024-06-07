@@ -3,10 +3,10 @@
 
 <form action="traitement.php" method="POST">
     <label for="nb1">Nombre 1 : </label>
-    <input type="number" name="nombre1" id="nb1">
+    <input type="number" name="nombre1" id="nb1" required>
 
     <label for="nb2">Nombre 2 : </label>
-    <input type="number" name="nombre2" id="nb2">
+    <input type="number" name="nombre2" id="nb2" required>
 
     <label for="operateur">Opération</label>
     <select name="operateur" id="operateur">
