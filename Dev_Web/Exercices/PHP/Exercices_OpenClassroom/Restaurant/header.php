@@ -5,7 +5,7 @@
             <ul>
                 <li><a href="page1.html">Lien</a></li>
                 <li><a href="page2.html">Lien</a></li>
-                <li><a href="page3.html">Lien</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
         </div>    
     </nav>

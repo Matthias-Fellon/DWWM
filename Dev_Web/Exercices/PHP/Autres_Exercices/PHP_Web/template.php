@@ -14,6 +14,9 @@
                 <li><a href="/Formulaire/formulaire.php">Formulaire</a></li>
                 <li><a href="/Cercle/cercle.php">Calcul sur le cercle</a></li>
                 <li><a href="/Calculatrice/calculatrice.php">Calculatrice</a></li>
+                <li><a href="/Input_Type/radio.php">Input radio</a></li>
+                <li><a href="/Input_Type/checkbox.php">Input checkbox</a></li>
+                <li><a href="/Input_Type/securite.php">Sécurité</a></li>
             </ul>
         </nav>
     </header>
