@@ -21,6 +21,10 @@
                 <label for="message" class="form-label">Votre message</label>
                 <textarea class="form-control" placeholder="Exprimez vous" id="message" name="message"></textarea>
             </div>
+            <div class="mb-3">
+                <label for="screenshot" class="form-label">Votre capture d'écran</label>
+                <input type="file" class="form-control" id="screenshot" name="screenshot" />
+            </div>
             <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
         <br/>
