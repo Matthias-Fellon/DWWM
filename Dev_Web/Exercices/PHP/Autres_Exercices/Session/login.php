@@ -39,13 +39,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors['dateNaissance'] = "Vous devez être majeur pour vous inscrire.";
         }
     }
+
+    // Si pas d'erreurs
     if (empty($errors)) {
-        //envoyer les résultats sur infoUser.php
+        session_start(); //Démarre une session
+
+        //Stocker des infos dans la session
+        $_SESSION['username'] = $nom;
+        
+        header("Location: index.php");
+        exit;
     }
 }
 ?>
 
-<form action="infoUser.php" method="POST">
+<form action="login.php" method="POST">
     <label for="nom">Entrez votre nom complet : </label><br>
     <input type="text" name="nom" id="nom" value="<?= htmlspecialchars($nom ?? '') ?>"><br>
     <span style="color: red;"><?= $errors['nom'] ?? '' ?></span><br>
@@ -66,19 +74,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="date" name="dateNaissance" id="dateNaissance" value="<?= htmlspecialchars($dateNaissance ?? '') ?>"><br>
     <span style="color: red;"><?= $errors['dateNaissance'] ?? '' ?></span><br>
 
-    <p>Sexe : </p><br>
-    <input type="radio" name="sexe" id="option1" value="homme">
-    <label for="option1">homme</label>
-    <input type="radio" name="sexe" id="option2" value="femme">
-    <label for="option2">femme</label>
-    <input type="radio" name="sexe" id="option3" value="autre">
-    <label for="option3">autre</label><br><br>
-
     <input type="submit" value="Soumettre">
 </form>
 
 <?php
     $content = ob_get_clean();
-    $titre = "Faille_XSS";
+    $titre = "Connexion";
     require "template.php";
 ?>
