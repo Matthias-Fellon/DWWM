@@ -1,22 +1,18 @@
 {
   "main": {
-    "id": "a539df827afde595",
+    "id": "050548789b85eb36",
     "type": "split",
     "children": [
       {
-        "id": "7956dd4c23c0fd67",
+        "id": "cefbd9e04a3ee475",
         "type": "tabs",
         "children": [
           {
-            "id": "49883ce4612fa00c",
+            "id": "cc7aceb0abe8c4f3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projet_JO/Projet JO.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -25,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "33805962f80bbe8c",
+    "id": "b069262b2209d721",
     "type": "split",
     "children": [
       {
-        "id": "1d8a7468c7ea71a6",
+        "id": "14d7ba953ca18dc8",
         "type": "tabs",
         "children": [
           {
-            "id": "84dc0a109ef50495",
+            "id": "112675069fdcc127",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +39,7 @@
             }
           },
           {
-            "id": "109c567e3710186b",
+            "id": "82dcc8c4260ac158",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +54,7 @@
             }
           },
           {
-            "id": "075bb568356b1722",
+            "id": "17bef2dfef885bb3",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -72,20 +68,19 @@
     "width": 300
   },
   "right": {
-    "id": "4c7774b484e76141",
+    "id": "f937111d82031645",
     "type": "split",
     "children": [
       {
-        "id": "ef66e21e28eb002a",
+        "id": "204cf7857c9b8a79",
         "type": "tabs",
         "children": [
           {
-            "id": "4e301d17fc788317",
+            "id": "1d46fceff627c433",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projet_JO/Projet JO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +92,18 @@
             }
           },
           {
-            "id": "977b7903e54b326e",
+            "id": "a337cc98fa6d3323",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projet_JO/Projet JO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "82070e4c2f5a0109",
+            "id": "d9e166f1c795eeff",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,13 +114,11 @@
             }
           },
           {
-            "id": "31d17fd54c8b689f",
+            "id": "21ef31ea5c9136f0",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Projet_JO/Projet JO.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,27 +138,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "49883ce4612fa00c",
-  "lastOpenFiles": [
-    "Projet_JO/Projet JO.md",
-    "Cours/2- Syntaxe de base.md",
-    "Cours/3- Manipulation du DOM.md",
-    "Cours/4- Gestion des tableaux et Objets.md",
-    "Cours/5- Fonctions avancées.md",
-    "Cours/6- Concepts Avancés.md",
-    "Cours/7- AJAX (Asynchronous JavaScript and XML).md",
-    "Cours/8- Frameworks JavaScript.md",
-    "Cours/9- Bonnes Pratiques et Débogage.md",
-    "Exercices/Fetch Rick et Morty/Fetch Rick et Morty.md",
-    "Exercices/Exercices - Algo de base.md",
-    "Exercices/Exercices - Conditions & boucles.md",
-    "Exercices/Exercices - Fonctions.md",
-    "Exercices/Exercices - Manipulation du DOM.md",
-    "Quizz/Quizz du 05 avril 2024.md",
-    "Quizz/Quizz du 19 avril 2024.md",
-    "Aide mémoire - Général.md",
-    "Aide mémoire - Manipulation du DOM.md",
-    "Aide mémoire - Tableaux.md",
-    "Sommaire.md"
-  ]
+  "active": "cc7aceb0abe8c4f3",
+  "lastOpenFiles": []
 }
