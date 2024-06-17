@@ -1,5 +1,5 @@
 ## Visual Studio Code
-### php -S localhost:3000
+### php -S localhost:8000
 Permet de lancer un serveur pour tester des petits projets
 
 La commande doit être écrite dans le terminal

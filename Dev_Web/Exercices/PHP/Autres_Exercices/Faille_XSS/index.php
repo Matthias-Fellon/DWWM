@@ -1,6 +1,6 @@
-<?php ob_start(); ?>
-
 <?php
+session_start();
+ob_start();
 // Variables pour stocker les messages d'erreur
 $errors = [];
 
@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $MDP = trim($_POST['MDP']);
     $confirmMDP = trim($_POST['confirmMDP']);
     $dateNaissance = trim($_POST['dateNaissance']);
+    $sexe = trim($_POST['sexe']);
 
     // Validation des champs
     if (empty($nom)) {
@@ -39,13 +40,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors['dateNaissance'] = "Vous devez être majeur pour vous inscrire.";
         }
     }
+
+    if (empty($sexe)) {
+        $errors['sexe'] = "Veuillez selectionner votre sexe.";
+    }
+
     if (empty($errors)) {
-        //envoyer les résultats sur infoUser.php
+        //Stocker des infos dans la session
+        $_SESSION['username'] = $nom;
+        $_SESSION['email'] = $email;
+        $_SESSION['MDP'] = $MDP;
+        $_SESSION['dateNaissance'] = $dateNaissance;
+        $_SESSION['sexe'] = $sexe;
+        header("Location: infoUser.php");
+        exit;
+        echo "L'utilisateur a été inscrit avec succes !";
     }
 }
 ?>
 
-<form action="infoUser.php" method="POST">
+<form action="index.php" method="POST">
     <label for="nom">Entrez votre nom complet : </label><br>
     <input type="text" name="nom" id="nom" value="<?= htmlspecialchars($nom ?? '') ?>"><br>
     <span style="color: red;"><?= $errors['nom'] ?? '' ?></span><br>
@@ -66,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="date" name="dateNaissance" id="dateNaissance" value="<?= htmlspecialchars($dateNaissance ?? '') ?>"><br>
     <span style="color: red;"><?= $errors['dateNaissance'] ?? '' ?></span><br>
 
-    <p>Sexe : </p><br>
+    <p>Sexe : </p>
     <input type="radio" name="sexe" id="option1" value="homme">
     <label for="option1">homme</label>
     <input type="radio" name="sexe" id="option2" value="femme">

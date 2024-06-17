@@ -1,16 +1,14 @@
 <?php
 
-if (isset($_POST['phrase'])) {
-    $pharse = $_POST['phrase'];
+if(isset($_POST['phrase'])){
+    $phrase = $_POST['phrase'];
     $majuscule = "/[A-Z]/";
 
-    if(preg_match($majuscule,$pharse)) {
-        echo "La phrae contient des majuscules";
-    } else {
-        echo "La phrae ne contient pas des majuscules";
-    }
-} else {
+    if(preg_match($majuscule,$phrase)){
+        echo "La phrase contient des majuscules";
+    }else{
+        echo "Ne contient de majuscules";
+    } 
+}else{
     echo "Veuillez soumettre le formulaire";
 }
-
-?>
