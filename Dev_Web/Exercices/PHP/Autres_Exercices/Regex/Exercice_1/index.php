@@ -20,6 +20,13 @@
             <h1>Vérifier mot de passe</h1>
             <label for="motDePasse">Entrez votre mot de passe : </label>
             <input type="text" name="motDePasse" id="motDePasse">
+            <div class="conditionsMDP">
+                <span id="LongueurMDP">Utiliser 10 caractères</span>
+                <span id="MinusculeMDP">Au moins une lettre minuscule</span>
+                <span id="MajusculeMDP">Au moins une lettre majucule</span>
+                <span id="CaracSpeMDP">Au moins un caractère spéciale</span>
+                <span id="ChiffreMDP">Au moins 1 chiffre</span>
+            </div>
         </div>
     </main>
 </body>
