@@ -1,0 +1,32 @@
+Exercice : Gestion d'Employés
+
+Vous devez créer deux classes en PHP pour gérer des employés dans une entreprise. La classe de base est Employe et la classe dérivée est Manager.
+
+1. Classe Employe :
+
+Attributs protégés :
+
+nom : Le nom de l'employé.
+salaire : Le salaire de l'employé.
+Méthodes :
+
+Un constructeur qui prend le nom et le salaire initial de l'employé.
+Une méthode afficherDetails() qui affiche le nom et le salaire de l'employé.
+
+2. Classe Manager :
+
+Attributs protégés :
+
+employesGeres : Un tableau des employés gérés par le manager.
+Méthodes :
+
+Un constructeur qui prend le nom, le salaire initial du manager et un tableau optionnel d'employés gérés.
+Une méthode ajouterEmploye(Employe $employe) qui permet d'ajouter un employé à la liste des employés gérés par le manager.
+Une méthode afficherDetails() qui affiche le nom, le salaire du manager et la liste des employés gérés avec leurs détails.
+
+
+Instructions :
+
+Créez une instance de la classe Employe avec le nom "Alice" et un salaire de 50000.
+Créez une instance de la classe Manager avec le nom "Bob", un salaire de 70000, et ajoutez l'employé "Alice" à la liste des employés gérés par le manager.
+Affichez les détails de l'employé et du manager.

@@ -1,19 +1,11 @@
 <?php
-// require_once "stagiaire.php";
+require_once "produit.php";
 
-// $stagiaires =[
-//     "Martin" => new Stagiaire("Martin", [rand(0,20), rand(0,20), rand(0,20)]),
-//     "Paul" => new Stagiaire("Paul", [rand(0,20), rand(0,20), rand(0,20)]),
-//     "Nicolas" => new Stagiaire("Nicolas", [rand(0,20), rand(0,20), rand(0,20)])
-// ];
-
-// foreach ($stagiaires as $stagiaire) {
-//     $stagiaire->afficher();
-//     $stagiaire->calculerMoyenne();
-//     $stagiaire->trouverMin();
-//     $stagiaire->trouverMax();
-//     echo "************************************************<br>";
-// }
+$produits =[
+    "Yaourt" => new Produit("Yaourt", 5.99, 6),
+    "Fromage" => new Produit("Fromage", 3.10, 12),
+    "Pomme" => new Produit("Pomme", 0.50, 37)
+];
 
 $errors = [];
 
@@ -60,25 +52,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <header>
-        <a href="index.php">Accueil</a>
+        <nav>
+            <a href="index.php">Accueil</a>
+        </nav>
     </header>
 
     <main>
-        <form action="index.php" method="POST">
+        <div class="produits">
+            <?php foreach ($produits as $produit): ?> 
+                <div class="container">
+                    <p><strong>Nom : </strong> <?= $produit->getNom() ?></p>
+                    <p><strong>Prix : </strong> <?= $produit->getPrix() ?> </p>
+                    <p><strong>Quantitées : </strong> <?= $produit->getQuantite() ?></p>
+                    <input id="ModifProduit" type="button" value="Modifier Produit">
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+        <form class="container" action="index.php" method="POST">
             <label for="nom">Entrez le nom du produit : </label><br>
             <input type="text" name="nom" id="nom" value="<?= htmlspecialchars($nom ?? '') ?>"><br>
             <span style="color: red;"><?= $errors['nom'] ?? '' ?></span><br>
 
-            <label for="nom">Entrez le nouveau prix: </label><br>
-            <input type="text" name="nom" id="nom" value="<?= htmlspecialchars($nom ?? '') ?>"><br>
-            <span style="color: red;"><?= $errors['prix_1'] ?? '' ?></span><br>
+            <label for="nom">Entrez le nouveau prix : </label><br>
+            <input type="text" name="nom" id="nom" value="<?= htmlspecialchars($prix ?? '') ?>"><br>
+            <span style="color: red;"><?= $errors['prix_1'] ?? '' ?></span>
             <span style="color: red;"><?= $errors['prix_2'] ?? '' ?></span><br>
 
             <label for="stock">Stock</label>
-            <select name="stock">
-                <option value="ajouter">Ajouter</option>
-                <option value="enlever">Enlever</option>
-            </select>
+            <div class="addSuppStock">
+                <select name="stock">
+                    <option value="ajouter">Ajouter</option>
+                    <option value="enlever">Enlever</option>
+                </select>
+                <input type="number" name="quantite" id="quantite" value="<?= htmlspecialchars($quantite ?? '') ?>">
+            </div>
 
             <input type="submit" value="Ajouter">
         </form>
