@@ -13,8 +13,6 @@ while ($lapin->getEnVie()) {
 
     if ($lapin->getEnVie()) {
         $lapin->fuir();
-    } else {
-        echo "<p>Le pauvre petit lapin " . $lapin->getCouleur() . " est malheureusement mort</p>";
     }
     echo "**********************************<br>";
 }

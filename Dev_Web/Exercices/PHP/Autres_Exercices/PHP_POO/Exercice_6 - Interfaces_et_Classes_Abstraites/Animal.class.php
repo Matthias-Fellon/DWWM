@@ -3,12 +3,11 @@ require_once "interface.php";
 
 abstract class Animal implements interfaces{
     //Attributs
-    private string $couleur;
-    private int $nombrePatte;
+    protected string $couleur;
+    protected int $nombrePatte;
 
     //Constructeur
-    public function __construct($couleur, $nbPatte)
-    {
+    public function __construct(string $couleur, int $nbPatte){
         $this->couleur = $couleur;
         $this->nombrePatte = $nbPatte;
     }
@@ -18,8 +17,8 @@ abstract class Animal implements interfaces{
     public function getNbPattes(){return $this->nombrePatte;}
 
     //Setter
-    public function setCouleur($couleur){$this->couleur = $couleur;}
-    public function setNbPattes($nbPatte){$this->nombrePatte = $nbPatte;}
+    public function setCouleur(string $couleur){$this->couleur = $couleur;}
+    public function setNbPattes(int $nbPatte){$this->nombrePatte = $nbPatte;}
     
     //Methode abstraite
     abstract public function crier();

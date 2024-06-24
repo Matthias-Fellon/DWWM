@@ -6,8 +6,7 @@ abstract class Humain implements interfaces{
     protected string $nom;
 
     //Constructeur
-    public function __construct($nom)
-    {
+    public function __construct(string $nom){
         $this->nom = $nom;
     }
 
@@ -15,6 +14,6 @@ abstract class Humain implements interfaces{
     public function getNom(){return $this->nom;}
 
     //Setter
-    public function setNom($nom){$this->nom = $nom;}
+    public function setNom(string $nom){$this->nom = $nom;}
 }
 ?>
