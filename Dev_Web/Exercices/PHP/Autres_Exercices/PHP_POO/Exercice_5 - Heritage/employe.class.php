@@ -24,7 +24,7 @@ class Employe {
 
     //Méthodes
     public function afficherDetails() {
-        return "Nom : $this->nom // Salaire : $this->salaire <br>";
+        return "Nom : $this->nom // Salaire : $this->salaire €<br>";
     }
 }
 

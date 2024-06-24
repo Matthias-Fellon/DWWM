@@ -2,6 +2,5 @@ ECF PHP
 Openclassromm : restaurant
 PHP Repertoire
 PHP POO Exercice 4
-PHP POO Exercice 5
 
 Recuperer les fichiers sql sur github

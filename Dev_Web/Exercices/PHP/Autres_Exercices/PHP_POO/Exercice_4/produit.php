@@ -34,7 +34,7 @@ class Produit
     //Methodes
     public function afficherProduit() {
         echo "Produit : $this->nom <br>"
-            . "Prix : $this->prix\\€<br>"
+            . "Prix : $this->prix €<br>"
             . "Quantité en stock : $this->quantite <br>";
     }
 

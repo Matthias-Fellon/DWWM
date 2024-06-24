@@ -6,7 +6,7 @@ class Manager extends Employe{
     protected array $employesGeres;
 
     //Constructeur
-    public function __construct($nom, $salaire, $employesGeres)
+    public function __construct($nom, $salaire, $employesGeres = [])
     {
         $this->nom = $nom;
         $this->salaire = $salaire;
@@ -26,11 +26,11 @@ class Manager extends Employe{
 
     //Méthodes
     public function ajouterEmploye(Employe $employe) {
-        $this->employesGeres[$employe->getNom()] = $employe->getSalaire(); // !PB
+        $this->employesGeres[$employe->getNom()] = $employe->getSalaire();
     }
 
     public function afficherDetails() {
-        return "Nom : " . $this->nom . " // Salaire : " . $this->salaire . " // Employés Gerés : " . implode($this->employesGeres) . "<br>";
+        return "Nom : " . $this->nom . " // Salaire : " . $this->salaire . " € // Employés Gerés : " . implode(", ", array_keys($this->employesGeres)) . "<br>";
     }
 }
 
