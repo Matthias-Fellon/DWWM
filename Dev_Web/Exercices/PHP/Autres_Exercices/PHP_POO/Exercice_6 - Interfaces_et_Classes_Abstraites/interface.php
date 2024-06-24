@@ -1,5 +1,5 @@
 <?php
 interface interfaces{
-    public function SeDeplacer();
+    public function seDeplacer();
 }
 ?>
