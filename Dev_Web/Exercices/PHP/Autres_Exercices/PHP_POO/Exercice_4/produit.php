@@ -19,17 +19,9 @@ class Produit
     public function getQuantite() {return $this->quantite;}
 
     //Setter
-    public function setNom($nom) {
-        $this->nom = $nom;
-    }
-
-    public function setPrix($prix) {
-        $this->prix = $prix;
-    }
-
-    public function setQuantite($quantite) {
-        $this->quantite = $quantite;
-    }
+    public function setNom($nom) {$this->nom = $nom;}
+    public function setPrix($prix) {$this->prix = $prix;}
+    public function setQuantite($quantite) {$this->quantite = $quantite;}
 
     //Methodes
     public function afficherProduit() {

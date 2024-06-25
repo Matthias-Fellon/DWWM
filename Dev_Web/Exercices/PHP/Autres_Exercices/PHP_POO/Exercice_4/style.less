@@ -27,64 +27,57 @@ body {
     }
 
     main {
-        .container {
-            width: 300px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            
-            .formulaireModification{
-                width: 250px;
-            }
-        }
+        display: flex;
 
-    
-        form label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        
-        form input[type="text"],
-        form input[type="email"],
-        form input[type="number"],
-        form input[type="password"],
-        form input[type="submit"],
-        input[type="button"],
-        form select {
-            width: calc(100% - 16px);
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        
-        input[type="button"],
-        form input[type="submit"] {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            margin-top: 2rem;
-        }
-        
-        form input[type="submit"]:hover {
-            background-color: #555;
-        }
-    
-        form span {
-            color: red;
-        }
-    
-        .addSuppStock {
+        .produit{
+            width: 300px;
+            height: fit-content;
+            background: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
             display: flex;
-            column-gap: 10px;
-        }
-        
-        .produits{
-            display: flex;
+            flex-direction: column;
+
+            label {
+                display: block;
+                font-weight: bold;
+            }
+            
+            input[type="text"],
+            input[type="email"],
+            input[type="number"],
+            input[type="password"],
+            input[type="submit"],
+            input[type="button"],
+            select {
+                width: calc(100% - 16px);
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            
+            input[type="button"],
+            input[type="submit"] {
+                background-color: #333;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+            
+            input[type="submit"]:hover {
+                background-color: #555;
+            }
+            
+            .formModifProduit{
+                .addSuppQuantite {
+                    display: flex;
+                    column-gap: 10px;
+                }
+            }
         }
     }
 

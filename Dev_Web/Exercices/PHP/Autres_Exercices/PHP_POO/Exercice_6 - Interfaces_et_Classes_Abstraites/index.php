@@ -16,4 +16,5 @@ while ($lapin->getEnVie()) {
     }
     echo "**********************************<br>";
 }
+echo "Le programme est terminé car le lapin est mort";
 ?>

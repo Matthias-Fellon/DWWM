@@ -4,13 +4,13 @@ require_once "Lapin.class.php";
 
 class Chasseur extends Humain{
     //Attributs
-    protected string $arme; // ! PB
+    private string $arme; // ! PB
 
     //Constructeur
     public function __construct(string $nom, string $arme){
         parent::__construct($nom);
         $this->arme = $arme;
-        echo "<p>Le chasseur " . $this->nom . " a été créer avec un " . $this->$arme . "</p>";
+        echo "Le chasseur " . $this->nom . " a été créer avec un " . $this->arme . "<br>";
     }
 
     //Getter
@@ -21,19 +21,17 @@ class Chasseur extends Humain{
 
     //Méthodes
     public function seDeplacer(){
-        echo "<p>" . $this->nom . " avance avec son " . $this->arme . "</p>";
+        echo $this->nom . " avance avec son " . $this->arme . "<br>";
     }
 
     public function chasser(Lapin $lapin){
         $chasse = rand(1,6);
         $touche = ($chasse == 1 || $chasse == 6);
         
-        echo "<p>" . $this->nom . " tire sur le lapin avec son " . $this->arme . " et… " . ($touche ? "le touche" : "le rate") . "</p>";
+        echo $this->nom . " tire sur le lapin avec son " . $this->arme . " et… " . ($touche ? "le touche" : "le rate") . "<br>";
         if ($touche) {
             $lapin->setEnVie(false);
         }
     }
-
-    
 }
 ?>

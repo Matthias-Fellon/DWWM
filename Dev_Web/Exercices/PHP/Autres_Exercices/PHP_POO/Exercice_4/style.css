@@ -22,55 +22,50 @@ body header nav a {
 body header nav a:hover {
   text-decoration: underline;
 }
-body main .container {
+body main {
+  display: flex;
+}
+body main .produit {
   width: 300px;
-  margin: 20px auto;
+  height: fit-content;
   background: #fff;
+  margin: 20px auto;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
-body main .container .formulaireModification {
-  width: 250px;
-}
-body main form label {
+body main .produit label {
   display: block;
-  margin-bottom: 10px;
   font-weight: bold;
 }
-body main form input[type="text"],
-body main form input[type="email"],
-body main form input[type="number"],
-body main form input[type="password"],
-body main form input[type="submit"],
-body main input[type="button"],
-body main form select {
+body main .produit input[type="text"],
+body main .produit input[type="email"],
+body main .produit input[type="number"],
+body main .produit input[type="password"],
+body main .produit input[type="submit"],
+body main .produit input[type="button"],
+body main .produit select {
   width: calc(100% - 16px);
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-body main input[type="button"],
-body main form input[type="submit"] {
+body main .produit input[type="button"],
+body main .produit input[type="submit"] {
   background-color: #333;
   color: #fff;
   border: none;
   cursor: pointer;
-  margin-top: 2rem;
 }
-body main form input[type="submit"]:hover {
+body main .produit input[type="submit"]:hover {
   background-color: #555;
 }
-body main form span {
-  color: red;
-}
-body main .addSuppStock {
+body main .produit .formModifProduit .addSuppQuantite {
   display: flex;
   column-gap: 10px;
-}
-body main .produits {
-  display: flex;
 }
 body footer {
   width: 100%;
