@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body header {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+body header nav a {
+  padding: 0;
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+body header nav a:hover {
+  text-decoration: underline;
+}
+body main {
+  width: 75%;
+  display: flex;
+}
+body main .produit {
+  width: 300px;
+  height: fit-content;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+body main .produit .infoProduit {
+  display: flex;
+  flex-direction: column;
+}
+body main .produit .infoProduit input[type="button"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: center;
+}
+body main .produit .infoProduit input[type="button"]:hover {
+  background-color: #555;
+}
+body main .produit .formModifProduit {
+  margin: 0px 8px;
+  padding: 8px 16px;
+  background-color: #fceedc;
+  border-radius: 8px;
+  align-self: center;
+  display: none;
+  flex-direction: column;
+}
+body main .produit .formModifProduit label {
+  font-weight: bold;
+}
+body main .produit .formModifProduit input[type="text"],
+body main .produit .formModifProduit input[type="email"],
+body main .produit .formModifProduit input[type="number"],
+body main .produit .formModifProduit input[type="password"],
+body main .produit .formModifProduit input[type="submit"],
+body main .produit .formModifProduit select {
+  width: calc(100% - 16px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+body main .produit .formModifProduit input[type="submit"] {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+body main .produit .formModifProduit input[type="submit"]:hover {
+  background-color: #555;
+}
+body main .produit .formModifProduit .addSuppQuantite {
+  margin-top: 1rem;
+  display: flex;
+  column-gap: 10px;
+}
+body main .produit .showHide {
+  display: flex;
+}
+body footer {
+  width: 100%;
+  height: 2.5rem;
+  position: absolute;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  color: white;
+}

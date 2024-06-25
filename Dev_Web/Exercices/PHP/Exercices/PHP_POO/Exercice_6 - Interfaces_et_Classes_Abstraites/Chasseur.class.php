@@ -4,7 +4,7 @@ require_once "Lapin.class.php";
 
 class Chasseur extends Humain{
     //Attributs
-    private string $arme; // ! PB
+    private string $arme;
 
     //Constructeur
     public function __construct(string $nom, string $arme){

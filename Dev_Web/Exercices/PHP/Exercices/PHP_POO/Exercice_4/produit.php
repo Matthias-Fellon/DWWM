@@ -30,16 +30,12 @@ class Produit
             . "Quantité en stock : $this->quantite <br>";
     }
 
-    public function mettreAJourPrix($nouveauPrix) {
-        $this->prix = $nouveauPrix;
-    }
-
     public function ajouterStock($quantiteAjoutee) {
         $this->quantite += $quantiteAjoutee;
     }
 
-    public function vendreProduit($quantiteVendue) {
-        $this->quantite -= $quantiteVendue;
+    public function retirerStock($quantiteRetiree) {
+        $this->quantite -= $quantiteRetiree;
     }
 }
 ?>
