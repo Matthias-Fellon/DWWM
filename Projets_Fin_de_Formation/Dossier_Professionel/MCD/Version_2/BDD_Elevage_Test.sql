@@ -2,6 +2,9 @@
 #        Script MySQL.
 #------------------------------------------------------------
 
+DROP database IF EXISTS Elevage;
+CREATE database IF NOT EXISTS Elevage;
+USE Elevage;
 
 #------------------------------------------------------------
 # Table: Animal
@@ -62,16 +65,16 @@ CREATE TABLE Vaccin(
 
 
 #------------------------------------------------------------
-# Table: Test
+# Table: Test_Animal
 #------------------------------------------------------------
 
 CREATE TABLE Test(
-        ID_Test                  Int  Auto_increment  NOT NULL ,
+        ID_Test_Animal                  Int  Auto_increment  NOT NULL ,
         PKD                      Blob ,
         FIV                      Blob ,
         FELV                     Blob ,
         Identification_Genetique Blob
-	,CONSTRAINT Test_PK PRIMARY KEY (ID_Test)
+	,CONSTRAINT Test_Animal_PK PRIMARY KEY (ID_Test)
 )ENGINE=InnoDB;
 
 
