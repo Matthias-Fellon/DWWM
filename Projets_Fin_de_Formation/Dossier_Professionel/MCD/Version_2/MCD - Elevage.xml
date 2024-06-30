@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<work>
+	<about>
+		<version num="0.5"/>
+		<author>
+			<name>MESSOUCI</name>
+			<email>jmerise@jfreesoft.com</email>
+		</author>
+	</about>
+<MCD>
+	<entitiesList>
+		<entite name="Animal" x="236" y="830">
+			<attribut name ="ID_Animal" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Date_Naissance" type="Date" size1="" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Sexe" type="Char" size1="1" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Image_Bebe" type="Blob" size1="" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Image_Adulte" type="Blob" size1="" size2="" key="" isnull="true" comment=""/>
+
+		</entite>
+
+		<entite name="Espece" x="754" y="861">
+			<attribut name ="ID_Espece" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Portee" x="1206" y="620">
+			<attribut name ="ID_Portee" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="true" comment=""/>
+			<attribut name ="Date_Naissance" type="Date" size1="" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Nombre_Chatons" type="Int" size1="" size2="" key="" isnull="true" comment=""/>
+
+		</entite>
+
+		<entite name="Race" x="1231" y="848">
+			<attribut name ="ID_Race" type="Int" size1="" size2="" key="PRIMARY KEY" isnull="true" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+			<attribut name ="Description" type="Text" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Vaccin" x="251" y="1117">
+			<attribut name ="ID_Vaccin" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="true" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Test" x="530" y="1094">
+			<attribut name ="ID_Test" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="true" comment=""/>
+			<attribut name ="PKD" type="Blob" size1="" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="FIV" type="Blob" size1="" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="FELV" type="Blob" size1="" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Identification_Genetique" type="Blob" size1="" size2="" key="" isnull="true" comment=""/>
+
+		</entite>
+
+		<relation name="Effectuer" x="622" y="1013">
+
+		</relation>
+
+		<relation name="Animal_Vaccin" x="247" y="1026">
+			<attribut name ="Date_Administration" type="Date" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</relation>
+
+		<relation name="Race_Portee" x="1269" y="763">
+
+		</relation>
+
+		<relation name="A_Pour_Mere" x="104" y="760">
+
+		</relation>
+
+		<relation name="A_Pour_Pere" x="521" y="758">
+
+		</relation>
+
+		<relation name="Adopter" x="265" y="532">
+			<attribut name ="Date_Adoption" type="Date" size1="" size2="" key="" isnull="false" comment=""/>
+
+		</relation>
+
+		<entite name="Personne" x="241" y="336">
+			<attribut name ="ID_Personne" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Prenom" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Adresse" type="Varchar" size1="150" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Telephone" type="Numeric" size1="15" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Email" type="Varchar" size1="150" size2="" key="" isnull="true" comment=""/>
+
+		</entite>
+
+		<entite name="Eleveur" x="28" y="122">
+			<attribut name ="Nom_Elevage" type="Varchar" size1="50" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Numero_Siret" type="Numeric" size1="30" size2="" key="" isnull="true" comment=""/>
+			<attribut name ="Description" type="Text" size1="" size2="" key="" isnull="true" comment=""/>
+
+		</entite>
+
+		<entite name="Adoptant" x="271" y="155">
+			<attribut name ="Date_Adoption" type="Date" size1="" size2="" key="" isnull="true" comment=""/>
+
+		</entite>
+
+		<entite name="Utilisateur" x="468" y="156">
+			<attribut name ="Mot_De_Passe" type="Varchar" size1="255" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Role" x="742" y="367">
+			<attribut name ="ID_Role" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="Privilege" x="1024" y="145">
+			<attribut name ="ID_Privilege" type="Auto_increment" size1="" size2="" key="PRIMARY KEY" isnull="false" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="Personne_Role" x="539" y="389">
+
+		</relation>
+
+		<relation name="Utilisateur_Privilege" x="781" y="165">
+
+		</relation>
+
+		<entite name="TypeFourrureRace" x="903" y="1088">
+			<attribut name ="ID_TypeFourrureRace" type="Int" size1="" size2="" key="PRIMARY KEY" isnull="true" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="CouleurFourrureRace" x="1195" y="1087">
+			<attribut name ="ID_CouleurFourrureRace" type="Int" size1="" size2="" key="PRIMARY KEY" isnull="true" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="CouleurYeuxRace" x="1506" y="1088">
+			<attribut name ="ID_CouleurYeuxRace" type="Int" size1="" size2="" key="PRIMARY KEY" isnull="true" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="CouleurCoussinetRace" x="1793" y="1087">
+			<attribut name ="ID_CouleurCoussinetRace" type="Int" size1="" size2="" key="PRIMARY KEY" isnull="true" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<relation name="Appartenir" x="564" y="881">
+
+		</relation>
+
+		<relation name="Avoir" x="1069" y="878">
+
+		</relation>
+
+		<relation name="Race_TypeFourrureRace" x="940" y="1009">
+
+		</relation>
+
+		<relation name="Race_CouleurCoussinetRace" x="1830" y="1010">
+
+		</relation>
+
+		<relation name="Race_CouleurFourrureRace" x="1233" y="1011">
+
+		</relation>
+
+		<relation name="Race_CouleurYeuxRace" x="1544" y="1011">
+
+		</relation>
+
+		<relation name="TypeFourrureRace_TypeFourrure" x="912" y="1210">
+
+		</relation>
+
+		<relation name="CouleurCoussinetRace_CouleurCoussinet" x="1789" y="1210">
+
+		</relation>
+
+		<relation name="CouleurFourrureRace_CouleurFourrure" x="1195" y="1210">
+
+		</relation>
+
+		<relation name="CouleurYeuxRace_CouleurYeux" x="1519" y="1211">
+
+		</relation>
+
+		<entite name="TypeFourrure" x="917" y="1289">
+			<attribut name ="ID_TypeFourrure" type="Int" size1="" size2="" key="PRIMARY KEY" isnull="true" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="CouleurFourrure" x="1208" y="1291">
+			<attribut name ="ID_CouleurFourrure " type="Int" size1="" size2="" key="PRIMARY KEY" isnull="true" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="CouleurYeux" x="1521" y="1290">
+			<attribut name ="ID_CouleurYeux" type="Int" size1="" size2="" key="PRIMARY KEY" isnull="true" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+		<entite name="CouleurCoussinet" x="1807" y="1290">
+			<attribut name ="ID_CouleurCoussinet" type="Int" size1="" size2="" key="PRIMARY KEY" isnull="true" comment=""/>
+			<attribut name ="Nom" type="Varchar" size1="50" size2="" key="" isnull="false" comment=""/>
+
+		</entite>
+
+	</entitiesList>
+	<LinkList>
+		<link name="" card="0,n" elem1="Animal" elem2="Animal_Vaccin" casse="false" x="147.0" y="261.0" />
+		<link name="" card="0,n" elem1="Vaccin" elem2="Animal_Vaccin" casse="false" x="146.0" y="418.0" />
+		<link name="" card="0,1" elem1="Animal" elem2="Effectuer" casse="false" x="296.0" y="261.0" />
+		<link name="" card="0,n" elem1="Test" elem2="Effectuer" casse="false" x="442.0" y="421.0" />
+		<link name="" card="0,n" elem1="Race" elem2="Race_Portee" casse="false" x="1089.0" y="213.0" />
+		<link name="" card="1,n" elem1="Portee" elem2="Race_Portee" casse="false" x="1195.0" y="121.0" />
+		<link name="" card="0,1" elem1="Animal" elem2="A_Pour_Mere" casse="false" x="185.0" y="109.0" />
+		<link name="" card="0,n" elem1="Animal" elem2="A_Pour_Mere" casse="false" x="185.0" y="109.0" />
+		<link name="" card="0,1" elem1="Animal" elem2="A_Pour_Pere" casse="false" x="273.0" y="116.0" />
+		<link name="" card="0,n" elem1="Animal" elem2="A_Pour_Pere" casse="false" x="273.0" y="116.0" />
+		<link name="" card="1,1" elem1="Animal" elem2="Adopter" casse="false" x="273.0" y="119.0" />
+		<link name="" card="1,n" elem1="Personne" elem2="Adopter" casse="false" x="517.0" y="59.0" />
+		<link name="" card="0,n" elem1="Role" elem2="Personne_Role" casse="false" x="724.0" y="545.0" />
+		<link name="" card="1,1" elem1="Utilisateur" elem2="Utilisateur_Privilege" casse="false" x="601.0" y="130.0" />
+		<link name="" card="0,n" elem1="Privilege" elem2="Utilisateur_Privilege" casse="false" x="740.0" y="76.0" />
+		<link name="" card="1,n" elem1="Personne" elem2="Personne_Role" casse="false" x="885.0" y="378.0" />
+		<link name="" card="1,n" elem1="Animal" elem2="Appartenir" casse="false" x="505.0" y="868.0" />
+		<link name="" card="1,1" elem1="Espece" elem2="Appartenir" casse="false" x="758.0" y="868.0" />
+		<link name="" card="1,n" elem1="Espece" elem2="Avoir" casse="false" x="949.0" y="834.0" />
+		<link name="" card="1,1" elem1="Race" elem2="Avoir" casse="false" x="1182.0" y="831.0" />
+		<link name="" card="1,1" elem1="Race" elem2="Race_TypeFourrureRace" casse="false" x="1188.0" y="960.0" />
+		<link name="" card="1,1" elem1="Race" elem2="Race_CouleurFourrureRace" casse="false" x="1329.0" y="961.0" />
+		<link name="" card="1,1" elem1="Race" elem2="Race_CouleurYeuxRace" casse="false" x="1466.0" y="960.0" />
+		<link name="" card="1,1" elem1="Race" elem2="Race_CouleurCoussinetRace" casse="false" x="1605.0" y="961.0" />
+		<link name="" card="1,n" elem1="TypeFourrureRace" elem2="TypeFourrureRace_TypeFourrure" casse="false" x="1046.0" y="1178.0" />
+		<link name="" card="1,1" elem1="TypeFourrure" elem2="TypeFourrureRace_TypeFourrure" casse="false" x="1050.0" y="1290.0" />
+		<link name="" card="1,n" elem1="CouleurFourrureRace" elem2="CouleurFourrureRace_CouleurFourrure" casse="false" x="1327.0" y="1179.0" />
+		<link name="" card="1,1" elem1="CouleurFourrure" elem2="CouleurFourrureRace_CouleurFourrure" casse="false" x="1330.0" y="1291.0" />
+		<link name="" card="1,n" elem1="CouleurYeuxRace" elem2="CouleurYeuxRace_CouleurYeux" casse="false" x="1601.0" y="1178.0" />
+		<link name="" card="1,1" elem1="CouleurYeux" elem2="CouleurYeuxRace_CouleurYeux" casse="false" x="1605.0" y="1290.0" />
+		<link name="" card="1,n" elem1="CouleurCoussinetRace" elem2="CouleurCoussinetRace_CouleurCoussinet" casse="false" x="1879.0" y="1178.0" />
+		<link name="" card="1,1" elem1="CouleurCoussinet" elem2="CouleurCoussinetRace_CouleurCoussinet" casse="false" x="1883.0" y="1290.0" />
+		<link name="" card="1,n" elem1="TypeFourrureRace" elem2="Race_TypeFourrureRace" casse="false" x="1046.0" y="1075.0" />
+		<link name="" card="1,n" elem1="CouleurFourrureRace" elem2="Race_CouleurFourrureRace" casse="false" x="1327.0" y="1076.0" />
+		<link name="" card="1,n" elem1="CouleurYeuxRace" elem2="Race_CouleurYeuxRace" casse="false" x="1601.0" y="1075.0" />
+		<link name="" card="1,n" elem1="CouleurCoussinetRace" elem2="Race_CouleurCoussinetRace" casse="false" x="1879.0" y="1075.0" />
+	</LinkList>
+	<heritageList>
+		<hlien name ="" entiPere ="Personne" entFils ="Eleveur" />
+		<hlien name ="" entiPere ="Personne" entFils ="Adoptant" />
+		<hlien name ="" entiPere ="Personne" entFils ="Utilisateur" />
+	</heritageList>
+</MCD>
+</work>
