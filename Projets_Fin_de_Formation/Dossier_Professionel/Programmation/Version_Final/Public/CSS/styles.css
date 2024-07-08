@@ -17,8 +17,8 @@ body header nav {
   display: flex;
 }
 body header nav #imgLogo {
-  width: 1%;
-  height: 1%;
+  width: 100px;
+  height: 100px;
 }
 body header nav ul {
   list-style: none;

@@ -10,5 +10,5 @@ ob_start();
 <?php
 $content = ob_get_clean();
 $titre = "Accueil";
-require "template.php";
+require __DIR__ . "/Public/template.php";
 ?>
