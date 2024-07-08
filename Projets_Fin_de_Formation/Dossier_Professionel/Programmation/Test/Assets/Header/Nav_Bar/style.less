@@ -1,78 +1,116 @@
 *{
-    margin:0;
-    padding:0;
-    font-family: 'Helvatica Neue', Regular;
+    margin: 0;
+    padding: 0;
 }
 
 body{
     height: 100vh;
     width: 100vw;
+
     header{
-        color: #F5F5F7;
-        padding: 15px;
-        padding-top: 90px;
-        padding-bottom: 50px;
-        nav{
+        max-width: 430px;
+        background-color: #F5F5F7;
+        padding: 20px 0px;
+
+        // .top-bar{
+        //     .back-icon{
+        //         width: 40px;
+        //         height: 40px;
+        //         background-color: black;
+        //         opacity: 0.5;
+        //         border-radius: 4px;
+        //         display: flex;
+                
+        //         .line{
+        //             height: 2px;
+        //             width: 24px;
+        //             background-color: white;
+        //         }
+        //     }
+        // }
+
+        .menu{
             display: flex;
             flex-direction: column;
-            .top-bar{
-                .back-icon{
-                    width: 40px;
-                    height: 40px;
-                    background-color: black;
-                    opacity: 0.5;
-                    border-radius: 4px;
-                    display: flex;
-                    .line{
-                        height: 2px;
-                        width: 24px;
-                        background-color: white;
-                    }
+            overflow: hidden;
+            align-items: center;
+            .item{
+                width: 100% - 16px;
+                overflow: hidden;
+                border-bottom: 2px solid black;
+                list-style: none;
+
+                .bouton{
+                    display: inline-flex;
+                    position: relative;
+                    align-items: center;
+                    font-family: 'Helvatica Neue', Regular, sans-serif;
+                    font-size: clamp(16px, 5vw + 1rem, 24px); //se renseigner sur clamp
+                    color: black;
+                    line-height: 18px;
+                    text-decoration: none;
+                    padding: 16px 0px;
                 }
-            }
-            .accordeons{
-                .accordeon{
-                    border-bottom: 2px solid black;
-                    button{
-                        width: 100%;
-                        display: inline-flex;
+
+                .fa-chevron-right{
+                    color: black;
+                    padding: 5px;
+                    font-size: clamp(10px, 5vw + 0.5rem, 18px); //se renseigner sur clamp
+                }
+                
+                .smenu{
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.5s ease;
+
+                    a{
+                        display: block;
+                        position: relative;
+                        font-family: 'Helvatica Neue', Light, sans-serif;
+                        font-size: clamp(10px, 3vw + 1rem, 18px); //se renseigner sur clamp
                         color: black;
-                        background: none;
-                        border: none;
-                        font-size: clamp(1rem, 10vw, 24px);
-                        padding: 15px;
-                        padding-left: 0px;
-                        line-height: 18px;
+                        text-decoration: none;
+                        padding: 7.5px 26px;
                     }
-                    .panel{
-                        display: none;
-                        list-style: none;
-                        padding: 10px;
-                        li{
-                            a{
-                                color: black;
-                                text-decoration: none;  
-                            }
-                        }
+
+                    a:before {
+                        content: "";
+                        width: 5px;
+                        height: 100%;
+                        position: absolute;
+                        background-color: grey;
+                        left: 0;
+                        top: 0;
+                        transition: 0.3s;
+                        opacity: 0;
+                    }
+
+                    a:hover::before {
+                        opacity: 1;
                     }
                 }
             }
-            #imgLogo{
-                position: relative;
-top: 50px;
+
+            .item:target .smenu {
+                max-height: 20em;
             }
+        }
+
+        #imgLogo{
+            position: relative;
+            top: 50px;
         }
     }
 }
 
-@media all and (min-width: 431px) and (max-width: 768px){
-    *{
-        display: none;
-    }
-}
+// @media all and (min-width: 431px) and (max-width: 768px){
+//     *{
+//         display: none;
+//     }
+// }
 
-@media all and (min-width: 769px){
-    *{
-        display: none;
-    }
-}
+// @media all and (min-width: 769px){
+//     *{
+//         display: none;
+//     }
+// }
