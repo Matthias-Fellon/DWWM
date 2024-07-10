@@ -13,8 +13,8 @@ if (isset($_POST['email'], $_POST['password'])) {
     $stmt->execute([$email]);
     $user = $stmt->fetch();
 
-    if ($user && password_verify($password, $user['pwd'])) {
-    // if ($user && ($password == $user['pwd'])) {
+    // if ($user && password_verify($password, $user['pwd'])) {
+    if ($user && ($password == $user['pwd'])) {
         $_SESSION['user_id'] = $user['id'];
         header('Location: index.php');
         exit();

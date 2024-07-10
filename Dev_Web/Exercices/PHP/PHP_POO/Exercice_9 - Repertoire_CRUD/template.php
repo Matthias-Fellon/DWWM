@@ -25,7 +25,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li><a href="Logout.class.php">Déconnexion</a></li>
                 <?php else: ?>
-                    <li><a href="Login.class.php ?">Login</a></li>
+                    <li><a href="Login.class.php">Login</a></li>
                 <?php endif; ?>
             </ul>
         </nav>

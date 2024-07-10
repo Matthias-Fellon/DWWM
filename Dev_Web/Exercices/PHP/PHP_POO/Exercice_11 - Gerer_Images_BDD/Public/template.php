@@ -19,7 +19,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <li><a href="./../index.php">Accueil</a></li>
                 <li><a href="./../Entities/Create.class.php">Ajouter</a></li>
                 <li><a href="./../Entities/Read.class.php">Voir les utilisateurs</a></li>
-                <li><a href="./../Entities/Update.class.php<?php if(isset($_SESSION['user_id'])): ?>?id=<?=$_SESSION['user_id']?><?php endif; ?>">Modifier un utilisateur</a></li>
+                <li><a href="./../Entities/Update.class.php<?php if(isset($_SESSION['user_id'])): ?>?id=<?= $_SESSION['user_id'] ?><?php endif; ?>">Modifier un utilisateur</a></li>
                 <li><a href="./../Entities/Delete.class.php">Supprimer un utilisateur</a></li>
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li><a href="./../Entities/Logout.class.php">Déconnexion</a></li>

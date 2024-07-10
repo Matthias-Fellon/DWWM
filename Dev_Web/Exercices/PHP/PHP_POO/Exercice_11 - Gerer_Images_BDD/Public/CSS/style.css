@@ -69,6 +69,8 @@ form label {
 
 form input[type="text"],
 form input[type="email"],
+form input[type="file"],
+form input[type="password"],
 form input[type="submit"],
 form select {
     width: calc(100% - 16px);
@@ -76,6 +78,10 @@ form select {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+form select {
+    width: 100%;
 }
 
 form input[type="submit"] {

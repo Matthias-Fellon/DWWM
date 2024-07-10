@@ -13,7 +13,7 @@ CREATE TABLE users (
     email VARCHAR(55) NOT NULL UNIQUE,
     telephone VARCHAR(20) NOT NULL,
     pwd VARCHAR(255) NOT NULL,
-    nomImage LONGBLOB NOT NULL,
+    nomImage VARCHAR(255),
     CONSTRAINT USERS_PK PRIMARY KEY(id)
 )ENGINE=InnoDB;
 
@@ -26,8 +26,8 @@ CREATE TABLE userroles (
 
 
 
-INSERT INTO users (nom, prenom, email, telephone, pwd, nomImage) VALUES ('Dupont', 'Val', 'val.dupont@gmail.com', '0123456789','password1','img1');
-INSERT INTO users (nom, prenom, email, telephone, pwd, nomImage) VALUES ('Duck', 'Donald', 'donald.duck@gmail.com', '0987654321','password2','img2');
+INSERT INTO users (nom, prenom, email, telephone, pwd, nomImage) VALUES ('Dupont', 'Val', 'val.dupont@gmail.com', '0123456789','password1','');
+INSERT INTO users (nom, prenom, email, telephone, pwd, nomImage) VALUES ('Duck', 'Donald', 'donald.duck@gmail.com', '0987654321','password2','');
 
 -- Attribuer des rôles aux utilisateurs
 INSERT INTO userRoles (user_id, role) VALUES (1, 'admin');  
