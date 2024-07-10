@@ -4,17 +4,6 @@
 
 
 #------------------------------------------------------------
-# Table: Portee
-#------------------------------------------------------------
-
-CREATE TABLE Portee(
-        ID_Portee      Int  Auto_increment  NOT NULL ,
-        Nombre_Chatons Int
-	,CONSTRAINT Portee_PK PRIMARY KEY (ID_Portee)
-)ENGINE=InnoDB;
-
-
-#------------------------------------------------------------
 # Table: Vaccin
 #------------------------------------------------------------
 
@@ -32,7 +21,7 @@ CREATE TABLE Vaccin(
 CREATE TABLE Test(
         ID_Test  Int  Auto_increment  NOT NULL ,
         Nom      Varchar (50) ,
-        Resultat Blob NOT NULL
+        Resultat Varchar (50) NOT NULL
 	,CONSTRAINT Test_PK PRIMARY KEY (ID_Test)
 )ENGINE=InnoDB;
 
@@ -46,7 +35,7 @@ CREATE TABLE Personne(
         Nom         Varchar (50) ,
         Prenom      Varchar (50) ,
         Adresse     Varchar (150) ,
-        Telephone   Numeric ,
+        Telephone   Varchar (15) ,
         Email       Varchar (150)
 	,CONSTRAINT Personne_PK PRIMARY KEY (ID_Personne)
 )ENGINE=InnoDB;
@@ -59,16 +48,14 @@ CREATE TABLE Personne(
 CREATE TABLE Eleveur(
         ID_Personne  Int NOT NULL ,
         Nom_Elevage  Varchar (50) ,
-        Numero_Siret Numeric ,
-        Description  Text ,
+        Numero_Siret Varchar (30) NOT NULL ,
+        Description  Text NOT NULL ,
         Nom          Varchar (50) ,
         Prenom       Varchar (50) ,
         Adresse      Varchar (150) ,
-        Telephone    Numeric ,
+        Telephone    Varchar (15) ,
         Email        Varchar (150)
 	,CONSTRAINT Eleveur_PK PRIMARY KEY (ID_Personne)
-
-    ,CONSTRAINT Eleveur_Personne0_FK FOREIGN KEY (ID_Personne) REFERENCES Personne(ID_Personne)
 )ENGINE=InnoDB;
 
 
@@ -77,16 +64,14 @@ CREATE TABLE Eleveur(
 #------------------------------------------------------------
 
 CREATE TABLE Adoptant(
-        ID_Personne   Int NOT NULL ,
-        Date_Adoption Date ,
-        Nom           Varchar (50) ,
-        Prenom        Varchar (50) ,
-        Adresse       Varchar (150) ,
-        Telephone     Numeric ,
-        Email         Varchar (150)
+        ID_Personne Int NOT NULL ,
+        Description Varchar (50) NOT NULL ,
+        Nom         Varchar (50) ,
+        Prenom      Varchar (50) ,
+        Adresse     Varchar (150) ,
+        Telephone   Varchar (15) ,
+        Email       Varchar (150)
 	,CONSTRAINT Adoptant_PK PRIMARY KEY (ID_Personne)
-    
-    ,CONSTRAINT Adoptant_Personne0_FK FOREIGN KEY (ID_Personne) REFERENCES Personne(ID_Personne)
 )ENGINE=InnoDB;
 
 
@@ -98,7 +83,7 @@ CREATE TABLE Privilege(
         ID_Privilege Int  Auto_increment  NOT NULL ,
         Nom          Varchar (50) NOT NULL
 	,CONSTRAINT Privilege_PK PRIMARY KEY (ID_Privilege)
-)ENGINE=InnoDB;
+)ENGINE=InnoDB COMMENT "SuperAdministrateur Administrateur Utilisateur" ;
 
 
 #------------------------------------------------------------
@@ -107,17 +92,14 @@ CREATE TABLE Privilege(
 
 CREATE TABLE Utilisateur(
         ID_Personne  Int NOT NULL ,
-        Mot_De_Passe Varchar (255) NOT NULL ,
+        Mot_De_Passe Varchar (255) ,
         Nom          Varchar (50) ,
         Prenom       Varchar (50) ,
         Adresse      Varchar (150) ,
-        Telephone    Numeric ,
+        Telephone    Varchar (15) ,
         Email        Varchar (150) ,
         ID_Privilege Int NOT NULL
 	,CONSTRAINT Utilisateur_PK PRIMARY KEY (ID_Personne)
-
-    ,CONSTRAINT Utilisateur_Personne0_FK FOREIGN KEY (ID_Personne) REFERENCES Personne(ID_Personne)
-    ,CONSTRAINT Utilisateur_Privilege1_FK FOREIGN KEY (ID_Privilege) REFERENCES Privilege(ID_Privilege)
 )ENGINE=InnoDB;
 
 
@@ -138,95 +120,153 @@ CREATE TABLE Titre(
 
 CREATE TABLE Image(
         ID_Image Int  Auto_increment  NOT NULL ,
-        Image    Blob NOT NULL
+        Image    Varchar (50) NOT NULL
 	,CONSTRAINT Image_PK PRIMARY KEY (ID_Image)
 )ENGINE=InnoDB;
 
 
 #------------------------------------------------------------
-# Table: Animal
+# Table: Chat
 #------------------------------------------------------------
 
-CREATE TABLE Animal(
-        ID_Animal                    Int  Auto_increment  NOT NULL ,
-        Nom                          Varchar (50) ,
-        Espece                       Varchar (50) NOT NULL ,
-        Race                         Varchar (50) ,
-        Date_Naissance               Date ,
-        Sexe                         Char (1) ,
-        Image                        Blob ,
-        Puce_Electronique            Varchar (30) ,
-        Livre_Origine                Varchar (30) ,
-        ADN                          Varchar (30) ,
-        Statut                       Varchar (30) ,
-        Date_Naissance_Animal_Portee Date ,
-        Date_Adoption                Date NOT NULL ,
-        ID_Portee                    Int NOT NULL ,
-        ID_Animal_A_Pour_Mere        Int ,
-        ID_Animal_A_Pour_Pere        Int ,
-        ID_Personne                  Int NOT NULL
-	,CONSTRAINT Animal_PK PRIMARY KEY (ID_Animal)
-
-    ,CONSTRAINT Animal_Portee0_FK FOREIGN KEY (ID_Portee) REFERENCES Portee(ID_Portee)
-	,CONSTRAINT Animal_Animal1_FK FOREIGN KEY (ID_Animal_A_Pour_Mere) REFERENCES Animal(ID_Animal)
-	,CONSTRAINT Animal_Animal2_FK FOREIGN KEY (ID_Animal_A_Pour_Pere) REFERENCES Animal(ID_Animal)
-	,CONSTRAINT Animal_Personne3_FK FOREIGN KEY (ID_Personne) REFERENCES Personne(ID_Personne)
+CREATE TABLE Chat(
+        ID_Animal                  Int  Auto_increment  NOT NULL ,
+        Nom                        Varchar (50) ,
+        Race                       Varchar (50) NOT NULL ,
+        Date_Naissance             Date NOT NULL ,
+        Sexe                       Char (1) NOT NULL ,
+        Image                      Varchar (50) NOT NULL ,
+        Puce_Electronique          Varchar (30) NOT NULL ,
+        Livre_Origine              Varchar (30) NOT NULL ,
+        ADN                        Varchar (30) NOT NULL ,
+        Statut                     Varchar (30) ,
+        Date_Adoption              Date NOT NULL ,
+        ID_Animal_Chat             Int ,
+        ID_Animal_Chat_A_Pour_Pere Int ,
+        ID_Personne                Int NOT NULL
+	,CONSTRAINT Chat_PK PRIMARY KEY (ID_Animal)
 )ENGINE=InnoDB;
 
 
 #------------------------------------------------------------
-# Table: Effectuer
+# Table: Chat_Test
 #------------------------------------------------------------
 
-CREATE TABLE Effectuer(
+CREATE TABLE Chat_Test(
         ID_Test   Int NOT NULL ,
         ID_Animal Int NOT NULL
-	,CONSTRAINT Effectuer_PK PRIMARY KEY (ID_Test,ID_Animal)
-
-    ,CONSTRAINT Effectuer_Test0_FK FOREIGN KEY (ID_Test) REFERENCES Test(ID_Test)
-	,CONSTRAINT Effectuer_Animal1_FK FOREIGN KEY (ID_Animal) REFERENCES Animal(ID_Animal)
+	,CONSTRAINT Chat_Test_PK PRIMARY KEY (ID_Test,ID_Animal)
 )ENGINE=InnoDB;
 
 
 #------------------------------------------------------------
-# Table: Animal_Vaccin
+# Table: Chat_Vaccin
 #------------------------------------------------------------
 
-CREATE TABLE Animal_Vaccin(
+CREATE TABLE Chat_Vaccin(
         ID_Vaccin           Int NOT NULL ,
         ID_Animal           Int NOT NULL ,
         Date_Administration Date NOT NULL
-	,CONSTRAINT Animal_Vaccin_PK PRIMARY KEY (ID_Vaccin,ID_Animal)
-
-    ,CONSTRAINT Animal_Vaccin_Vaccin0_FK FOREIGN KEY (ID_Vaccin) REFERENCES Vaccin(ID_Vaccin)
-	,CONSTRAINT Animal_Vaccin_Animal1_FK FOREIGN KEY (ID_Animal) REFERENCES Animal(ID_Animal)
+	,CONSTRAINT Chat_Vaccin_PK PRIMARY KEY (ID_Vaccin,ID_Animal)
 )ENGINE=InnoDB;
 
 
 #------------------------------------------------------------
-# Table: Animal_Titre
+# Table: Chat_Titre
 #------------------------------------------------------------
 
-CREATE TABLE Animal_Titre(
+CREATE TABLE Chat_Titre(
         ID_Titre  Int NOT NULL ,
         ID_Animal Int NOT NULL ,
         Date      Date NOT NULL
-	,CONSTRAINT Animal_Titre_PK PRIMARY KEY (ID_Titre,ID_Animal)
-
-    ,CONSTRAINT Animal_Titre_Titre0_FK FOREIGN KEY (ID_Titre) REFERENCES Titre(ID_Titre)
-	,CONSTRAINT Animal_Titre_Animal1_FK FOREIGN KEY (ID_Animal) REFERENCES Animal(ID_Animal)
+	,CONSTRAINT Chat_Titre_PK PRIMARY KEY (ID_Titre,ID_Animal)
 )ENGINE=InnoDB;
 
 
 #------------------------------------------------------------
-# Table: Animal_Image
+# Table: Chat_Image
 #------------------------------------------------------------
 
-CREATE TABLE Animal_Image(
+CREATE TABLE Chat_Image(
         ID_Image  Int NOT NULL ,
         ID_Animal Int NOT NULL
-	,CONSTRAINT Animal_Image_PK PRIMARY KEY (ID_Image,ID_Animal)
-
-    ,CONSTRAINT Animal_Image_Image0_FK FOREIGN KEY (ID_Image) REFERENCES Image(ID_Image)
-	,CONSTRAINT Animal_Image_Animal1_FK FOREIGN KEY (ID_Animal) REFERENCES Animal(ID_Animal)
+	,CONSTRAINT Chat_Image_PK PRIMARY KEY (ID_Image,ID_Animal)
 )ENGINE=InnoDB;
+
+
+
+
+ALTER TABLE Eleveur
+	ADD CONSTRAINT Eleveur_Personne0_FK
+	FOREIGN KEY (ID_Personne)
+	REFERENCES Personne(ID_Personne);
+
+ALTER TABLE Adoptant
+	ADD CONSTRAINT Adoptant_Personne0_FK
+	FOREIGN KEY (ID_Personne)
+	REFERENCES Personne(ID_Personne);
+
+ALTER TABLE Utilisateur
+	ADD CONSTRAINT Utilisateur_Personne0_FK
+	FOREIGN KEY (ID_Personne)
+	REFERENCES Personne(ID_Personne);
+
+ALTER TABLE Utilisateur
+	ADD CONSTRAINT Utilisateur_Privilege1_FK
+	FOREIGN KEY (ID_Privilege)
+	REFERENCES Privilege(ID_Privilege);
+
+ALTER TABLE Chat
+	ADD CONSTRAINT Chat_Chat0_FK
+	FOREIGN KEY (ID_Animal_Chat)
+	REFERENCES Chat(ID_Animal);
+
+ALTER TABLE Chat
+	ADD CONSTRAINT Chat_Chat1_FK
+	FOREIGN KEY (ID_Animal_Chat_A_Pour_Pere)
+	REFERENCES Chat(ID_Animal);
+
+ALTER TABLE Chat
+	ADD CONSTRAINT Chat_Personne2_FK
+	FOREIGN KEY (ID_Personne)
+	REFERENCES Personne(ID_Personne);
+
+ALTER TABLE Chat_Test
+	ADD CONSTRAINT Chat_Test_Test0_FK
+	FOREIGN KEY (ID_Test)
+	REFERENCES Test(ID_Test);
+
+ALTER TABLE Chat_Test
+	ADD CONSTRAINT Chat_Test_Chat1_FK
+	FOREIGN KEY (ID_Animal)
+	REFERENCES Chat(ID_Animal);
+
+ALTER TABLE Chat_Vaccin
+	ADD CONSTRAINT Chat_Vaccin_Vaccin0_FK
+	FOREIGN KEY (ID_Vaccin)
+	REFERENCES Vaccin(ID_Vaccin);
+
+ALTER TABLE Chat_Vaccin
+	ADD CONSTRAINT Chat_Vaccin_Chat1_FK
+	FOREIGN KEY (ID_Animal)
+	REFERENCES Chat(ID_Animal);
+
+ALTER TABLE Chat_Titre
+	ADD CONSTRAINT Chat_Titre_Titre0_FK
+	FOREIGN KEY (ID_Titre)
+	REFERENCES Titre(ID_Titre);
+
+ALTER TABLE Chat_Titre
+	ADD CONSTRAINT Chat_Titre_Chat1_FK
+	FOREIGN KEY (ID_Animal)
+	REFERENCES Chat(ID_Animal);
+
+ALTER TABLE Chat_Image
+	ADD CONSTRAINT Chat_Image_Image0_FK
+	FOREIGN KEY (ID_Image)
+	REFERENCES Image(ID_Image);
+
+ALTER TABLE Chat_Image
+	ADD CONSTRAINT Chat_Image_Chat1_FK
+	FOREIGN KEY (ID_Animal)
+	REFERENCES Chat(ID_Animal);

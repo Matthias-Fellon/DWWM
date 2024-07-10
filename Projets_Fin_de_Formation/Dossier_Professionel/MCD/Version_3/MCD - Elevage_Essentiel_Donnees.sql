@@ -1,66 +1,104 @@
-----------------------------------------------------------------------
--- Script de données de test
-----------------------------------------------------------------------
+-- Table Chat
+INSERT INTO Chat (ID_Animal, Nom, Race, Date_Naissance, Sexe, Image, Puce_Electronique, Livre_Origine, ADN, Statut) VALUES
+(1, 'Misty', 'Persan', '2020-03-15', 'F', 'misty.jpg', '1234567890', 'LO12345', 'ADN12345', 'Available'),
+(2, 'Tom', 'Exotic Shorthair', '2019-06-22', 'M', 'tom.jpg', '1234567891', 'LO12346', 'ADN12346', 'Adopted'),
+(3, 'Leo', 'Bengal', '2021-01-11', 'M', 'leo.jpg', '1234567892', 'LO12347', 'ADN12347', 'Available'),
+(4, 'Luna', 'Sphynx', '2018-11-05', 'F', 'luna.jpg', '1234567893', 'LO12348', 'ADN12348', 'Adopted');
 
--- Insertion des données dans la table Portee
-INSERT INTO Portee (Date_Naissance, Nombre_Chatons) VALUES 
-('2023-01-15', 4),
-('2023-03-20', 3),
-('2023-05-10', 5);
+-- Table Vaccin
+INSERT INTO Vaccin (ID_Vaccin, Nom) VALUES
+(1, 'Rabies'),
+(2, 'Feline Distemper'),
+(3, 'Feline Herpesvirus'),
+(4, 'Feline Calicivirus');
 
--- Insertion des données dans la table Vaccin
-INSERT INTO Vaccin (Nom) VALUES 
-('Rage'),
-('Typhus'),
-('Leucose');
+-- Table Test
+INSERT INTO Test (ID_Test, Nom, Resultat) VALUES
+(1, 'FIV', 'Negative'),
+(2, 'FeLV', 'Negative'),
+(3, 'Blood Type', 'A'),
+(4, 'FIP', 'Negative');
 
--- Insertion des données dans la table Depistage_Maladie
-INSERT INTO Depistage_Maladie (PKD, FIV, FELV, Identification_Genetique) VALUES -- A MODIFIER
-(NULL, NULL, NULL, NULL),
-(NULL, NULL, NULL, NULL),
-(NULL, NULL, NULL, NULL);
+-- Table Animal_Vaccin
+INSERT INTO Animal_Vaccin (ID_Animal, ID_Vaccin, Date_Administration) VALUES
+(1, 1, '2021-04-01'),
+(1, 2, '2021-04-01'),
+(2, 1, '2020-07-01'),
+(3, 3, '2021-02-15'),
+(4, 4, '2019-12-01');
 
--- Insertion des données dans la table Personne
-INSERT INTO Personne (Nom, Prenom, Adresse, Telephone, Email) VALUES 
-('Dupont', 'Jean', '123 Rue Principale', '0123456789', 'jean.dupont@example.com'),
-('Martin', 'Marie', '456 Avenue des Champs', '0987654321', 'marie.martin@example.com'),
-('Bernard', 'Paul', '789 Boulevard de la Paix', '0112233445', 'paul.bernard@example.com');
+-- Table Effectuer
+INSERT INTO Effectuer (ID_Animal, ID_Test) VALUES
+(1, 1),
+(1, 2),
+(2, 3),
+(3, 4),
+(4, 1);
 
--- Insertion des données dans la table Eleveur
-INSERT INTO Eleveur (ID_Personne, Nom_Elevage, Numero_Siret, Description, Nom, Prenom, Adresse, Telephone, Email) VALUES 
-(1, 'Elevage de la Belle Etoile', '12345678900010', 'Petit élevage familial', 'Dupont', 'Jean', '123 Rue Principale', '0123456789', 'jean.dupont@example.com');
+-- Table A_Pour_Mere
+INSERT INTO A_Pour_Mere (ID_Animal, ID_Mere) VALUES
+(1, 4),
+(3, 4);
 
--- Insertion des données dans la table Adoptant
-INSERT INTO Adoptant (ID_Personne, Date_Adoption, Nom, Prenom, Adresse, Telephone, Email) VALUES 
-(2, '2024-01-01', 'Martin', 'Marie', '456 Avenue des Champs', '0987654321', 'marie.martin@example.com'),
-(3, '2024-02-01', 'Bernard', 'Paul', '789 Boulevard de la Paix', '0112233445', 'paul.bernard@example.com');
+-- Table A_Pour_Pere
+INSERT INTO A_Pour_Pere (ID_Animal, ID_Pere) VALUES
+(3, 2);
 
--- Insertion des données dans la table Privilege
-INSERT INTO Privilege (Nom) VALUES 
-('SuperAdministrateur'),
-('Administrateur'),
-('Utilisateur');
+-- Table Adopter
+INSERT INTO Adopter (ID_Animal, ID_Personne, Date_Adoption) VALUES
+(2, 2, '2019-12-10'),
+(3, 1, '2020-08-01'),
+(4, 2, '2019-12-15');
 
--- Insertion des données dans la table Utilisateur
-INSERT INTO Utilisateur (ID_Personne, Mot_De_Passe, Nom, Prenom, Adresse, Telephone, Email, ID_Privilege) VALUES 
-(1, 'password123', 'Dupont', 'Jean', '123 Rue Principale', '0123456789', 'jean.dupont@example.com', 1);
+-- Table Personne
+INSERT INTO Personne (ID_Personne, Nom, Prenom, Adresse, Telephone, Email) VALUES
+(1, 'Smith', 'John', '123 Cat St, Feline City', '555-1234', 'john.smith@example.com'),
+(2, 'Doe', 'Jane', '456 Kitten Ln, Meowtown', '555-5678', 'jane.doe@example.com');
 
--- Insertion des données dans la table Animal
-INSERT INTO Animal (Nom, Date_Naissance, Sexe, Image_Bebe, Image_Adulte, Date_Adoption, ID_Test, ID_Animal_A_Pour_Mere, ID_Animal_A_Pour_Pere, ID_Personne) VALUES -- A MODIFIER 
-('Minou', '2023-01-15', 'M', NULL, NULL, '2024-01-01', 1, NULL, NULL, 2),
-('Mina', '2023-03-20', 'F', NULL, NULL, '2024-02-01', 2, NULL, NULL, 3);
+-- Table Eleveur
+INSERT INTO Eleveur (ID_Personne, Nom_Elevage, Numero_Siret, Description) VALUES
+(1, 'Purrfect Pets', '987654321', 'Professional cat breeder with over 10 years of experience.');
 
--- Insertion des données dans la table Race
-INSERT INTO Race (ID_Race, Nom, Description, ID_Espece) VALUES -- A MODIFIER
-(1, 'Siamois', 'Chat de race siamois'),
-(2, 'Persan', 'Chat de race persan');
+-- Table Adoptant
+INSERT INTO Adoptant (ID_Personne, Date_Adoption) VALUES
+(1, '2019-12-16'),
+(2, '2019-12-15');
 
--- Insertion des données dans la table Animal_Vaccin
-INSERT INTO Animal_Vaccin (ID_Vaccin, ID_Animal, Date_Administration) VALUES 
-(1, 1, '2024-01-15'),
-(2, 2, '2024-02-15');
+-- Table Utilisateur
+INSERT INTO Utilisateur (ID_Personne, Mot_De_Passe) VALUES
+(1, 'password123'),
+(2, 'securepass456');
 
--- Insertion des données dans la table Race_Portee
-INSERT INTO Race_Portee (ID_Portee, ID_Race) VALUES -- A MODIFIER
+-- Table Privilege
+INSERT INTO Privilege (ID_Privilege, Nom) VALUES
+(1, 'Admin'),
+(2, 'User');
+
+-- Table Utilisateur_Privilege
+INSERT INTO Utilisateur_Privilege (ID_Personne, ID_Privilege) VALUES
 (1, 1),
 (2, 2);
+
+-- Table Titre
+INSERT INTO Titre (ID_Titre, Nom) VALUES
+(1, 'Champion'),
+(2, 'Grand Champion');
+
+-- Table Animal_Titre
+INSERT INTO Animal_Titre (ID_Animal, ID_Titre, Date) VALUES
+(1, 1, '2022-05-01'),
+(3, 2, '2023-01-15');
+
+-- Table Image
+INSERT INTO Image (ID_Image, Image) VALUES
+(1, 'misty1.jpg'),
+(2, 'tom1.jpg'),
+(3, 'leo1.jpg'),
+(4, 'luna1.jpg');
+
+-- Table Animal_Image
+INSERT INTO Animal_Image (ID_Animal, ID_Image) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4);
