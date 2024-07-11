@@ -9,21 +9,21 @@ if (session_status() == PHP_SESSION_NONE) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Public/CSS/styles.css">
+    <link rel="stylesheet" href="~/Public/StyleSheets/Styles.css">
     <title>Chatterie des Fell de Chyme</title>
 </head>
 <body>
     <header>
         <nav>
-            <img id="imgLogo" src="../Public/Images/Logo/Chatterie_des_fell_de_chyme_Black_Logo.png" alt="Logo_du_site">
+            <img id="imgLogo" src="~/Public/Images/Logo/Chatterie_des_fell_de_chyme_Black_Logo.png" alt="Logo_du_site">
             <ul>
                 <li><a href="#index.php">Accueil</a></li>
                 <li><a href="#femelles.php">Les Femelles</a></li>
                 <li><a href="#males.php">Les Mâles</a></li>
                 <li><a href="#portees.php">Les Portées</a></li>
                 <li><a href="#contact.php">Contact</a></li>
+                <li><a href="Login.php">Connexion</a></li>
             </ul>
-
         </nav>
     </header>
 
@@ -36,6 +36,6 @@ if (session_status() == PHP_SESSION_NONE) {
         <p class="footer">Copyright Fell de Chyme - 2024</p> <!-- Avoir l'annee actuelle -->
     </footer>
 
-    <script src="../Public/JavaScript/script.js"></script>
+    <script src="~/Public/JavaScript/script.js"></script>
 </body>
 </html>

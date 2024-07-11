@@ -10,5 +10,5 @@ ob_start();
 <?php
 $content = ob_get_clean();
 $titre = "Accueil";
-require __DIR__ . "/Public/template.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/App/Views/template.php';
 ?>
