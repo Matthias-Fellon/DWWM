@@ -1,33 +1,4 @@
-<?php
-ob_start();
-require_once __DIR__ . "/Auth.class.php";
-require_once __DIR__ . "/User.class.php";
-Auth::verifyAdmin();
-
-if(isset($_POST['id'], $_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['telephone'], $_POST['role'])) {
-    $id = $_POST['id'];
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $email = $_POST['email'];
-    $telephone = $_POST['telephone'];
-    $role = $_POST['role'];
-
-    $message = User::updateUser($id, $nom, $prenom, $email, $telephone, $role);
-    echo $message;
-}
-
-if (isset($_GET['id'])) {
-    $user = User::getUserById($_GET['id']);
-
-    if (!$user) {
-        echo "Utilisateur non trouvé.";
-        exit();
-    }
-} else {
-    echo "Aucun ID d'utilisateur fourni.";
-    exit();
-}
-?>
+<?php ob_start(); ?>
 
 <div class="form-container">
     <?php if ($user) : ?>
