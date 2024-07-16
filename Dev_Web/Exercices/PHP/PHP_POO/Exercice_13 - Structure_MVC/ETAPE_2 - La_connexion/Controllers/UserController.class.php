@@ -16,6 +16,7 @@ class UserController{
 
     public function updateForm($id) {
         $utilisateur = $this->userManager->getUserById($id);
+        echo var_dump($utilisateur);
         require './views/update.view.php';
     }
 
@@ -30,8 +31,10 @@ class UserController{
 
         //Gestion du téléchargement de l'image
         if(isset($files['image']) && $files['image']['error'] == UPLOAD_ERR_OK) {
-            $nomImage = baseName($files['image']['name']);
-            move_uploaded_file($files['image']['tmp_name'], "./public/image/$nomImage");
+            $tmp_name = $files['image']['tmp_name'];
+            $name = basename($files['image']['name']);
+            move_uploaded_file($tmp_name, "./public/images/$name");
+            $nomImage = $name;
         }
         $message = $this->userManager->updateUser($id, $nom, $prenom, $email, $telephone, $role, $nomImage);
         $this->listUser();

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('styles/style.css') }}">
+    <title>{% block title %}Répertoire - POO - MVC{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <img src="{{ asset('images/logo.png') }}" alt="Logo" class="nav-logo">
+        <nav>
+            <ul>
+                <li><a href="{{ path('app_accueil') }}">Accueil</a></li>
+                <li><a href="{{ path('app_ajouter') }}">Ajouter</a></li>
+                <li><a href="{{ path('app_voir') }}">Voir les utilisateurs</a></li>
+                <li><a href="{{ path('app_modifier') }}">Modifier</a></li>
+                <li><a href="{{ path('app_supprimer') }}">Supprimer</a></li>
+                <li><a href="{{ path('app_login') }}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>{{ titre }}</h1>
+    {% block body %}{% endblock %}
+    <footer>
+        <p class="foot">Copyright AFCI - 2024</p>
+    </footer>
+</body>
+</html>

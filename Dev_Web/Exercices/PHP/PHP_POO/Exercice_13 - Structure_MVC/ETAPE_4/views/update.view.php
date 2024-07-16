@@ -1,5 +1,6 @@
-<?php ob_start(); ?>
-
+<?php
+ob_start();
+?>
 
 <div class="form-container">
     <?php if ($utilisateur) : ?>
@@ -32,4 +33,3 @@
 $content = ob_get_clean();
 $titre = "Modifier un utilisateur";
 require "template.php";
-?>

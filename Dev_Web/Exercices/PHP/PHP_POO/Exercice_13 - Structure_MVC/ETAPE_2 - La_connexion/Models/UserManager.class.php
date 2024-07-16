@@ -1,7 +1,7 @@
 <?php
 require_once './Models/MyDbConnection.php';
 
-class UserManager{
+class UserManager {
     private $pdo;
 
     public function __construct() {   
@@ -20,14 +20,25 @@ class UserManager{
     }
 
     // La page update
+    public function getUserById($id) {
+        $sql = 'SELECT users.id, users.nom, users.prenom, users.email, users.telephone, users.nomImage, userroles.role
+                FROM users
+                LEFT JOIN userroles ON users.id = userroles.user_id
+                WHERE users.id = ?';
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$id]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function updateUser($id, $nom, $prenom, $email, $telephone, $role, $nomImage) {
         try {
             $sql = 'UPDATE Users 
-                    SET nom = ?, prenom = ?, email = ?, telephone = ? 
+                    SET nom = ?, prenom = ?, email = ?, telephone = ?, nomImage = ?
                     WHERE id = ?';
 
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([$nom, $prenom, $email, $telephone, $id]);
+            $stmt->execute([$nom, $prenom, $email, $telephone, $nomImage, $id]);
 
             $sql = 'UPDATE UserRoles
                     SET role = ? 
@@ -40,16 +51,5 @@ class UserManager{
         } catch (PDOException $e) {
             return "Erreur : " . $e->getMessage();
         }
-    }
-
-    public function getUserById($id) {
-        $sql = 'SELECT users.id, users.nom, users.prenom, users.email, users.telephone, users.nomImage, userroles.role
-                FROM users
-                LEFT JOIN userroles ON users.id = userroles.user_id
-                WHERE users.id = ?';
-
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$id]);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
