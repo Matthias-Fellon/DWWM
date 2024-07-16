@@ -56,5 +56,5 @@ if (isset($_GET['id'])) {
 <?php
 $content = ob_get_clean();
 $titre = "Modifier un utilisateur";
-require "./template.php";
+require __DIR__ . "/../Public/template.php";
 ?>
