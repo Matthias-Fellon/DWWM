@@ -30,7 +30,8 @@ class UserController {
         // Gestion de l'upload de l'image
         if (isset($files['image']) && $files['image']['error'] === UPLOAD_ERR_OK) {
             $tmp_name = $files['image']['tmp_name'];
-            $name = basename($files['image']['name']);
+            $rename =  $nom . '-' . $prenom . '.' . pathinfo($files['image']['name'])['extension'];
+            $name = basename($rename);
             move_uploaded_file($tmp_name, "./public/images/$name");
             $nomImage = $name;
         }

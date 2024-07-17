@@ -44,6 +44,7 @@ class UserManager {
             return "Erreur : " . $e->getMessage();
         }
     }
+
     public function createUser($nom, $prenom, $email, $telephone, $role, $nomImage, $pwd) {
         try {
             $stmt = $this->pdo->prepare('INSERT INTO users (nom, prenom, email, telephone, nomImage, pwd) VALUES (?, ?, ?, ?, ?, ?)');
@@ -74,6 +75,4 @@ class UserManager {
             return "Erreur : " . $e->getMessage();
         }
     }
-
-
 }

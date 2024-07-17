@@ -2,6 +2,12 @@
 #        Script MySQL.
 #------------------------------------------------------------
 
+-- Création de la base de données
+DROP DATABASE IF EXIST Chatterie;
+CREATE DATABASE IF NOT EXIST Chatterie
+
+-- Utilisation de la base de données
+USE Chatterie;
 
 #------------------------------------------------------------
 # Table: Chat

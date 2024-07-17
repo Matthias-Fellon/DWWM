@@ -26,6 +26,7 @@ try {
                 $controller->logout();
                 break;
             case "read":
+                
                 $controller = new UserController();
                 $controller->listUsers();
                 break;
