@@ -1,4 +1,7 @@
-<?php ob_start(); ?>
+<?php ob_start(); 
+echo var_dump($_SERVER['PHP_SELF']);
+echo (var_dump($users));
+?>
 
 <table border="1">
     <tr>
