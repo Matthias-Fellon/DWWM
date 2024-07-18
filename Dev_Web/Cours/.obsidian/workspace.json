@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "4a079fc653de006d",
+        "id": "75747e31482c696d",
         "type": "tabs",
         "children": [
           {
-            "id": "b00044912a0a81cd",
+            "id": "a18630e4c8d6a6e4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Labrairies_Frameworks/Symfony.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Labrairies_Frameworks/Symfony.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Labrairies_Frameworks/Symfony.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Labrairies_Frameworks/Symfony.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,10 +138,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b00044912a0a81cd",
+  "active": "a18630e4c8d6a6e4",
   "lastOpenFiles": [
-    "PHP/Commandes.md",
     "Labrairies_Frameworks/Symfony.md",
+    "PHP/Commandes.md",
     "PHP/Tableaux_Matrice.pdf",
     "NoSQL/Commandes.md",
     "Projet_JO/Projet JO.md",

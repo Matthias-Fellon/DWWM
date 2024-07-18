@@ -9,22 +9,66 @@ if (session_status() == PHP_SESSION_NONE) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/Public/StyleSheets/Styles.css">
+    <<link rel="stylesheet" href="<?= URL ?>Public/StyleSheets/styles.css">
     <title>Chatterie des Fell de Chyme</title>
 </head>
 <body>
     <header>
-        <nav>
-            <img id="imgLogo" src="~/Public/Images/Logo/Chatterie_des_fell_de_chyme_Black_Logo.png" alt="Logo_du_site">
+        <nav class="menu">
+            <div class="top-bar">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
             <ul>
-                <li><a href="#index.php">Accueil</a></li>
-                <li><a href="#femelles.php">Les Femelles</a></li>
-                <li><a href="#males.php">Les Mâles</a></li>
-                <li><a href="#portees.php">Les Portées</a></li>
-                <li><a href="#contact.php">Contact</a></li>
-                <li><a href="Login.php">Connexion</a></li>
+                <li class="item" id="accueil">
+                    <a href="#accueil" class="bouton">Accueil</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <div class="smenu">
+                        <a href="#">Présentation de l'Elevage</a>
+                        <a href="#">À Propos de Moi</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Actualités</a>
+                        <a href="#">Galerie Photos/Vidéos</a>
+                    </div>
+                </li>
+                <li class="item" id="elevage">
+                    <a href="#elevage" class="bouton">Elevage</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <div class="smenu">
+                        <a href="#">Les Mâles</a>
+                        <a href="#">Les Femelles</a>
+                        <a href="#">Les Chatons</a>
+                        <a href="#">Les Retraités</a>
+                        <a href="#">En Mémoire</a>
+                    </div>
+                </li>
+                <li class="item" id="contact">
+                    <a href="#contact" class="bouton">Contact</a>
+                </li>
+                <li class="item" id="conditionsVente">
+                    <a href="#conditionsVente" class="bouton">Conditions de Vente</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <div class="smenu">
+                        <a href="#">Coût Prévisionnel</a>
+                        <a href="#">Mentions Légales</a>
+                        <a href="#">Conditions D'Adoption</a>
+                        <a href="#">Disponibilité - Option - Réservation</a>
+                    </div>
+                </li>
+                <li class="item" id="galerie">
+                    <a href="#galerie" class="bouton">Galerie</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <div class="smenu">
+                        <a href="#">Photos</a>
+                        <a href="#">Videos</a>
+                    </div>
+                </li>
+                <li class="item" id="connexion">
+                    <a href="#connexion" class="bouton">Connexion</a>
+                </li>
             </ul>
         </nav>
+        <img id="imgLogo" src="<?= URL ?>Public/Images/Logo/Chatterie_des_fell_de_chyme_Black_Logo.png" alt="Logo_du_site">
     </header>
 
     <main>
@@ -36,6 +80,6 @@ if (session_status() == PHP_SESSION_NONE) {
         <p class="footer">Copyright Fell de Chyme - 2024</p> <!-- Avoir l'annee actuelle -->
     </footer>
 
-    <script src="~/Public/JavaScript/script.js"></script>
+    <script src="<?= URL ?>Public/JavaScript/script.js"></script>
 </body>
 </html>

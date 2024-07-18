@@ -69,6 +69,5 @@
         </nav>
         <!-- <img id="imgLogo" src="./Images/Chatterie_des_fell_de_chyme_Black_Logo.png" alt="Logo_du_site"> -->
     </header>
-    <script src="./script.js"></script>
 </body>
 </html>
