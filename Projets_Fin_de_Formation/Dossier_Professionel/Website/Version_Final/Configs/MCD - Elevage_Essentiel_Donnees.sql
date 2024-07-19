@@ -1,104 +1,105 @@
 -- Table Chat
-INSERT INTO Chat (ID_Chat, Nom, Race, Date_Naissance, Sexe, Image, Puce_Electronique, Livre_Origine, ADN, Statut) VALUES
-(1, 'Misty', 'Persan', '2020-03-15', 'F', 'misty.jpg', '1234567890', 'LO12345', 'ADN12345', 'Available'),
-(2, 'Tom', 'Exotic Shorthair', '2019-06-22', 'M', 'tom.jpg', '1234567891', 'LO12346', 'ADN12346', 'Adopted'),
-(3, 'Leo', 'Bengal', '2021-01-11', 'M', 'leo.jpg', '1234567892', 'LO12347', 'ADN12347', 'Available'),
-(4, 'Luna', 'Sphynx', '2018-11-05', 'F', 'luna.jpg', '1234567893', 'LO12348', 'ADN12348', 'Adopted');
+INSERT INTO Chat (ID_Chat, Nom, Nom_Usage, Race, Date_Naissance, Sexe, Couleur, Couleur_Yeux, Affixe_Naissance, Affixe_Actuel, Image, Puce_Electronique, Livre_Origine, ADN, Statut, Date_Adoption, Etat, ID_Chat_A_Pour_Mere, ID_Chat_A_Pour_Pere, ID_Personne) VALUES
+(1, 'Pheize',       '',         'Persan', '18-08-2019', 'F', 'Black Silver Shaded',         'Vert', 'Des Fever-fell',           'Des Fever-fell',       'pheize.jpg',       '250268743142082', 'LOOF 2020.2130',    '', 'Adopté',   '', 'Actif',    6,    NULL,  1),
+(2, 'Q''Pidon',     'Phares',   'Persan', '13-09-2019', 'M', 'Blue Golden Shaded',          'Vert', 'Du Pid D''Arrouyette',     '',                     'phares.jpg',       '250268732525100', 'LOOF 2020.2261',    '', 'Adopté',   '', 'Actif',    NULL, NULL,  1),
+(3, 'Thao''s',      '',         'Persan', '05-06-2022', 'M', 'Blue Golden Shaded',          'Vert', 'Des Fell De Chymé',        'Des Fell De Chymé',    'thao.jpg',         '250269590840460', 'LOOF 2022.36935',   '', 'Adopté',   '', 'Actif',    1,    2,     1),
+(4, 'Upsylone',     '',         'Persan', '10-03-2023', 'F', 'Black Tortue Golden Shaded',  '',     'Du Grand Nocq ',           '',                     'upsylone.jpg',     '250269591320957', 'LOOF 2023.46399',   '', 'Adopté',   '', 'Actif',    NULL, NULL,  1),
+(5, 'Nostradamus',  '',         'Persan', '24-10-2017', 'M', 'Crème Tabby Point',           '',     'Des Beautés D''Isara',     '',                     'nostradamus.jpg',  '250269811440948', 'LOOF 2018.7964',    '', 'Adopté',   '', 'Décedé',   NULL, NULL,  1),
+(6, 'Nydal',        'Nevenn',   'Persan', '21-07-2017', 'F', 'Blue Point',                  'Bleu', 'Des Émeraudes D''Isara',   '',                     'neven.jpg',        '250269811425251', 'LOOF 2017.33924',   '', 'Adopté',   '', 'Rétraité', NULL, NULL,  NULL),
+(7, 'Jim',          'Jango',    'Persan', '16-07-2014', 'M', 'Black Silver Shaded',         '',     'Du Conte D''Artois',       '',                     'jango.jpg',        '250268731216727', 'LOOF 2014.2014',    '', 'Adopté',   '', 'Rétraité', NULL, NULL,  NULL),
+(8, 'Ice-Flower',   'Ice',      'Persan', '30-04-2013', 'F', 'Black Silver Shaded',         'Vert', 'Du Doulieu',               '',                     'ice.jpg',          '250268500609607', 'LOOF 2013.26702',   '', 'Adopté',   '', 'Rétraité', NULL, NULL,  NULL);
 
--- Table Vaccin
-INSERT INTO Vaccin (ID_Vaccin, Nom) VALUES
-(1, 'Rabies'),
-(2, 'Feline Distemper'),
-(3, 'Feline Herpesvirus'),
-(4, 'Feline Calicivirus');
+-- Table Chat_Test
+-- INSERT INTO Chat_Test (ID_Chat, ID_Test, Résultat) VALUES
+-- (1, 1, 'resultat.jpg'),
+-- (1, 2, 'resultat.jpg'),
+-- (1, 3, 'resultat.jpg'),
+-- (2, 1, 'resultat.jpg'),
+-- (2, 3, 'resultat.jpg'),
+-- (3, 1, 'resultat.jpg'),
+-- (3, 2, 'resultat.jpg'),
+-- (3, 4, 'resultat.jpg'),
+-- (4, 1, 'resultat.jpg'),
+-- (4, 2, 'resultat.jpg'),
+-- (4, 3, 'resultat.jpg'),
+-- (4, 4, 'resultat.jpg'),
+-- (5, 1, 'resultat.jpg');
+
+-- Table Chat_Vaccin
+-- INSERT INTO Chat_Vaccin (ID_Chat, ID_Vaccin, Date_Administration) VALUES
+-- (1, 1, '15-06-2019'),
+-- (1, 2, '15-08-2019'),
+-- (1, 3, '15-07-2019'),
+-- (1, 4, '15-09-2019'),
+-- (2, 1, '22-09-2019'),
+-- (2, 3, '22-10-2019'),
+-- (2, 2, '22-11-2019'),
+-- (2, 4, '22-12-2019'),
+-- (3, 1, '11-08-2020'),
+-- (3, 2, '11-10-2020'),
+-- (3, 3, '11-09-2020'),
+-- (4, 1, '05-01-2020'),
+-- (4, 2, '05-03-2020'),
+-- (5, 1, '22-07-2021'),
+-- (5, 2, '22-09-2021');
+
+-- Table Chat_Titre
+-- INSERT INTO Chat_Titre (ID_Chat, ID_Titre, Date) VALUES -- A modifier
+-- (1, 1, '2022-05-01'),
+-- (3, 2, '2023-01-15');
+
+-- Table Chat_Image
+-- INSERT INTO Chat_Image (ID_Chat, ID_Image) VALUES -- A modifier
+-- (1, 1),
+-- (2, 2),
+-- (3, 3),
+-- (4, 4);
+
 
 -- Table Test
 INSERT INTO Test (ID_Test, Nom, Resultat) VALUES
-(1, 'FIV', 'Negative'),
-(2, 'FeLV', 'Negative'),
-(3, 'Blood Type', 'A'),
-(4, 'FIP', 'Negative');
+(1, 'FIV'),
+(2, 'FeLV'),
+(3, 'PKD'),
+(4, 'Bilan Sanguin'),
+(5, 'Identification Génétique'),
+(6, 'PIF');
 
--- Table Animal_Vaccin
-INSERT INTO Animal_Vaccin (ID_Chat, ID_Vaccin, Date_Administration) VALUES
-(1, 1, '2021-04-01'),
-(1, 2, '2021-04-01'),
-(2, 1, '2020-07-01'),
-(3, 3, '2021-02-15'),
-(4, 4, '2019-12-01');
+-- Table Vaccin
+INSERT INTO Vaccin (ID_Vaccin, Nom) VALUES
+(1, '1er Vaccin'),
+(2, '2ème Vaccin'),
+(3, 'Rappel 1er Vaccin'),
+(4, 'Rappel 2ème Vaccin');
 
--- Table Effectuer
-INSERT INTO Chat_Test (ID_Chat, ID_Test) VALUES
-(1, 1),
-(1, 2),
-(2, 3),
-(3, 4),
-(4, 1);
+-- Table Titre
+INSERT INTO Titre (ID_Titre, Nom) VALUES 
+(1, 'Champion National'),
+(2, 'Champion International');
 
--- Table A_Pour_Mere
-INSERT INTO A_Pour_Mere (ID_Chat, ID_Mere) VALUES
-(1, 4),
-(3, 4);
-
--- Table A_Pour_Pere
-INSERT INTO A_Pour_Pere (ID_Chat, ID_Pere) VALUES
-(3, 2);
-
--- Table Adopter
-INSERT INTO Adopter (ID_Animal, ID_Personne, Date_Adoption) VALUES
-(2, 2, '2019-12-10'),
-(3, 1, '2020-08-01'),
-(4, 2, '2019-12-15');
+-- Table Image
+-- INSERT INTO Image (ID_Image, Image) VALUES -- A modifier
+-- (1, 'pheize.jpg'),
+-- (2, 'phares.jpg'),
+-- (3, 'thao.jpg'),
+-- (4, 'upsylone.jpg');
 
 -- Table Personne
 INSERT INTO Personne (ID_Personne, Nom, Prenom, Adresse, Telephone, Email) VALUES
-(1, 'Smith', 'John', '123 Cat St, Feline City', '555-1234', 'john.smith@example.com'),
-(2, 'Doe', 'Jane', '456 Kitten Ln, Meowtown', '555-5678', 'jane.doe@example.com');
+(1, 'Fournier', 'Dorothée', 'Rue Eugène Pottier', '0614000000', 'dorothee.fournier@gmail.com'),
+(2, 'Dupont', 'Jean', '12 Rue des Fleurs, Paris', '0123456789', 'jean.dupont@gmail.com'),
+(3, 'Martin', 'Sophie', '34 Avenue des Champs, Lyon', '0987654321', 'sophie.martin@gmail.com');
 
 -- Table Eleveur
-INSERT INTO Eleveur (ID_Personne, Nom_Elevage, Numero_Siret, Description) VALUES
-(1, 'Purrfect Pets', '987654321', 'Professional cat breeder with over 10 years of experience.');
-
--- Table Adoptant
-INSERT INTO Adoptant (ID_Personne, Date_Adoption) VALUES
-(1, '2019-12-16'),
-(2, '2019-12-15');
+INSERT INTO Eleveur (ID_Personne, Nom_Elevage, Numero_Siret, Description, Nom, Prenom, Adresse, Telephone, Email) VALUES
+(1, 'Elevage des Fell de Chymé', '12345678901234', 'Elevage spécialisé dans les races de chat de type Persan', 'Fournier', 'Dorothée', 'Rue Eugène Pottier', '0614000000', 'dorothee.fournier@gmail.com');
 
 -- Table Utilisateur
-INSERT INTO Utilisateur (ID_Personne, Mot_De_Passe) VALUES
-(1, 'password123'),
-(2, 'securepass456');
+INSERT INTO Utilisateur (ID_Personne, Mot_De_Passe, Nom, Prenom, Adresse, Telephone, Email, ID_Privilege) VALUES
+(1, 'password1', 'Fournier', 'Dorothée', 'Rue Eugène Pottier', '0614000000', 'dorothee.fournier@gmail.com', 1),
+(2, 'password2', 'Dupont', 'Jean', '12 Rue des Fleurs, Paris', '0123456789', 'jean.dupont@gmail.com', 2);
 
 -- Table Privilege
 INSERT INTO Privilege (ID_Privilege, Nom) VALUES
-(1, 'Admin'),
-(2, 'User');
-
--- Table Utilisateur_Privilege
-INSERT INTO Utilisateur_Privilege (ID_Personne, ID_Privilege) VALUES
-(1, 1),
-(2, 2);
-
--- Table Titre
-INSERT INTO Titre (ID_Titre, Nom) VALUES
-(1, 'Champion'),
-(2, 'Grand Champion');
-
--- Table Animal_Titre
-INSERT INTO Animal_Titre (ID_Animal, ID_Titre, Date) VALUES
-(1, 1, '2022-05-01'),
-(3, 2, '2023-01-15');
-
--- Table Image
-INSERT INTO Image (ID_Image, Image) VALUES
-(1, 'misty1.jpg'),
-(2, 'tom1.jpg'),
-(3, 'leo1.jpg'),
-(4, 'luna1.jpg');
-
--- Table Animal_Image
-INSERT INTO Animal_Image (ID_Animal, ID_Image) VALUES
-(1, 1),
-(2, 2),
-(3, 3),
-(4, 4);
+(1, 'Administrateur'),
+(2, 'Utilisateur');

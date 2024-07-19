@@ -9,7 +9,11 @@ if (session_status() == PHP_SESSION_NONE) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <<link rel="stylesheet" href="<?= URL ?>Public/StyleSheets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="<?= URL ?>Public/StyleSheets/styles.css">
     <title>Chatterie des Fell de Chyme</title>
 </head>
 <body>
@@ -63,12 +67,24 @@ if (session_status() == PHP_SESSION_NONE) {
                         <a href="#">Videos</a>
                     </div>
                 </li>
-                <li class="item" id="connexion">
-                    <a href="#connexion" class="bouton">Connexion</a>
+                <li class="item" id="connexion/deconnexion">
+                    <?php if(!isset($_SERVER['user_id'])): ?>
+                    <a href="<?= URL ?>login" class="bouton">Connexion</a>
+                    <?php else: ?>
+                    <a href="<?= URL ?>logout" class="bouton">Deconnexion</a>
+                    <?php endif; ?>
+                </li>
+                <li class="item" id="CRUD">
+                    <a href="#CRUD" class="bouton">CRUD</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <div class="smenu">
+                        <a href="<?= URL ?>manageUsers/readUser">Utilisateurs</a>
+                        <a href="<?= URL ?>manageCats">Chats</a>
+                    </div>
                 </li>
             </ul>
         </nav>
-        <img id="imgLogo" src="<?= URL ?>Public/Images/Logo/Chatterie_des_fell_de_chyme_Black_Logo.png" alt="Logo_du_site">
+        <!-- <img id="imgLogo" src="<?= URL ?>Public/Images/Logo/Chatterie_des_fell_de_chyme_Black_Logo.png" alt="Logo_du_site"> -->
     </header>
 
     <main>

@@ -32,4 +32,4 @@ ob_start();
 <?php
 $content = ob_get_clean();
 $titre = "Modifier un utilisateur";
-require "template.php";
+require __DIR__ . "/../template.php";

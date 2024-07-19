@@ -33,4 +33,4 @@
 <?php
 $content = ob_get_clean();
 $titre = "Voir les utilisateurs";
-require "template.php";
+require  __DIR__ . "/../template.php";

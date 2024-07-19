@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/../../Configs/MyDbConnection.php";
+require_once __DIR__ . "/../../Configs/MyDbConnection.class.php";
 class AuthManager {
     private $pdo;
 

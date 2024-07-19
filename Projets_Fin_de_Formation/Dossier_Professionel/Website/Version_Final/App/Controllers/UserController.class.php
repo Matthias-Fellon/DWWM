@@ -10,12 +10,12 @@ class UserController {
 
     public function listUsers() {
         $users = $this->userManager->getAllUsers();
-        require '../Views/read.view.php';
+        require  __DIR__ . '/../Views/User/read.view.php';
     }
 
     public function UpdateForm($id) {
         $utilisateur = $this->userManager->getUserById($id);
-        require '../Views/update.view.php';
+        require  __DIR__ . '../Views/User/update.view.php';
     }
 
     public function updateUser($data, $files) {
@@ -32,7 +32,7 @@ class UserController {
             $tmp_name = $files['image']['tmp_name'];
             $rename =  $nom . '-' . $prenom . '.' . pathinfo($files['image']['name'])['extension'];
             $name = basename($rename);
-            move_uploaded_file($tmp_name, "./public/images/$name");
+            move_uploaded_file($tmp_name, "./Public/Images/$name");
             $nomImage = $name;
         }
 
@@ -48,13 +48,13 @@ class UserController {
         $role = $data['role'];
         $pwd = $data['pwd'];
         $nomImage = 'default.png'; // Image par défaut
-
-         // Vérification de l'existence et de l'absence d'erreur dans le fichier uploadé
+        
+        // Vérification de l'existence et de l'absence d'erreur dans le fichier uploadé
         // Gestion de l'upload de l'image
         if (isset($files['image']) && $files['image']['error'] === UPLOAD_ERR_OK) {
             $tmp_name = $files['image']['tmp_name'];
             $name = basename($files['image']['name']);
-            move_uploaded_file($tmp_name, "./public/images/$name");
+            move_uploaded_file($tmp_name, "./Public/Images/$name");
             $nomImage = $name;
         }
 
@@ -63,12 +63,12 @@ class UserController {
     }
 
     public function addForm(){
-        require './views/create.view.php';
+        require './Views/User/create.view.php';
     }
 
     public function deleteForm(){
         $users =  $this->userManager->getAllUsers();
-        require './views/delete.view.php';
+        require './Views/User/delete.view.php';
     }
 
     public function deleteUser($id){

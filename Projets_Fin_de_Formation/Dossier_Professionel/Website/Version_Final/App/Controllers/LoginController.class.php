@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../Models/AuthManager.class.php';
-require_once __DIR__ . '/../../Configs/MyDbConnection.php';
+require_once __DIR__ . '/../../Configs/MyDbConnection.class.php';
 
 class LoginController {
     private $authManager;
@@ -21,13 +21,13 @@ class LoginController {
 
             if ($userId) {
                 $_SESSION['user_id'] = $userId;
-                header('Location: ' . URL . 'accueil');
+                header('Location: ' . URL . 'Accueil');
                 exit();
             } else {
                 $error = "Email ou mot de passe incorrect.";
             }
         }
 
-        require '../Views/login.view.php';
+        require __DIR__ . '/../Views/login.view.php';
     }
 }

@@ -15,6 +15,6 @@
 
 <?php
 $content = ob_get_clean();
-$titre = "Identification Espace Administrateur";
+$titre = "Identification";
 require "template.php";
 ?>
