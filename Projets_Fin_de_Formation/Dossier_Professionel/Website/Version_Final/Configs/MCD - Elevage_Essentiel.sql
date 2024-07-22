@@ -18,9 +18,9 @@ CREATE TABLE Personne(
         ID_Personne Int  Auto_increment  NOT NULL ,
         Nom         Varchar (50) NOT NULL ,
         Prenom      Varchar (50) NOT NULL ,
-        Adresse     Varchar (150) NOT NULL ,
         Telephone   Varchar (15) NOT NULL ,
-        Email       Varchar (150) NOT NULL
+        Email       Varchar (150) NOT NULL ,
+        Image_Profil Varchar (50) NOT NULL
 	,CONSTRAINT Personne_PK PRIMARY KEY (ID_Personne)
 )ENGINE=InnoDB;
 
@@ -36,9 +36,9 @@ CREATE TABLE Eleveur(
         Description  Text NOT NULL ,
         Nom          Varchar (50) NOT NULL ,
         Prenom       Varchar (50) NOT NULL ,
-        Adresse      Varchar (150) NOT NULL ,
         Telephone    Varchar (15) NOT NULL ,
-        Email        Varchar (150) NOT NULL
+        Email        Varchar (150) NOT NULL ,
+        Image_Profil Varchar (50) NOT NULL
 	,CONSTRAINT Eleveur_PK PRIMARY KEY (ID_Personne)
 )ENGINE=InnoDB;
 
@@ -52,9 +52,9 @@ CREATE TABLE Utilisateur(
         Mot_De_Passe Varchar (255) NOT NULL ,
         Nom          Varchar (50) NOT NULL ,
         Prenom       Varchar (50) NOT NULL ,
-        Adresse      Varchar (150) NOT NULL ,
         Telephone    Varchar (15) NOT NULL ,
         Email        Varchar (150) NOT NULL ,
+        Image_Profil Varchar (50) NOT NULL ,
         ID_Privilege Int NOT NULL
 	,CONSTRAINT Utilisateur_PK PRIMARY KEY (ID_Personne)
 )ENGINE=InnoDB;
@@ -66,7 +66,7 @@ CREATE TABLE Utilisateur(
 
 CREATE TABLE Privilege(
         ID_Privilege Int  Auto_increment  NOT NULL ,
-        Nom          Varchar (50) NOT NULL
+        Role         Varchar (50) NOT NULL
 	,CONSTRAINT Privilege_PK PRIMARY KEY (ID_Privilege)
 )ENGINE=InnoDB;
 

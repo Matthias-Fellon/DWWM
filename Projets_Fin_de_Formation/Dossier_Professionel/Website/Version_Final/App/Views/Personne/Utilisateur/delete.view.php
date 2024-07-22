@@ -7,8 +7,8 @@ ob_start();
         <label for="id">Utilisateur:</label>
         <select name="id" required>
             <?php foreach ($users as $user) : ?>
-                <option value="<?php echo htmlspecialchars($user['id']); ?>">
-                    <?php echo htmlspecialchars($user['prenom'] . ' ' . $user['nom']); ?>
+                <option value="<?php echo htmlspecialchars($user['ID_Personne']); ?>">
+                    <?php echo htmlspecialchars($user['Prenom'] . ' ' . $user['Nom']); ?>
                 </option>
             <?php endforeach; ?>
         </select>

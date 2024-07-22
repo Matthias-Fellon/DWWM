@@ -85,21 +85,26 @@ INSERT INTO Titre (ID_Titre, Nom) VALUES
 -- (4, 'upsylone.jpg');
 
 -- Table Personne
-INSERT INTO Personne (ID_Personne, Nom, Prenom, Adresse, Telephone, Email) VALUES
-(1, 'Fournier', 'Dorothée', 'Rue Eugène Pottier', '0614000000', 'dorothee.fournier@gmail.com'),
-(2, 'Dupont', 'Jean', '12 Rue des Fleurs, Paris', '0123456789', 'jean.dupont@gmail.com'),
-(3, 'Martin', 'Sophie', '34 Avenue des Champs, Lyon', '0987654321', 'sophie.martin@gmail.com');
+INSERT INTO Personne (ID_Personne, Nom, Prenom, Telephone, Email, Image_Profil) VALUES
+(1, 'Fournier', 'Dorothée', '0614000000', 'dorothee.fournier@gmail.com', 'defaut.png'),
+(2, 'Dupont', 'Jean', '0123456789', 'jean.dupont@gmail.com', 'defaut.png'),
+(3, 'Martin', 'Sophie', '0987654321', 'sophie.martin@gmail.com', 'defaut.png');
 
 -- Table Eleveur
-INSERT INTO Eleveur (ID_Personne, Nom_Elevage, Numero_Siret, Description, Nom, Prenom, Adresse, Telephone, Email) VALUES
-(1, 'Elevage des Fell de Chymé', '12345678901234', 'Elevage spécialisé dans les races de chat de type Persan', 'Fournier', 'Dorothée', 'Rue Eugène Pottier', '0614000000', 'dorothee.fournier@gmail.com');
+INSERT INTO Eleveur (ID_Personne, Nom_Elevage, Numero_Siret, Description, Nom, Prenom, Telephone, Email, Image_Profil) VALUES
+(1, 'Elevage des Fell de Chymé', '12345678901234', 'Elevage spécialisé dans les races de chat de type Persan', 'Fournier', 'Dorothée', '0614000000', 'dorothee.fournier@gmail.com', 'defaut.png');
 
 -- Table Utilisateur
-INSERT INTO Utilisateur (ID_Personne, Mot_De_Passe, Nom, Prenom, Adresse, Telephone, Email, ID_Privilege) VALUES
-(1, 'password1', 'Fournier', 'Dorothée', 'Rue Eugène Pottier', '0614000000', 'dorothee.fournier@gmail.com', 1),
-(2, 'password2', 'Dupont', 'Jean', '12 Rue des Fleurs, Paris', '0123456789', 'jean.dupont@gmail.com', 2);
+INSERT INTO Utilisateur (ID_Personne, Mot_De_Passe, Nom, Prenom, Telephone, Email, Image_Profil, ID_Privilege) VALUES
+(1, '$2y$10$mYBC0cuPZ3nmYZWIyzQm4utrBBARtGL5FkFD6pa/OjZORj61C5Apy', 'Fournier', 'Dorothée', '0614000000', 'dorothee.fournier@gmail.com', 'defaut.png', 1),
+(2, '$2y$10$Jpbrv3inJ7N8zplL0vttyuaoIvAu.NKE3p5f2Fsd20KClLsX/kPqC', 'Dupont', 'Jean', '0123456789', 'jean.dupont@gmail.com', 'defaut.png', 2);
 
 -- Table Privilege
-INSERT INTO Privilege (ID_Privilege, Nom) VALUES
+INSERT INTO Privilege (ID_Privilege, Role) VALUES
 (1, 'Administrateur'),
 (2, 'Utilisateur');
+
+-- Mise à jour des données 
+UPDATE chat SET ID_Personne = 1;
+UPDATE chat SET ID_Chat_A_Pour_Mere = 6 WHERE ID_Chat = 1;
+UPDATE chat SET ID_Chat_A_Pour_Pere = 2, ID_Chat_A_Pour_Mere = 1 WHERE ID_Chat = 3;

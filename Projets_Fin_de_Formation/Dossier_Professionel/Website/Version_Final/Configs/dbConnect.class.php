@@ -7,7 +7,7 @@ abstract class DbConnect {
         // opérateur de fusion null ?:
         $host = getenv('DB_HOST') ?: 'localhost';
         $port = getenv('DB_PORT') ?: '3306';
-        $db = getenv('DB_NAME') ?: 'repertoire_2'; //$db = getenv('DB_NAME') ?: 'fell_de_chyme';
+        $db = getenv('DB_NAME') ?: 'chatterie'; //$db = getenv('DB_NAME') ?: 'fell_de_chyme';
         $user = getenv('DB_USER') ?: 'root';
         $pass = getenv('DB_PASS') ?: '';
         $charset = 'utf8mb4';

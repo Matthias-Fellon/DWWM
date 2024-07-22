@@ -68,13 +68,13 @@ if (session_status() == PHP_SESSION_NONE) {
                     </div>
                 </li>
                 <li class="item" id="connexion/deconnexion">
-                    <?php if(!isset($_SESSION['user_id'])): ?>
+                    <?php if(!isset($_SESSION['ID_Personne'])): ?>
                     <a href="<?= URL ?>login" class="bouton">Connexion</a>
                     <?php else: ?>
                     <a href="<?= URL ?>logout" class="bouton">Deconnexion</a>
                     <?php endif; ?>
                 </li>
-                <?php if(isset($_SESSION['user_id']) && $this->authManager->estAdmin($_SESSION['user_id'])):?>
+                <?php if(isset($_SESSION['ID_Personne']) && $this->authManager->estAdmin($_SESSION['ID_Personne'])):?>
                 <li class="item" id="CRUD">
                     <a href="#CRUD" class="bouton">CRUD</a>
                     <i class="fa-solid fa-chevron-right"></i>

@@ -14,31 +14,31 @@ class AuthManager {
     }
 
     public function authenticate($email, $password) {
-        $stmt = $this->pdo->prepare('SELECT id, pwd FROM users WHERE email = ?');
+        $stmt = $this->pdo->prepare('SELECT ID_Personne, Mot_De_Passe FROM utilisateur WHERE Email = ?');
         $stmt->execute([$email]);
         $user = $stmt->fetch();
 
-        if ($user && password_verify($password, $user['pwd'])) {
-            return $user['id'];
+        if ($user && password_verify($password, $user['Mot_De_Passe'])) {
+            return $user['ID_Personne'];
         } else {
             return false;
         }
     }
 
     public function estAdmin($userId) {
-        $stmt = $this->pdo->prepare('SELECT role FROM UserRoles WHERE user_id = ?');
+        $stmt = $this->pdo->prepare('SELECT Role FROM privilege WHERE ID_Privilege = ?');
         $stmt->execute([$userId]);
         $userRole = $stmt->fetch();
-        return $userRole && $userRole['role'] === 'admin';
+        return $userRole && $userRole['Role'] === 'Administrateur';
     }
 
     public function verifierAdmin() {
         $this->startSession();
-        if (!isset($_SESSION['user_id'])) {
+        if (!isset($_SESSION['ID_Personne'])) {
             echo "Session utilisateur non définie.";
             exit();
         } else {
-            $userId = $_SESSION['user_id'];
+            $userId = $_SESSION['ID_Personne'];
             if (!$this->estAdmin($userId)) {
                 echo "L'utilisateur avec l'ID $userId n'est pas un administrateur.";
                 exit();
