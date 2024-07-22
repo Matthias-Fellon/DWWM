@@ -21,7 +21,7 @@ class LoginController {
 
             if ($userId) {
                 $_SESSION['user_id'] = $userId;
-                header('Location: ' . URL . 'Accueil');
+                header('Location: ' . URL . 'home');
                 exit();
             } else {
                 $error = "Email ou mot de passe incorrect.";

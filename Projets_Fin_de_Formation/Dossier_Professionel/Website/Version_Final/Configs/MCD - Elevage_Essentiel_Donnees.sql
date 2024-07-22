@@ -1,13 +1,13 @@
 -- Table Chat
 INSERT INTO Chat (ID_Chat, Nom, Nom_Usage, Race, Date_Naissance, Sexe, Couleur, Couleur_Yeux, Affixe_Naissance, Affixe_Actuel, Image, Puce_Electronique, Livre_Origine, ADN, Statut, Date_Adoption, Etat, ID_Chat_A_Pour_Mere, ID_Chat_A_Pour_Pere, ID_Personne) VALUES
-(1, 'Pheize',       '',         'Persan', '18-08-2019', 'F', 'Black Silver Shaded',         'Vert', 'Des Fever-fell',           'Des Fever-fell',       'pheize.jpg',       '250268743142082', 'LOOF 2020.2130',    '', 'Adopté',   '', 'Actif',    6,    NULL,  1),
-(2, 'Q''Pidon',     'Phares',   'Persan', '13-09-2019', 'M', 'Blue Golden Shaded',          'Vert', 'Du Pid D''Arrouyette',     '',                     'phares.jpg',       '250268732525100', 'LOOF 2020.2261',    '', 'Adopté',   '', 'Actif',    NULL, NULL,  1),
-(3, 'Thao''s',      '',         'Persan', '05-06-2022', 'M', 'Blue Golden Shaded',          'Vert', 'Des Fell De Chymé',        'Des Fell De Chymé',    'thao.jpg',         '250269590840460', 'LOOF 2022.36935',   '', 'Adopté',   '', 'Actif',    1,    2,     1),
-(4, 'Upsylone',     '',         'Persan', '10-03-2023', 'F', 'Black Tortue Golden Shaded',  '',     'Du Grand Nocq ',           '',                     'upsylone.jpg',     '250269591320957', 'LOOF 2023.46399',   '', 'Adopté',   '', 'Actif',    NULL, NULL,  1),
-(5, 'Nostradamus',  '',         'Persan', '24-10-2017', 'M', 'Crème Tabby Point',           '',     'Des Beautés D''Isara',     '',                     'nostradamus.jpg',  '250269811440948', 'LOOF 2018.7964',    '', 'Adopté',   '', 'Décedé',   NULL, NULL,  1),
-(6, 'Nydal',        'Nevenn',   'Persan', '21-07-2017', 'F', 'Blue Point',                  'Bleu', 'Des Émeraudes D''Isara',   '',                     'neven.jpg',        '250269811425251', 'LOOF 2017.33924',   '', 'Adopté',   '', 'Rétraité', NULL, NULL,  NULL),
-(7, 'Jim',          'Jango',    'Persan', '16-07-2014', 'M', 'Black Silver Shaded',         '',     'Du Conte D''Artois',       '',                     'jango.jpg',        '250268731216727', 'LOOF 2014.2014',    '', 'Adopté',   '', 'Rétraité', NULL, NULL,  NULL),
-(8, 'Ice-Flower',   'Ice',      'Persan', '30-04-2013', 'F', 'Black Silver Shaded',         'Vert', 'Du Doulieu',               '',                     'ice.jpg',          '250268500609607', 'LOOF 2013.26702',   '', 'Adopté',   '', 'Rétraité', NULL, NULL,  NULL);
+(1, 'Pheize',       '',         'Persan', '18-08-2019', 'F', 'Black Silver Shaded',         'Vert', 'Des Fever-fell',           'Des Fever-fell',       'pheize.jpg',       '250268743142082', 'LOOF 2020.2130',    '', 'Adopté',   '', 'Actif',    NULL, NULL, NULL),
+(2, 'Q''Pidon',     'Phares',   'Persan', '13-09-2019', 'M', 'Blue Golden Shaded',          'Vert', 'Du Pid D''Arrouyette',     '',                     'phares.jpg',       '250268732525100', 'LOOF 2020.2261',    '', 'Adopté',   '', 'Actif',    NULL, NULL, NULL),
+(3, 'Thao''s',      '',         'Persan', '05-06-2022', 'M', 'Blue Golden Shaded',          'Vert', 'Des Fell De Chymé',        'Des Fell De Chymé',    'thao.jpg',         '250269590840460', 'LOOF 2022.36935',   '', 'Adopté',   '', 'Actif',    NULL, NULL, NULL),
+(4, 'Upsylone',     '',         'Persan', '10-03-2023', 'F', 'Black Tortue Golden Shaded',  '',     'Du Grand Nocq ',           '',                     'upsylone.jpg',     '250269591320957', 'LOOF 2023.46399',   '', 'Adopté',   '', 'Actif',    NULL, NULL, NULL),
+(5, 'Nostradamus',  '',         'Persan', '24-10-2017', 'M', 'Crème Tabby Point',           '',     'Des Beautés D''Isara',     '',                     'nostradamus.jpg',  '250269811440948', 'LOOF 2018.7964',    '', 'Adopté',   '', 'Décedé',   NULL, NULL, NULL),
+(6, 'Nydal',        'Nevenn',   'Persan', '21-07-2017', 'F', 'Blue Point',                  'Bleu', 'Des Émeraudes D''Isara',   '',                     'neven.jpg',        '250269811425251', 'LOOF 2017.33924',   '', 'Adopté',   '', 'Rétraité', NULL, NULL, NULL),
+(7, 'Jim',          'Jango',    'Persan', '16-07-2014', 'M', 'Black Silver Shaded',         '',     'Du Conte D''Artois',       '',                     'jango.jpg',        '250268731216727', 'LOOF 2014.2014',    '', 'Adopté',   '', 'Rétraité', NULL, NULL, NULL),
+(8, 'Ice-Flower',   'Ice',      'Persan', '30-04-2013', 'F', 'Black Silver Shaded',         'Vert', 'Du Doulieu',               '',                     'ice.jpg',          '250268500609607', 'LOOF 2013.26702',   '', 'Adopté',   '', 'Rétraité', NULL, NULL, NULL);
 
 -- Table Chat_Test
 -- INSERT INTO Chat_Test (ID_Chat, ID_Test, Résultat) VALUES
@@ -57,7 +57,7 @@ INSERT INTO Chat (ID_Chat, Nom, Nom_Usage, Race, Date_Naissance, Sexe, Couleur, 
 
 
 -- Table Test
-INSERT INTO Test (ID_Test, Nom, Resultat) VALUES
+INSERT INTO Test (ID_Test, Nom) VALUES
 (1, 'FIV'),
 (2, 'FeLV'),
 (3, 'PKD'),

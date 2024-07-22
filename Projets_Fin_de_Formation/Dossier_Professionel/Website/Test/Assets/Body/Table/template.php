@@ -1,9 +1,3 @@
-<?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,8 +7,8 @@ if (session_status() == PHP_SESSION_NONE) {
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
         crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="<?= URL ?>Public/StyleSheets/styles.css">
-    <title>Chatterie des Fell de Chyme</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Table</title>
 </head>
 <body>
     <header>
@@ -67,26 +61,9 @@ if (session_status() == PHP_SESSION_NONE) {
                         <a href="#">Videos</a>
                     </div>
                 </li>
-                <li class="item" id="connexion/deconnexion">
-                    <?php if(!isset($_SESSION['user_id'])): ?>
-                    <a href="<?= URL ?>login" class="bouton">Connexion</a>
-                    <?php else: ?>
-                    <a href="<?= URL ?>logout" class="bouton">Deconnexion</a>
-                    <?php endif; ?>
-                </li>
-                <?php if(isset($_SESSION['user_id']) && $this->authManager->estAdmin($_SESSION['user_id'])):?>
-                <li class="item" id="CRUD">
-                    <a href="#CRUD" class="bouton">CRUD</a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <div class="smenu">
-                        <a href="<?= URL ?>manageUsers/readUser">Utilisateurs</a>
-                        <a href="<?= URL ?>manageCats/readCat">Chats</a>
-                    </div>
-                </li>
-                <?php endif; ?>
             </ul>
         </nav>
-        <!-- <img id="imgLogo" src="<?= URL ?>Public/Images/Logo/Chatterie_des_fell_de_chyme_Black_Logo.png" alt="Logo_du_site"> -->
+        <!-- <img id="imgLogo" src="<?php echo ""; ?>Public/Images/Logo/Chatterie_des_fell_de_chyme_Black_Logo.png" alt="Logo_du_site"> -->
     </header>
 
     <main>
@@ -97,7 +74,5 @@ if (session_status() == PHP_SESSION_NONE) {
     <footer>
         <p class="footer">Copyright Fell de Chyme - 2024</p> <!-- Avoir l'annee actuelle -->
     </footer>
-
-    <script src="<?= URL ?>Public/JavaScript/script.js"></script>
 </body>
 </html>

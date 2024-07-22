@@ -42,6 +42,8 @@ class AuthManager {
             if (!$this->estAdmin($userId)) {
                 echo "L'utilisateur avec l'ID $userId n'est pas un administrateur.";
                 exit();
+            } else {
+                return true;
             }
         }
     }

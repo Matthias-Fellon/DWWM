@@ -3,6 +3,7 @@
 define("URL", str_replace("index.php", "", (isset($_SERVER["HTTPS"]) ? "https" : "http") . "://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']));
 
 // Inclure les fichiers de contrôleurs nécessaires
+require_once './App/Controllers/HomeController.class.php';
 require_once './App/Controllers/UserController.class.php';
 require_once './App/Controllers/CatController.class.php';
 require_once './App/Controllers/LoginController.class.php';
@@ -15,8 +16,9 @@ try {
     } else {
         $url = explode("/", filter_var($_GET["page"], FILTER_SANITIZE_URL));
         switch ($url[0]) {
-            case "home": 
-                require "App/Views/home.view.php"; 
+            case "home":
+                $controller = new HomeController();
+                $controller->showHome();
                 break;
 
             case "login":
@@ -30,9 +32,9 @@ try {
                 break;
           
             case "manageUsers":
+                $controller = new UserController();
                 switch($url[1]) {
                     case "createUser":
-                        $controller = new UserController();
                         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $controller->addUser($_POST, $_FILES);
                         } else {
@@ -41,12 +43,10 @@ try {
                         break;
 
                     case "readUser":
-                        $controller = new UserController();
                         $controller->listUsers();
                         break;
 
                     case "updateUser":
-                        $controller = new UserController();
                         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $controller->updateUser($_POST, $_FILES);
                         } else {
@@ -59,7 +59,6 @@ try {
                         break;
 
                     case "deleteUser":
-                        $controller = new UserController();
                         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                             $controller->deleteUser($_POST['id']);
                         }else{
@@ -70,24 +69,27 @@ try {
                     default: 
                         throw new Exception("La page n'existe pas 1");
                 }
+                break;
 
             case "manageCats":
-                    switch($url[1]) {
-                        case "createCat":
-                            break;
+                switch($url[1]) {
+                    case "createCat":
+                        break;
 
-                        case "readCat":
-                            break;
-    
-                        case "updateCat":
-                            break;
-    
-                        case "deleteCat":
-                            break;
-                        
-                        default: 
-                            throw new Exception("La page n'existe pas 2");
-                    }
+                    case "readCat":
+                        break;
+
+                    case "updateCat":
+                        break;
+
+                    case "deleteCat":
+                        break;
+                    
+                    default: 
+                        throw new Exception("La page n'existe pas 2");
+                }
+                break;
+                
             default: 
                 throw new Exception("La page n'existe pas");
         }

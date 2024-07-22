@@ -10,7 +10,7 @@ class LogoutController {
 
     public function logout() {
         $this->authManager->logout();
-        header('Location: ' . URL . 'login');
+        header('Location: ' . URL . 'home');
         exit();
     }
 }

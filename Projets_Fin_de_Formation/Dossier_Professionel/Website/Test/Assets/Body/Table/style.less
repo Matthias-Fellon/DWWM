@@ -1,11 +1,11 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
-body {
-    width: 100vw;
+body{
     height: 100vh;
+    width: 100vw;
 
     header {
         .navbar{
@@ -104,7 +104,7 @@ body {
         }
     }
 
-    main {
+    main{
         h1 {
             text-align: center;
             margin-top: 20px;
@@ -118,7 +118,16 @@ body {
             flex: 1;
         }
         
-        .login-container,
+        .login-container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
         .form-container {
             width: 300px;
             margin: 20px auto;
@@ -135,7 +144,6 @@ body {
             
             input[type="text"],
             input[type="email"],
-            input[type="password"],
             input[type="submit"],
             select {
                 width: calc(100% - 16px);
@@ -157,53 +165,43 @@ body {
             }
         }
         
-        .login-container {
-            margin: 50px auto;
-            text-align: center;
-        }
-
         table {
-            width: 80% !important;
-            margin: 20px auto !important;
-            border-collapse: collapse !important;
-            background: #fff !important;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
-        
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
             thead {
-                tr {
+                tr{
                     th {
-                        border: 1px solid #ccc !important;
-                        padding: 10px !important;
-                        text-align: left !important;
-                        background-color: #f4f4f4 !important;
+                        border: 1px solid #ccc;
+                        padding: 10px;
+                        text-align: left;
+                        background-color: #f4f4f4;
                     }
                 }
             }
-        
+
             tbody {
                 tr {
                     td {
-                        border: 1px solid #ccc !important;
-                        padding: 10px !important;
-                        text-align: left !important;
-        
+                        border: 1px solid #ccc;
+                        padding: 10px;
+                        text-align: left;
+    
                         a {
-                            color: #333 !important;
-                            text-decoration: none !important;
-                            font-weight: bold !important;
+                            color: #333;
+                            text-decoration: none;
+                            font-weight: bold;
                         }
                         
                         a:hover {
-                            text-decoration: underline !important;
+                            text-decoration: underline;
                         }
                     }  
                 }
             }
-        }
-        
-        .error {
-            color: red;
-            margin-bottom: 15px;
         }
     }
 
@@ -214,18 +212,6 @@ body {
         justify-content: center;
         padding: 10px;
         margin: 10px;
-    }
-}
-
-@media all and (min-width: 431px) and (max-width: 768px) {
-    *{
-        display: none;
-    }
-}
-
-@media all and (min-width: 769px) and (max-width: 1439px) {
-    *{
-        display: none;
     }
 }
 

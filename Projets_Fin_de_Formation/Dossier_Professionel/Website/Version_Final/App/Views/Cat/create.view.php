@@ -28,4 +28,4 @@ ob_start();
 <?php
 $content = ob_get_clean();
 $titre = "Ajouter un utilisateur";
-require __DIR__ . "/../template.php";
+require "template.php";
