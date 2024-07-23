@@ -46,5 +46,5 @@ symfony server:start
 ```
 
 # 6 - Aides vidéos pour créer un git Symfony
- #### https://www.youtube.com/watch?v=0B2HVZoQl00
- #### https://www.youtube.com/watch?v=HLe3hF0i6fo
+#### https://www.youtube.com/watch?v=0B2HVZoQl00
+#### https://www.youtube.com/watch?v=HLe3hF0i6fo

@@ -4,15 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "75747e31482c696d",
+        "id": "db4d0c44c013c0dd",
         "type": "tabs",
         "children": [
+          {
+            "id": "d9ad4c02996988c0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Labrairies_Frameworks/React.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
           {
             "id": "a18630e4c8d6a6e4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Labrairies_Frameworks/Symfony.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Labrairies_Frameworks/React.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Labrairies_Frameworks/React.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +138,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Labrairies_Frameworks/React.md"
+              }
             }
           }
         ]
@@ -138,9 +160,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a18630e4c8d6a6e4",
+  "active": "d9ad4c02996988c0",
   "lastOpenFiles": [
     "Labrairies_Frameworks/Symfony.md",
+    "Labrairies_Frameworks/React.md",
     "PHP/Commandes.md",
     "PHP/Tableaux_Matrice.pdf",
     "NoSQL/Commandes.md",
