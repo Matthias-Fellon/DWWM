@@ -1,5 +1,8 @@
 <?php
 require_once __DIR__ . '/../../Configs/MyDbConnection.class.php';
+require_once __DIR__ . '/PersonneManger.class.php';
+// TODO Faire les modifs des requetes car les champs actuels sont different des champs de la BDD
+// TODO Pour les fonctions modifiants des donnees contenu dans la BDD, Effectuer des transaction (Commit et Rollback)
 
 class UserManager extends PersonneManager{
     private $pdo;

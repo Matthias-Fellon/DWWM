@@ -1,13 +1,34 @@
+-- Table Personne
+INSERT INTO Personne (ID_Personne, Nom, Prenom, Telephone, Email) VALUES
+(1, 'Fournier', 'Dorothée', '0614000000', 'dorothee.fournier@gmail.com'),
+(2, 'Dupont', 'Jean', '0123456789', 'jean.dupont@gmail.com'),
+(3, 'Martin', 'Sophie', '0987654321', 'sophie.martin@gmail.com');
+
+-- Table Eleveur
+INSERT INTO Eleveur (ID_Eleveur, Nom_Elevage, Numero_Siret, Description, ID_Personne) VALUES
+(1, 'Elevage des Fell de Chymé', '12345678901234', 'Elevage spécialisé dans les races de chat de type Persan', 1);
+
+-- Table Privilege
+INSERT INTO Privilege (ID_Privilege, Role) VALUES
+(1, 'Administrateur'),
+(2, 'Utilisateur');
+
+-- Table Utilisateur
+INSERT INTO Utilisateur (ID_Utilisateur, Mot_De_Passe, Image_Profil, Derniere_Connexion, ID_Privilege, ID_Personne) VALUES
+(1, '$2y$10$mYBC0cuPZ3nmYZWIyzQm4utrBBARtGL5FkFD6pa/OjZORj61C5Apy', 'defaut.png', '2023-09-15 10:43:22', 1, 1),
+(2, '$2y$10$Jpbrv3inJ7N8zplL0vttyuaoIvAu.NKE3p5f2Fsd20KClLsX/kPqC', 'defaut.png', '2023-11-21 22:02:15', 2, 2);
+
+
 -- Table Chat
 INSERT INTO Chat (ID_Chat, Nom, Nom_Usage, Race, Date_Naissance, Sexe, Couleur, Couleur_Yeux, Affixe_Naissance, Affixe_Actuel, Image, Puce_Electronique, Livre_Origine, ADN, Statut, Date_Adoption, Etat, ID_Chat_A_Pour_Mere, ID_Chat_A_Pour_Pere, ID_Personne) VALUES
-(1, 'Pheize',       '',         'Persan', '18-08-2019', 'F', 'Black Silver Shaded',         'Vert', 'Des Fever-fell',           'Des Fever-fell',       'pheize.jpg',       '250268743142082', 'LOOF 2020.2130',    '', 'Adopté',   '', 'Actif',    NULL, NULL, NULL),
-(2, 'Q''Pidon',     'Phares',   'Persan', '13-09-2019', 'M', 'Blue Golden Shaded',          'Vert', 'Du Pid D''Arrouyette',     '',                     'phares.jpg',       '250268732525100', 'LOOF 2020.2261',    '', 'Adopté',   '', 'Actif',    NULL, NULL, NULL),
-(3, 'Thao''s',      '',         'Persan', '05-06-2022', 'M', 'Blue Golden Shaded',          'Vert', 'Des Fell De Chymé',        'Des Fell De Chymé',    'thao.jpg',         '250269590840460', 'LOOF 2022.36935',   '', 'Adopté',   '', 'Actif',    NULL, NULL, NULL),
-(4, 'Upsylone',     '',         'Persan', '10-03-2023', 'F', 'Black Tortue Golden Shaded',  '',     'Du Grand Nocq ',           '',                     'upsylone.jpg',     '250269591320957', 'LOOF 2023.46399',   '', 'Adopté',   '', 'Actif',    NULL, NULL, NULL),
-(5, 'Nostradamus',  '',         'Persan', '24-10-2017', 'M', 'Crème Tabby Point',           '',     'Des Beautés D''Isara',     '',                     'nostradamus.jpg',  '250269811440948', 'LOOF 2018.7964',    '', 'Adopté',   '', 'Décedé',   NULL, NULL, NULL),
-(6, 'Nydal',        'Nevenn',   'Persan', '21-07-2017', 'F', 'Blue Point',                  'Bleu', 'Des Émeraudes D''Isara',   '',                     'neven.jpg',        '250269811425251', 'LOOF 2017.33924',   '', 'Adopté',   '', 'Rétraité', NULL, NULL, NULL),
-(7, 'Jim',          'Jango',    'Persan', '16-07-2014', 'M', 'Black Silver Shaded',         '',     'Du Conte D''Artois',       '',                     'jango.jpg',        '250268731216727', 'LOOF 2014.2014',    '', 'Adopté',   '', 'Rétraité', NULL, NULL, NULL),
-(8, 'Ice-Flower',   'Ice',      'Persan', '30-04-2013', 'F', 'Black Silver Shaded',         'Vert', 'Du Doulieu',               '',                     'ice.jpg',          '250268500609607', 'LOOF 2013.26702',   '', 'Adopté',   '', 'Rétraité', NULL, NULL, NULL);
+(1, 'Pheize',       '',         'Persan', '2019-08-18', 'F', 'Black Silver Shaded',         'Vert', 'Des Fever-fell',           'Des Fever-fell',       'pheize.jpg',       '250268743142082', 'LOOF 2020.2130',    '', 'Adopté',   '', 'Actif',    NULL, NULL, 1),
+(2, 'Q''Pidon',     'Phares',   'Persan', '2019-09-13', 'M', 'Blue Golden Shaded',          'Vert', 'Du Pid D''Arrouyette',     '',                     'phares.jpg',       '250268732525100', 'LOOF 2020.2261',    '', 'Adopté',   '', 'Actif',    NULL, NULL, 1),
+(3, 'Thao''s',      '',         'Persan', '2022-06-05', 'M', 'Blue Golden Shaded',          'Vert', 'Des Fell De Chymé',        'Des Fell De Chymé',    'thao.jpg',         '250269590840460', 'LOOF 2022.36935',   '', 'Adopté',   '', 'Actif',    NULL, NULL, 1),
+(4, 'Upsylone',     '',         'Persan', '2023-03-10', 'F', 'Black Tortue Golden Shaded',  '',     'Du Grand Nocq ',           '',                     'upsylone.jpg',     '250269591320957', 'LOOF 2023.46399',   '', 'Adopté',   '', 'Actif',    NULL, NULL, 1),
+(5, 'Nostradamus',  '',         'Persan', '2017-10-24', 'M', 'Crème Tabby Point',           '',     'Des Beautés D''Isara',     '',                     'nostradamus.jpg',  '250269811440948', 'LOOF 2018.7964',    '', 'Adopté',   '', 'Décedé',   NULL, NULL, 1),
+(6, 'Nydal',        'Nevenn',   'Persan', '2017-07-21', 'F', 'Blue Point',                  'Bleu', 'Des Émeraudes D''Isara',   '',                     'neven.jpg',        '250269811425251', 'LOOF 2017.33924',   '', 'Adopté',   '', 'Rétraité', NULL, NULL, 1),
+(7, 'Jim',          'Jango',    'Persan', '2014-07-16', 'M', 'Black Silver Shaded',         '',     'Du Conte D''Artois',       '',                     'jango.jpg',        '250268731216727', 'LOOF 2014.2014',    '', 'Adopté',   '', 'Rétraité', NULL, NULL, 1),
+(8, 'Ice-Flower',   'Ice',      'Persan', '2013-04-30', 'F', 'Black Silver Shaded',         'Vert', 'Du Doulieu',               '',                     'ice.jpg',          '250268500609607', 'LOOF 2013.26702',   '', 'Adopté',   '', 'Rétraité', NULL, NULL, 1);
 
 -- Table Chat_Test
 -- INSERT INTO Chat_Test (ID_Chat, ID_Test, Résultat) VALUES
@@ -44,16 +65,17 @@ INSERT INTO Chat (ID_Chat, Nom, Nom_Usage, Race, Date_Naissance, Sexe, Couleur, 
 -- (5, 2, '22-09-2021');
 
 -- Table Chat_Titre
--- INSERT INTO Chat_Titre (ID_Chat, ID_Titre, Date) VALUES -- A modifier
+-- INSERT INTO Chat_Titre (ID_Chat, ID_Titre, Date) VALUES
 -- (1, 1, '2022-05-01'),
 -- (3, 2, '2023-01-15');
 
 -- Table Chat_Image
--- INSERT INTO Chat_Image (ID_Chat, ID_Image) VALUES -- A modifier
+-- INSERT INTO Chat_Image (ID_Chat, ID_Image, Image) VALUES
 -- (1, 1),
+-- (1, 4),
 -- (2, 2),
--- (3, 3),
--- (4, 4);
+-- (3, 3);
+-- (4, 5);
 
 
 -- Table Test
@@ -78,33 +100,14 @@ INSERT INTO Titre (ID_Titre, Nom) VALUES
 (2, 'Champion International');
 
 -- Table Image
--- INSERT INTO Image (ID_Image, Image) VALUES -- A modifier
--- (1, 'pheize.jpg'),
--- (2, 'phares.jpg'),
--- (3, 'thao.jpg'),
--- (4, 'upsylone.jpg');
+INSERT INTO Image (ID_Image, Nom) VALUES
+(1, 'pheize.jpg'),
+(2, 'phares.jpg'),
+(3, 'thao.jpg'),
+(4, 'pheize_2.jpg'),
+(5, 'upsylone.jpg');
 
--- Table Personne
-INSERT INTO Personne (ID_Personne, Nom, Prenom, Telephone, Email, Image_Profil) VALUES
-(1, 'Fournier', 'Dorothée', '0614000000', 'dorothee.fournier@gmail.com', 'defaut.png'),
-(2, 'Dupont', 'Jean', '0123456789', 'jean.dupont@gmail.com', 'defaut.png'),
-(3, 'Martin', 'Sophie', '0987654321', 'sophie.martin@gmail.com', 'defaut.png');
-
--- Table Eleveur
-INSERT INTO Eleveur (ID_Personne, Nom_Elevage, Numero_Siret, Description, Nom, Prenom, Telephone, Email, Image_Profil) VALUES
-(1, 'Elevage des Fell de Chymé', '12345678901234', 'Elevage spécialisé dans les races de chat de type Persan', 'Fournier', 'Dorothée', '0614000000', 'dorothee.fournier@gmail.com', 'defaut.png');
-
--- Table Utilisateur
-INSERT INTO Utilisateur (ID_Personne, Mot_De_Passe, Nom, Prenom, Telephone, Email, Image_Profil, ID_Privilege) VALUES
-(1, '$2y$10$mYBC0cuPZ3nmYZWIyzQm4utrBBARtGL5FkFD6pa/OjZORj61C5Apy', 'Fournier', 'Dorothée', '0614000000', 'dorothee.fournier@gmail.com', 'defaut.png', 1),
-(2, '$2y$10$Jpbrv3inJ7N8zplL0vttyuaoIvAu.NKE3p5f2Fsd20KClLsX/kPqC', 'Dupont', 'Jean', '0123456789', 'jean.dupont@gmail.com', 'defaut.png', 2);
-
--- Table Privilege
-INSERT INTO Privilege (ID_Privilege, Role) VALUES
-(1, 'Administrateur'),
-(2, 'Utilisateur');
 
 -- Mise à jour des données 
-UPDATE chat SET ID_Personne = 1;
 UPDATE chat SET ID_Chat_A_Pour_Mere = 6 WHERE ID_Chat = 1;
 UPDATE chat SET ID_Chat_A_Pour_Pere = 2, ID_Chat_A_Pour_Mere = 1 WHERE ID_Chat = 3;
