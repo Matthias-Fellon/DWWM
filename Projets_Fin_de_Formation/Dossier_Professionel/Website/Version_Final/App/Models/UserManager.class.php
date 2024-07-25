@@ -12,9 +12,10 @@ class UserManager extends PersonneManager{
     }
 
     public function getAllUsers() {
-        $sql = 'SELECT ID_Personne, Mot_De_Passe, Nom, Prenom, Email, Telephone, Role, Image_Profil
+        $sql = 'SELECT utilisateur.ID_Personne, utilisateur.Mot_De_Passe, personne.Nom, personne.Prenom, personne.Email, personne.Telephone, privilege.Role, utilisateur.Image_Profil
                 FROM utilisateur
-                LEFT JOIN privilege ON utilisateur.ID_Personne = privilege.ID_Privilege';
+                LEFT JOIN privilege ON utilisateur.ID_Personne = privilege.ID_Privilege
+                RIGHT JOIN personne ON utilisateur.ID_Personne = personne.ID_Personne';
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -14,7 +14,9 @@ class AuthManager {
     }
 
     public function authenticate($email, $password) {
-        $stmt = $this->pdo->prepare('SELECT ID_Personne, Mot_De_Passe FROM utilisateur WHERE Email = ?');
+        $stmt = $this->pdo->prepare('SELECT utilisateur.ID_Personne, utilisateur.Mot_De_Passe FROM utilisateur 
+                                    LEFT JOIN personne ON utilisateur.ID_Personne = personne.ID_Personne 
+                                    WHERE personne.Email = ?');
         $stmt->execute([$email]);
         $user = $stmt->fetch();
 

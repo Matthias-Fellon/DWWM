@@ -4,10 +4,11 @@
 
 -- Création de la base de données
 DROP DATABASE IF EXISTS Chatterie;
-CREATE DATABASE IF NOT EXISTS Chatterie;
+DROP DATABASE IF EXISTS Fell_de_Chyme;
+CREATE DATABASE IF NOT EXISTS Fell_de_Chyme;
 
 -- Utilisation de la base de données
-USE Chatterie;
+USE Fell_de_Chyme;
 
 
 #------------------------------------------------------------
@@ -18,8 +19,9 @@ CREATE TABLE Personne(
         ID_Personne Int  Auto_increment  NOT NULL ,
         Nom         Varchar (50) NOT NULL ,
         Prenom      Varchar (50) NOT NULL ,
+        Sexe        Char (1) NOT NULL ,
         Telephone   Varchar (15) NOT NULL ,
-        Email       Varchar (150) NOT NULL
+        Email       Varchar (150) NOT NULL 
 	,CONSTRAINT Personne_PK PRIMARY KEY (ID_Personne)
 )ENGINE=InnoDB;
 
@@ -44,11 +46,12 @@ CREATE TABLE Eleveur(
 
 CREATE TABLE Utilisateur(
         ID_Utilisateur 		Int  Auto_increment  NOT NULL ,
+        Email               Varchar (150) NOT NULL ,
 		Mot_De_Passe   		Varchar (255) NOT NULL ,
 		Image_Profil 		Varchar (50) NOT NULL ,
 		Derniere_Connexion 	TimeStamp NOT NULL ,
         ID_Privilege   		Int NOT NULL ,
-        ID_Personne    		Int NOT NULL 
+        ID_Personne    		Int NOT NULL,
 	,CONSTRAINT Utilisateur_PK PRIMARY KEY (ID_Utilisateur)
 )ENGINE=InnoDB;
 

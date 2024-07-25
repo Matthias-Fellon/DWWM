@@ -1,8 +1,9 @@
 -- Table Personne
-INSERT INTO Personne (ID_Personne, Nom, Prenom, Telephone, Email) VALUES
-(1, 'Fournier', 'Dorothée', '0614000000', 'dorothee.fournier@gmail.com'),
-(2, 'Dupont', 'Jean', '0123456789', 'jean.dupont@gmail.com'),
-(3, 'Martin', 'Sophie', '0987654321', 'sophie.martin@gmail.com');
+INSERT INTO Personne (ID_Personne, Nom, Prenom, Sexe, Telephone, Email) VALUES
+(1, 'Fellon', 'Matthias', '0000000000', '', 'matthias.fellon@gmail.com'),
+(2, 'Fournier', 'Dorothée', '0614000000', '', 'dorothee.fournier@gmail.com'),
+(3, 'Dupont', 'Jean', '0123456789', 'M', 'jean.dupont@gmail.com'),
+(4, 'Martin', 'Sophie', '0987654321', 'F', 'sophie.martin@gmail.com');
 
 -- Table Eleveur
 INSERT INTO Eleveur (ID_Eleveur, Nom_Elevage, Numero_Siret, Description, ID_Personne) VALUES
@@ -10,13 +11,16 @@ INSERT INTO Eleveur (ID_Eleveur, Nom_Elevage, Numero_Siret, Description, ID_Pers
 
 -- Table Privilege
 INSERT INTO Privilege (ID_Privilege, Role) VALUES
-(1, 'Administrateur'),
-(2, 'Utilisateur');
+(1, 'SuperAdministrateur'),
+(2, 'Administrateur'),
+(3, 'Utilisateur');
 
 -- Table Utilisateur
-INSERT INTO Utilisateur (ID_Utilisateur, Mot_De_Passe, Image_Profil, Derniere_Connexion, ID_Privilege, ID_Personne) VALUES
-(1, '$2y$10$mYBC0cuPZ3nmYZWIyzQm4utrBBARtGL5FkFD6pa/OjZORj61C5Apy', 'defaut.png', '2023-09-15 10:43:22', 1, 1),
-(2, '$2y$10$Jpbrv3inJ7N8zplL0vttyuaoIvAu.NKE3p5f2Fsd20KClLsX/kPqC', 'defaut.png', '2023-11-21 22:02:15', 2, 2);
+INSERT INTO Utilisateur (ID_Utilisateur, Email, Mot_De_Passe, Image_Profil, Derniere_Connexion, ID_Privilege, ID_Personne) VALUES
+(1, 'dorothee.fournier@gmail.com', '$2y$10$mYBC0cuPZ3nmYZWIyzQm4utrBBARtGL5FkFD6pa/OjZORj61C5Apy', 'defaut.png', '2023-09-15 10:43:22', 2, 2),
+(2, 'matthias.fellon@gmail.com', '$2y$10$mYBC0cuPZ3nmYZWIyzQm4utrBBARtGL5FkFD6pa/OjZORj61C5Apy', 'defaut.png', '2023-06-02 11:50:42', 1, 1),
+(3, 'jean.dupont@gmail.com', '$2y$10$Jpbrv3inJ7N8zplL0vttyuaoIvAu.NKE3p5f2Fsd20KClLsX/kPqC', 'defaut.png', '2023-11-21 22:02:15', 3, 3),
+(4, 'sophie.martin@gmail.com', '$2y$10$mYBC0cuPZ3nmYZWIyzQm4utrBBARtGL5FkFD6pa/OjZORj61C5Apy', 'defaut.png', '2024-01-06 09:23:18', 3, NULL);
 
 
 -- Table Chat
@@ -70,12 +74,12 @@ INSERT INTO Chat (ID_Chat, Nom, Nom_Usage, Race, Date_Naissance, Sexe, Couleur, 
 -- (3, 2, '2023-01-15');
 
 -- Table Chat_Image
--- INSERT INTO Chat_Image (ID_Chat, ID_Image, Image) VALUES
--- (1, 1),
--- (1, 4),
--- (2, 2),
--- (3, 3);
--- (4, 5);
+INSERT INTO Chat_Image (ID_Chat, ID_Image) VALUES
+(1, 1),
+(1, 4),
+(2, 2),
+(3, 3),
+(4, 5);
 
 
 -- Table Test
