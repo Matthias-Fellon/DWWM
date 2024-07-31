@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/GitHub.md",
+                "file": "VS_Code/Settings (JSON).md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/GitHub.md",
+                "file": "VS_Code/Settings (JSON).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/GitHub.md",
+                "file": "VS_Code/Settings (JSON).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/GitHub.md"
+                "file": "VS_Code/Settings (JSON).md"
               }
             }
           }
@@ -149,9 +149,11 @@
   },
   "active": "1ab4938f7948569d",
   "lastOpenFiles": [
-    "NoSQL/MongoDB Installation.md",
+    "VS_Code/Key Bindings (JSON).md",
+    "VS_Code/Settings (JSON).md",
+    "VS_Code/Extensions.md",
     "Git/GitHub.md",
-    "VS_Code/VS Code.md",
+    "NoSQL/MongoDB Installation.md",
     "Docker/Docker.md",
     "Labrairies_Frameworks/Symfony.md",
     "Labrairies_Frameworks/React.md",
@@ -173,8 +175,6 @@
     "Exercices/Exercices - Fonctions.md",
     "Exercices/Exercices - Manipulation du DOM.md",
     "Quizz/Quizz du 05 avril 2024.md",
-    "Quizz/Quizz du 19 avril 2024.md",
-    "Aide mémoire - Général.md",
-    "Aide mémoire - Manipulation du DOM.md"
+    "Quizz/Quizz du 19 avril 2024.md"
   ]
 }
