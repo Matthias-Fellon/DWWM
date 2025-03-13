@@ -7,12 +7,8 @@ class UserController {
     private $userManager;
 
     public function __construct() {
+        $this->userManager = new UserManager();
         $this->authManager = new AuthManager();
-        if($this->authManager->verifierAdmin()) {
-            $this->userManager = new UserManager();
-        } else {
-            throw new Exception("Vous n'avez pas les droits pour acceder à cette page");
-        }
     }
 
     public function addUser($data, $files) {
@@ -42,6 +38,7 @@ class UserController {
     }
 
     public function listUsers() {
+        $this->authManager->verifierAdmin();
         $users = $this->userManager->getAllUsers();
         require  __DIR__ . '/../Views/User/read.view.php';
     }

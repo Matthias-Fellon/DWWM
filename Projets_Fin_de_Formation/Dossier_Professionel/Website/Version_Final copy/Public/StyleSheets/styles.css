@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+body header .navbar {
+  background-color: #F5F5F7;
+  padding: 20px 0px;
+}
+body header .navbar .menu {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+}
+body header .navbar .menu .item {
+  width: 84%;
+  overflow: hidden;
+  border-bottom: 2px solid black;
+  list-style: none;
+}
+body header .navbar .menu .item .bouton {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  font-family: 'Helvatica Neue', Regular, sans-serif;
+  font-size: clamp(16px, 6vw, 24px);
+  color: black;
+  line-height: 18px;
+  text-decoration: none;
+  padding: 16px 0px;
+}
+body header .navbar .menu .item .fa-chevron-right {
+  color: black;
+  padding: 5px;
+  font-size: clamp(10px, 5.5vw, 18px);
+}
+body header .navbar .menu .item .smenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+body header .navbar .menu .item .smenu a {
+  display: block;
+  position: relative;
+  font-family: 'Helvatica Neue', Light, sans-serif;
+  font-size: clamp(10px, 4vw, 18px);
+  color: black;
+  text-decoration: none;
+  padding: 7.5px 26px;
+}
+body header .navbar .menu .item .smenu a:before {
+  content: "";
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  background-color: grey;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  opacity: 0;
+}
+body header .navbar .menu .item .smenu a:hover::before {
+  opacity: 1;
+}
+body header .navbar .menu .item:target .smenu {
+  max-height: 20em;
+}
+body header .navbar #imgLogo {
+  position: relative;
+  top: 50px;
+}
+body main h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+body main .welcome-text {
+  text-align: center;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  flex: 1;
+}
+body main .login-container,
+body main .form-container {
+  width: 300px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+body main .login-container label,
+body main .form-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+body main .login-container input[type="text"],
+body main .form-container input[type="text"],
+body main .login-container input[type="email"],
+body main .form-container input[type="email"],
+body main .login-container input[type="password"],
+body main .form-container input[type="password"],
+body main .login-container input[type="submit"],
+body main .form-container input[type="submit"],
+body main .login-container select,
+body main .form-container select {
+  width: calc(100% - 16px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+body main .login-container input[type="submit"],
+body main .form-container input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+body main .login-container input[type="submit"]:hover,
+body main .form-container input[type="submit"]:hover {
+  background-color: #555;
+}
+body main .login-container {
+  margin: 50px auto;
+  text-align: center;
+}
+body main table {
+  width: 80% !important;
+  margin: 20px auto !important;
+  border-collapse: collapse !important;
+  background: #fff !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+}
+body main table thead tr th {
+  border: 1px solid #ccc !important;
+  padding: 10px !important;
+  text-align: left !important;
+  background-color: #f4f4f4 !important;
+}
+body main table tbody tr td {
+  border: 1px solid #ccc !important;
+  padding: 10px !important;
+  text-align: left !important;
+}
+body main table tbody tr td a {
+  color: #333 !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+body main table tbody tr td a:hover {
+  text-decoration: underline !important;
+}
+body main .error {
+  color: red;
+  margin-bottom: 15px;
+}
+body footer {
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+@media all and (min-width: 431px) and (max-width: 768px) {
+  * {
+    display: none;
+  }
+}
+@media all and (min-width: 769px) and (max-width: 1439px) {
+  * {
+    display: none;
+  }
+}
+@media all and (min-width: 1440px) {
+  body header .navbar .menu {
+    flex-direction: row;
+  }
+}

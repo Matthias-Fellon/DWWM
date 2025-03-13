@@ -1,0 +1,19 @@
+Website :
+
+Faire les differentes page :
+
+- Accueil
+- Profil
+- Connexion / Inscription
+- Cookie
+- CRUD Chat
+- CRUD Utilisateur
+
+- footer
+- 
+
+- Responsive
+
+
+
+

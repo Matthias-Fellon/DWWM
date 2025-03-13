@@ -1,0 +1,169 @@
+Je souhaiterais réaliser un site internet en partant d'un dossier vierge, j'utilise comme langage le PHP, le CSS, le LESS, le JavaScript et l'HTML.
+Il y aura également une base de donnée associer.
+Mon site est un site vitrine animalier concernant élevage de chats de race.
+Pour l'instant, mon site serait disponible sur 2 support : PC et téléphone.
+Pour ce projet j'utilise la structure MVC suivante :
+```
+C:.
+│   .htaccess
+│   index.php
+│   
+├───App
+│   ├───Controllers
+│   │       CatConroller.class.php
+│   │       HomeController.class.php
+│   │       LoginController.class.php
+│   │       LogoutController.class.php
+│   │       UserController.class.php
+│   │       
+│   ├───Models
+│   │       AuthManager.class.php
+│   │       CatManager.class.php
+│   │       PersonneManger.class.php
+│   │       UserManager.class.php
+│   │
+│   └───Views
+│       │   home.view.php
+│       │   login.view.php
+│       │   template.php
+│       │
+│       ├───Cat
+│       │       create.view.php
+│       │       delete.view.php
+│       │       read.view.php
+│       │       update.view.php
+│       │
+│       └───Utilisateur
+│               create.view.php
+│               delete.view.php
+│               read.view.php
+│               update.view.php
+│
+├───Configs
+│       DbConnect.class.php
+│       MCD - Elevage.sql
+│       MCD - Elevage_Donnees.sql
+│       MyDbConnection.class.php
+│
+└───Public
+    ├───Images
+    │   │   Persan_Chat_1.jpeg
+    │   │   Persan_Chat_1.png
+    │   │   Persan_Chat_2.png
+    │   │
+    │   └───Logo
+    │           Chatterie_des_fell_de_chyme_Black_Logo.png
+    │           Chatterie_des_fell_de_chyme_White_Logo.png
+    │
+    ├───JavaScript
+    │       script.js
+    │
+    └───StyleSheets
+            styles.css
+            styles.less
+```
+
+Voici le contenu du fichier "index.php":
+
+```
+<?php
+// Définit la constante URL
+define("URL", str_replace("index.php", "", (isset($_SERVER["HTTPS"]) ? "https" : "http") . "://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']));
+
+// Inclure les fichiers de contrôleurs nécessaires
+require_once './App/Controllers/HomeController.class.php';
+require_once './App/Controllers/UserController.class.php';
+require_once './App/Controllers/CatController.class.php';
+require_once './App/Controllers/LoginController.class.php';
+require_once './App/Controllers/LogoutController.class.php';
+
+try {
+    if (empty($_GET["page"])) {
+        header("Location: " . URL . "home");
+        exit();
+    } else {
+        $url = explode("/", filter_var($_GET["page"], FILTER_SANITIZE_URL));
+        switch ($url[0]) {
+            case "home":
+                $controller = new HomeController();
+                $controller->showHome();
+                break;
+
+            case "login":
+                $controller = new LoginController();
+                $controller->login();
+                break;
+
+            case "logout":
+                $controller = new LogoutController();
+                $controller->logout();
+                break;
+          
+            case "manageUsers":
+                $controller = new UserController();
+                switch($url[1]) {
+                    case "createUser":
+                        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                            $controller->addUser($_POST, $_FILES);
+                        } else {
+                            $controller->AddForm();
+                        }
+                        break;
+
+                    case "readUser":
+                        $controller->listUsers();
+                        break;
+
+                    case "updateUser":
+                        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                            $controller->updateUser($_POST, $_FILES);
+                        } else {
+                            if (isset($url[2])) {
+                                $controller->UpdateForm($url[2]);
+                            } else {
+                                throw new Exception("ID utilisateur non spécifié");
+                            }
+                        }
+                        break;
+
+                    case "deleteUser":
+                        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+                            $controller->deleteUser($_POST['id']);
+                        }else{
+                            $controller->deleteForm();
+                        }
+                        break;
+
+                    default: 
+                        throw new Exception("La page n'existe pas 1");
+                }
+                break;
+
+            case "manageCats":
+                switch($url[1]) {
+                    case "createCat":
+                        break;
+
+                    case "readCat":
+                        break;
+
+                    case "updateCat":
+                        break;
+
+                    case "deleteCat":
+                        break;
+                    
+                    default: 
+                        throw new Exception("La page n'existe pas 2");
+                }
+                break;
+                
+            default: 
+                throw new Exception("La page n'existe pas");
+        }
+    }
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+```
+Le contenu de ce fichier et il bien formé, manque t'il des choses ou y a t'il des optimisation a faire ?

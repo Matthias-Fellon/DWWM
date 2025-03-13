@@ -1,10 +1,8 @@
-// const m_burger = document.querySelector(".burger-menu");
-// const m_items = document.querySelector(".menu-items").classList;
-
-// m_burger.addEventListener('mouseenter', () => {
-//     m_items.toggle("open");
-// });
-
-// m_burger.addEventListener('mouseleave', () => {
-//     m_items.toggle("open");
-// });
+document.addEventListener("DOMContentLoaded", function () {
+    const openBtn = document.querySelector(".openbtn");
+    const menu = document.querySelector(".menu");
+  
+    openBtn.addEventListener("click", function () {
+      menu.classList.toggle("show");
+    });
+  });

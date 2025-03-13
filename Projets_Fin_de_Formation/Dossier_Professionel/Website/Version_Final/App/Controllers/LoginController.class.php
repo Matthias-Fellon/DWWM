@@ -20,14 +20,14 @@ class LoginController {
             $userId = $this->authManager->authenticate($email, $password);
 
             if ($userId) {
-                $_SESSION['ID_Personne'] = $userId;
-                header('Location: ' . URL . 'home');
+                $_SESSION['ID_Utilisateur'] = $userId;
+                header('Location: home');
                 exit();
             } else {
                 $error = "Email ou mot de passe incorrect.";
             }
         }
 
-        require __DIR__ . '/../Views/login.view.php';
+        require __DIR__ . '/../Views/Account/login.view.php';
     }
 }

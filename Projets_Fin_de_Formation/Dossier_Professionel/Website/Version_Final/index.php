@@ -1,6 +1,7 @@
 <?php
 // Définit la constante URL
-define("URL", str_replace("index.php", "", (isset($_SERVER["HTTPS"]) ? "https" : "http") . "://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']));
+define("URL", str_replace("index.php", "", (isset($_SERVER["HTTPS"]) ? "https" : "http") . "://". $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']));
+
 
 // Inclure les fichiers de contrôleurs nécessaires
 require_once './App/Controllers/HomeController.class.php';
@@ -10,31 +11,59 @@ require_once './App/Controllers/LoginController.class.php';
 require_once './App/Controllers/LogoutController.class.php';
 
 try {
-    if (empty($_GET["page"])) {
+    if ($_SERVER['REQUEST_URI'] === "/") {
         header("Location: " . URL . "home");
         exit();
     } else {
-        $url = explode("/", filter_var($_GET["page"], FILTER_SANITIZE_URL));
-        switch ($url[0]) {
+        $url = explode("/", filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_URL));
+        $controller = new HomeController();
+        switch ($url[1]) {
             case "home":
-                $controller = new HomeController();
                 $controller->showHome();
                 break;
 
-            case "login":
-                $controller = new LoginController();
-                $controller->login();
+            case "breeding":
+                $controller->showCat();
                 break;
 
-            case "logout":
-                $controller = new LogoutController();
-                $controller->logout();
+            case "saleRequirements":
+                $controller->showRequirement();
+                break;
+
+            case "contact":
+                $controller->showContact();
+                break;
+
+            case "gallery":
+                $controller->showGallery();
+                break;
+               
+            case "account":
+                switch($url[2]) {
+                    case "profile":
+                        $controller = new AccountController();
+                        $controller->showProfile();
+                        break;
+        
+                    case "login":
+                        $controller = new LoginController();
+                        $controller->login();
+                        break;
+        
+                    case "logout":
+                        $controller = new LogoutController();
+                        $controller->logout();
+                        break;
+                    
+                    default: 
+                        throw new Exception("Account : La page n'existe pas");
+                }
                 break;
           
-            case "manageUsers":
+            case "User":
                 $controller = new UserController();
-                switch($url[1]) {
-                    case "createUser":
+                switch($url[2]) {
+                    case "create":
                         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $controller->addUser($_POST, $_FILES);
                         } else {
@@ -42,11 +71,11 @@ try {
                         }
                         break;
 
-                    case "readUser":
+                    case "read":
                         $controller->listUsers();
                         break;
 
-                    case "updateUser":
+                    case "update":
                         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $controller->updateUser($_POST, $_FILES);
                         } else {
@@ -58,7 +87,7 @@ try {
                         }
                         break;
 
-                    case "deleteUser":
+                    case "delete":
                         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                             $controller->deleteUser($_POST['id']);
                         }else{
@@ -67,26 +96,28 @@ try {
                         break;
 
                     default: 
-                        throw new Exception("La page n'existe pas 1");
+                        throw new Exception("CRUD->User : La page n'existe pas 1");
                 }
                 break;
 
-            case "manageCats":
-                switch($url[1]) {
-                    case "createCat":
+            case "cat":
+                $controller = new CatController();
+                switch($url[2]) {
+                    case "create":
                         break;
 
-                    case "readCat":
+                    case "read":
+                        $controller->listCats();
                         break;
 
-                    case "updateCat":
+                    case "update":
                         break;
 
-                    case "deleteCat":
+                    case "delete":
                         break;
                     
                     default: 
-                        throw new Exception("La page n'existe pas 2");
+                        throw new Exception("CRUD->Cat : La page n'existe pas");
                 }
                 break;
                 

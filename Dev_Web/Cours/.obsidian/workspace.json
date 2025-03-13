@@ -13,11 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "VS_Code/Settings (JSON).md",
+                "file": "JavaScript/Cours/2- Syntaxe de base.md",
                 "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "2- Syntaxe de base"
             }
           }
         ]
@@ -39,8 +41,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -55,7 +60,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -63,7 +70,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -86,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "VS_Code/Settings (JSON).md",
+                "file": "JavaScript/Cours/2- Syntaxe de base.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +103,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2- Syntaxe de base"
             }
           },
           {
@@ -103,10 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "VS_Code/Settings (JSON).md",
+                "file": "JavaScript/Cours/2- Syntaxe de base.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2- Syntaxe de base"
             }
           },
           {
@@ -116,8 +129,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
-              }
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -126,8 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "VS_Code/Settings (JSON).md"
-              }
+                "file": "JavaScript/Cours/2- Syntaxe de base.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2- Syntaxe de base"
             }
           }
         ]
@@ -149,32 +171,40 @@
   },
   "active": "1ab4938f7948569d",
   "lastOpenFiles": [
-    "VS_Code/Key Bindings (JSON).md",
+    "JavaScript/Cours/1- Introduction à JavaScript.md",
+    "PHP/Commandes.md",
+    "PHP/Cours_Tableaux.pdf",
+    "PHP/Chemin relatif et Chemin absolu.pdf",
+    "PHP/Programmation_orientee_objet-v2.pdf",
+    "PHP/Programmation_orientee_objet-v1.pdf",
+    "PHP/POO-VISIBILITÉ.pdf",
+    "PHP/MVC.pdf",
+    "PHP/Les_formulaires.pdf",
+    "PHP/Les_fonctions.pdf",
+    "PHP/les_expressions_regulieres.pdf",
+    "PHP/Faille_xss.pdf",
     "VS_Code/Settings (JSON).md",
-    "VS_Code/Extensions.md",
-    "Git/GitHub.md",
-    "NoSQL/MongoDB Installation.md",
     "Docker/Docker.md",
+    "Git/GitHub.md",
+    "JavaScript/Cours/8- Frameworks JavaScript.md",
+    "JavaScript/Cours/9- Bonnes Pratiques et Débogage.md",
+    "JavaScript/Cours/4- Gestion des tableaux et Objets.md",
+    "JavaScript/Cours/3- Manipulation du DOM.md",
+    "JavaScript/Cours/2- Syntaxe de base.md",
     "Labrairies_Frameworks/Symfony.md",
     "Labrairies_Frameworks/React.md",
-    "PHP/Commandes.md",
-    "PHP/Tableaux_Matrice.pdf",
+    "NoSQL/MongoDB Installation.md",
+    "NoSQL/Exercices World.md",
     "NoSQL/Commandes.md",
     "Projet_JO/Projet JO.md",
+    "VS_Code/Extensions.md",
+    "VS_Code/Key Bindings (JSON).md",
     "Cours/2- Syntaxe de base.md",
     "Cours/3- Manipulation du DOM.md",
     "Cours/4- Gestion des tableaux et Objets.md",
     "Cours/5- Fonctions avancées.md",
     "Cours/6- Concepts Avancés.md",
     "Cours/7- AJAX (Asynchronous JavaScript and XML).md",
-    "Cours/8- Frameworks JavaScript.md",
-    "Cours/9- Bonnes Pratiques et Débogage.md",
-    "Exercices/Fetch Rick et Morty/Fetch Rick et Morty.md",
-    "Exercices/Exercices - Algo de base.md",
-    "Exercices/Exercices - Conditions & boucles.md",
-    "Exercices/Exercices - Fonctions.md",
-    "Exercices/Exercices - Manipulation du DOM.md",
-    "Quizz/Quizz du 05 avril 2024.md",
-    "Quizz/Quizz du 19 avril 2024.md"
+    "Cours/8- Frameworks JavaScript.md"
   ]
 }

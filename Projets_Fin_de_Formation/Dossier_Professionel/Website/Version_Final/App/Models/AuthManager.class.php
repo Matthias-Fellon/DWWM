@@ -14,33 +14,33 @@ class AuthManager {
     }
 
     public function authenticate($email, $password) {
-        $stmt = $this->pdo->prepare('SELECT utilisateur.ID_Personne, utilisateur.Mot_De_Passe FROM utilisateur 
-                                    LEFT JOIN personne ON utilisateur.ID_Personne = personne.ID_Personne 
-                                    WHERE personne.Email = ?');
+        $stmt = $this->pdo->prepare('SELECT utilisateur.ID_Utilisateur, utilisateur.Mot_De_Passe FROM utilisateur  
+                                    WHERE utilisateur.Email = ?');
         $stmt->execute([$email]);
         $user = $stmt->fetch();
 
-        if ($user && password_verify($password, $user['Mot_De_Passe'])) {
-            return $user['ID_Personne'];
+        // if ($user && password_verify($password, $user['Mot_De_Passe'])) {
+        if ($user && ($password == $user['Mot_De_Passe'])) {
+            return $user['ID_Utilisateur'];
         } else {
             return false;
         }
     }
 
     public function estAdmin($userId) {
-        $stmt = $this->pdo->prepare('SELECT Role FROM privilege WHERE ID_Privilege = ?');
+        $stmt = $this->pdo->prepare('SELECT Role FROM utilisateur WHERE utilisateur.ID_Utilisateur = ?');
         $stmt->execute([$userId]);
         $userRole = $stmt->fetch();
-        return $userRole && $userRole['Role'] === 'Administrateur';
+        return $userRole && $userRole['Role'] === 'Admin';
     }
 
     public function verifierAdmin() {
         $this->startSession();
-        if (!isset($_SESSION['ID_Personne'])) {
+        if (!isset($_SESSION['ID_Utilisateur'])) {
             echo "Session utilisateur non définie.";
             exit();
         } else {
-            $userId = $_SESSION['ID_Personne'];
+            $userId = $_SESSION['ID_Utilisateur'];
             if (!$this->estAdmin($userId)) {
                 echo "L'utilisateur avec l'ID $userId n'est pas un administrateur.";
                 exit();
@@ -48,6 +48,13 @@ class AuthManager {
                 return true;
             }
         }
+        $this->startSession();
+    if (!isset($_SESSION['ID_Utilisateur'])) {
+        return false; // L'utilisateur n'est pas connecté
+    }
+
+    $userId = $_SESSION['ID_Utilisateur'];
+    return $this->estAdmin($userId);
     }
 
     public function logout() {

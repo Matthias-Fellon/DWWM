@@ -3,79 +3,265 @@
   padding: 0;
 }
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  font-family: Helevtica, serif;
 }
-body header .navbar {
-  background-color: #F5F5F7;
-  padding: 20px 0px;
+body .navbar {
+  font-family: Helevtica, sans-serif;
+  background-color: white;
+  top: 0;
+  position: sticky;
+  overflow: hidden;
+  padding: 0% 4%;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
 }
-body header .navbar .menu {
+body .navbar a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+body .navbar a:hover {
+  background-color: #ddd;
+}
+body .navbar .menu {
+  display: flex;
+}
+body .navbar .menu a i {
+  padding-left: 5px;
+}
+body .navbar .utilisateur {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+body .navbar .openbtn {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+body main {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  justify-content: center;
   align-items: center;
-}
-body header .navbar .menu .item {
-  width: 84%;
-  overflow: hidden;
-  border-bottom: 2px solid black;
-  list-style: none;
-}
-body header .navbar .menu .item .bouton {
-  display: inline-flex;
-  position: relative;
-  align-items: center;
-  font-family: 'Helvatica Neue', Regular, sans-serif;
-  font-size: clamp(16px, 6vw, 24px);
-  color: black;
-  line-height: 18px;
-  text-decoration: none;
-  padding: 16px 0px;
-}
-body header .navbar .menu .item .fa-chevron-right {
-  color: black;
-  padding: 5px;
-  font-size: clamp(10px, 5.5vw, 18px);
-}
-body header .navbar .menu .item .smenu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-}
-body header .navbar .menu .item .smenu a {
-  display: block;
-  position: relative;
-  font-family: 'Helvatica Neue', Light, sans-serif;
-  font-size: clamp(10px, 4vw, 18px);
-  color: black;
-  text-decoration: none;
-  padding: 7.5px 26px;
-}
-body header .navbar .menu .item .smenu a:before {
-  content: "";
-  width: 5px;
-  height: 100%;
-  position: absolute;
-  background-color: grey;
-  left: 0;
-  top: 0;
-  transition: 0.3s;
-  opacity: 0;
-}
-body header .navbar .menu .item .smenu a:hover::before {
-  opacity: 1;
-}
-body header .navbar .menu .item:target .smenu {
-  max-height: 20em;
-}
-body header .navbar #imgLogo {
-  position: relative;
-  top: 50px;
 }
 body main h1 {
   text-align: center;
   margin-top: 20px;
+}
+body main .home {
+  min-width: 768px;
+  max-width: 1300px;
+  padding: 60px 0px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+body main .home .home-gride {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(150px, auto);
+}
+body main .home .home-gride .items {
+  width: 100%;
+  height: auto;
+}
+body main .home .home-gride .items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+body main .home .home-gride .one {
+  grid-column: 1;
+  grid-row: 1;
+}
+body main .home .home-gride .two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 4;
+  display: flex;
+  gap: 20px;
+}
+body main .home .home-gride .two .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .home .home-gride .two .content h1 {
+  font-weight: 200;
+  font-size: calc(1.475rem + 2.7vw);
+  margin-bottom: 10px;
+}
+body main .home .home-gride .two .content p {
+  text-align: center;
+  font-family: Helevtica, sans-serif;
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 1.5;
+}
+body main .home .home-gride .three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+body main .home .home-gride .four {
+  grid-column: 2 / 4;
+  grid-row: 4;
+}
+body main .aboutMe {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #B6AA9A;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  font-family: Helvetica, sans-serif;
+}
+body main .aboutMe .container {
+  min-width: 768px;
+  max-width: 1300px;
+  display: flex;
+}
+body main .aboutMe .container .left-container {
+  max-width: 50%;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+body main .aboutMe .container .left-container h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+body main .aboutMe .container .left-container p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+body main .aboutMe .container .right-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 50%;
+  margin-left: 8.33333333%;
+}
+body main .aboutMe .container .right-container .content {
+  width: 40%;
+  padding: 16px;
+  flex-direction: column;
+}
+body main .aboutMe .container .right-container .content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+body main .aboutMe .container .right-container .content p {
+  font-size: 1rem;
+}
+body main .aboutMe .container .right-container .content .separator {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+body main .aboutMe .container .right-container .content .separator hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid black;
+}
+body main .aboutCompagny {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #8E7762;
+  color: #F5F5F7;
+  font-family: Helvetica, sans-serif;
+}
+body main .aboutCompagny .left-container {
+  width: 50%;
+  align-items: center;
+  padding: 60px 50px;
+}
+body main .aboutCompagny .left-container h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+body main .aboutCompagny .left-container p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+body main .aboutCompagny .left-container a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.6rem 1.8rem;
+  font-size: 1.171875rem;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: #F5F5F7;
+  color: #8E7762;
+  border-radius: 10rem;
+  font-weight: bold;
+}
+body main .aboutCompagny .right-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 50%;
+}
+body main .aboutCompagny .right-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+body main .gallery {
+  display: grid;
+  grid-template-rows: repeat(10, 30px);
+  grid-template-columns: repeat(12, 1fr);
+  padding: 60px 10px;
+  gap: 20px;
+}
+body main .gallery .gallery-item {
+  width: 100%;
+  height: auto;
+}
+body main .gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+body main .gallery .item1 {
+  grid-area: 2 / 1 / 10 / 2;
+}
+body main .gallery .item2 {
+  grid-area: 1 / 2 / 6 / 5;
+}
+body main .gallery .item3 {
+  grid-area: 6 / 2 / 11 / 5;
+}
+body main .gallery .item4 {
+  grid-area: 2 / 5 / 10 / 8;
+}
+body main .gallery .item5 {
+  grid-area: 1 / 8 / 11 / 11;
+}
+body main .gallery .item6 {
+  grid-area: 2 / 11 / 10 / 13;
 }
 body main .welcome-text {
   text-align: center;
@@ -166,20 +352,48 @@ body footer {
   color: white;
   justify-content: center;
   padding: 10px;
-  margin: 10px;
 }
-@media all and (min-width: 431px) and (max-width: 768px) {
-  * {
-    display: none;
+@media screen and (max-width: 768px) {
+  body .navbar {
+    display: block;
   }
-}
-@media all and (min-width: 769px) and (max-width: 1439px) {
-  * {
+  body .navbar .menu {
     display: none;
+    flex-direction: column;
+    width: 100%;
   }
-}
-@media all and (min-width: 1440px) {
-  body header .navbar .menu {
-    flex-direction: row;
+  body .navbar .menu .closebtn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  body .navbar .menu a {
+    padding: 10px 20px;
+    text-align: left;
+  }
+  body .navbar .menu.show {
+    display: inline-block;
+  }
+  body .navbar .utilisateur {
+    display: none;
+    width: 100%;
+  }
+  body .navbar .utilisateur a {
+    padding: 10px 20px;
+    text-align: left;
+  }
+  body .navbar .utilisateur.show {
+    display: flex;
+  }
+  body .navbar .openbtn {
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
   }
 }
